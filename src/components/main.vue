@@ -1,7 +1,10 @@
 <template>
   <main>
+    <v-container fluid class="paraContainer">
+      <v-parallax src="../../static/bg.png" height="700"></v-parallax>
+    </v-container>
     <v-container fluid>
-      <v-layout>
+      <v-layout row wrap>
         <v-flex xs12>
           <v-carousel hide-controls>
             <v-carousel-item :src="item.img" v-for="(item, i) in collection" :key="i"></v-carousel-item>
@@ -9,7 +12,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container>
+    <v-container fluid>
       <div class="br"></div>
     </v-container>
   </main>
@@ -35,6 +38,15 @@ import collection from './collection'
   min-height: 700px;
 }
 .br {
-  min-height: 9999px;
+  min-height: 4559px;
+}
+.carousel__item {
+  transition: 1.5s;
+}
+.paralax__image-container > img {
+  background-position-y: 200px
+}
+.paraContainer {
+  padding-top: 100px;
 }
 </style>
