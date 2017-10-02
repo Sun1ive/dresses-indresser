@@ -1,6 +1,6 @@
 <template>
   <v-toolbar fixed>
-    <v-toolbar-title @click="scrollTop(e)">InDresser</v-toolbar-title>
+    <v-toolbar-title v-scroll-to="'.collection'">InDresser</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
     <v-toolbar-items>
@@ -16,8 +16,6 @@
       }
     },
     methods: {
-      scrollTop (e) {
-      }
     }
   }
 </script>

@@ -12,8 +12,19 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container fluid>
-      <div class="br"></div>
+    <v-container fluid grid-list-lg class="collection">
+      <v-layout row wrap>
+        <v-flex xs12 sm3 v-for="(item, i) in collection" :key="i">
+          <v-card>
+            <v-card-media :src="item.url" height="350"></v-card-media>
+            <v-card-title>{{ item.title }}</v-card-title>
+            <v-card-text>{{ item.desc }}</v-card-text>
+            <v-card-actions>
+              <v-btn>Посмотреть</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+      </v-layout>
     </v-container>
   </main>
 </template>
@@ -37,9 +48,6 @@ import collection from './collection'
 .carousel {
   min-height: 700px;
 }
-.br {
-  min-height: 4559px;
-}
 .carousel__item {
   transition: 1.5s;
 }
@@ -48,5 +56,8 @@ import collection from './collection'
 }
 .paraContainer {
   padding-top: 100px;
+}
+.collection {
+  background-color: #F7F7F7;
 }
 </style>
