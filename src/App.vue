@@ -31,6 +31,7 @@ import footer from './components/footer'
 <style>
 a {
   text-decoration: none;
+  color: white;
 }
 .container {
   padding: 0;

@@ -1,6 +1,6 @@
 <template>
-  <v-toolbar>
-    <v-toolbar-title><a href="#">InDresser</a></v-toolbar-title>
+  <v-toolbar dark fixed>
+    <v-toolbar-title @click="scrollTop(e)">InDresser</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
     <v-toolbar-items>
@@ -14,10 +14,16 @@
     data() {
       return {
       }
+    },
+    methods: {
+      scrollTop (e) {
+      }
     }
   }
 </script>
 
 <style scoped>
-
+.toolbar__title {
+  cursor: pointer;
+}
 </style>
