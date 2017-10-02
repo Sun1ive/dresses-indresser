@@ -4,5 +4,4 @@ let collection = [
   { title: 'Платье 03', price: 111, url: '../../static/three.png', thumb: '../../static/three1.png' }
 ]
 
-
 export default collection

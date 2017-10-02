@@ -4,7 +4,7 @@
       <v-layout>
         <v-flex xs12>
           <v-carousel hide-controls>
-            <v-carousel-item></v-carousel-item>
+            <v-carousel-item :src="item.url" v-for="(item, i) in collection" :key="i"></v-carousel-item>
           </v-carousel>
         </v-flex>
       </v-layout>
@@ -13,9 +13,15 @@
 </template>
 
 <script>
+import col from './collection'
   export default {
     data() {
       return {
+      }
+    },
+    computed: {
+      collection () {
+        return col
       }
     }
   }
