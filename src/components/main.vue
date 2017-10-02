@@ -1,8 +1,12 @@
 <template>
   <main>
-    <v-container>
+    <v-container fluid>
       <v-layout>
-        <v-flex></v-flex>
+        <v-flex xs12>
+          <v-carousel hide-controls>
+            <v-carousel-item></v-carousel-item>
+          </v-carousel>
+        </v-flex>
       </v-layout>
     </v-container>
   </main>
