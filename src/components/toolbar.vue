@@ -1,18 +1,18 @@
 <template>
-  <v-app>
-  </v-app>
+  <div>
+
+  </div>
 </template>
 
 <script>
   export default {
-    data () {
+    data() {
       return {
       }
     }
   }
 </script>
 
-<style>
+<style scoped>
 
 </style>
-
