@@ -9,7 +9,7 @@
           <v-btn flat v-scroll-to="'.advantage'">Преимущества</v-btn>
           <v-btn flat v-scroll-to="'.gallery'">Галерея</v-btn>
           <v-btn flat v-scroll-to="'.aboutUs'">О нас</v-btn>
-          <v-btn flat>Заказать</v-btn>
+          <v-btn flat @click.stop="showOrder">Заказать</v-btn>
         </v-flex>
         <v-flex xs12 sm6 class="text-xs-center">
           <v-btn flat><v-icon>call</v-icon>067-1112233</v-btn>
@@ -26,6 +26,11 @@
   export default {
     data() {
       return {
+      }
+    },
+    methods: {
+      showOrder () {
+        this.$emit('showOrder')
       }
     }
   }

@@ -1,9 +1,12 @@
 <template>
   <v-app @scroll="toolbar">
     <app-header></app-header>
-    <toolbar></toolbar>
+    <app-toolbar @showOrder="showOrder"></app-toolbar>
     <app-main></app-main>
-    <app-footer></app-footer>
+    <v-dialog v-model="dialog" width="350">
+      <app-order @closeOrder="closeOrder"></app-order>
+    </v-dialog>
+    <app-footer @showOrder="showOrder"></app-footer>
   </v-app>
 </template>
 
@@ -12,16 +15,19 @@ import toolbar from './components/toolbar'
 import main from './components/main'
 import footer from './components/footer'
 import header from './components/header'
+import order from './components/order'
 
   export default {
     components: {
-      toolbar,
+      'app-toolbar': toolbar,
       'app-main': main,
       'app-footer': footer,
-      'app-header': header
+      'app-header': header,
+      'app-order': order
     },
     data () {
       return {
+        dialog: false
       }
     },
     methods: {
@@ -33,6 +39,12 @@ import header from './components/header'
         } else {
           toolbar.classList.remove('toolbar--fixed')
         }
+      },
+      showOrder () {
+        this.dialog = true
+      },
+      closeOrder () {
+        this.dialog = false
       }
     },
     created () {
