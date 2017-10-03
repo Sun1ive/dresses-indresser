@@ -25,12 +25,53 @@
         </v-layout>
       </v-container>
     </section>
-    <section class="desc"></section>
+    <section class="desc">
+      <v-container fluid>
+        <v-layout row wrap justify-center align-center>
+          <v-flex xs12 md6 class="text-xs-center">Описание:</v-flex>
+          <v-flex xs12 md6 class="text-xs-center">таблица размеров</v-flex>
+        </v-layout>
+      </v-container>
+    </section>
+    <section class="advantage">
+      <v-container fluid>
+        <v-layout justify-center align-center class="pt-4">
+          <h1>Преимущества:</h1>
+        </v-layout>
+        <v-layout row wrap justify-center align-center class="advLayout">
+          <v-flex xs12 md6 class="text-xs-center">
+            <v-icon x-large>directions_bus</v-icon>
+            <h2>Бесплатная доставка</h2>
+          </v-flex>
+          <v-flex xs12 md6 class="text-xs-center">
+            <v-icon x-large>check</v-icon>
+            <h2>Подходит под любую обувь</h2>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </section>
+    <section class="gallery">
+      <v-container fluid grid-list-lg>
+        <v-layout row wrap class="galleryLayout">
+          <v-flex xs12 md3 v-for="(item,i) in gallery" :key="i">
+            <v-card>
+              <v-card-media :src="item.url" height="350"></v-card-media>
+              <v-card-title>{{ item.title }}</v-card-title>
+              <v-card-actions>
+                <v-btn>Заказать</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </section>
+    <section class="aboutUs"></section>
   </main>
 </template>
 
 <script>
 import collection from './collection'
+import gallery from './gallery'
   export default {
     data() {
       return {
@@ -39,6 +80,9 @@ import collection from './collection'
     computed: {
       collection () {
         return collection
+      },
+      gallery () {
+        return gallery
       }
     }
   }
@@ -65,7 +109,23 @@ import collection from './collection'
   min-height: inherit
 }
 .desc {
-  min-height: 300px;
   border-bottom: 1px solid #333
+}
+.desc .container .layout {
+  min-height: 300px;
+}
+.advantage .container .advLayout {
+  min-height: 150px;
+  border-bottom: 1px solid #333
+}
+.galleryLayout {
+  max-width: 1100px;
+  margin: 0 auto !important;
+}
+.card__title {
+  justify-content: center;
+}
+.card__actions {
+  justify-content: center;
 }
 </style>
