@@ -20,7 +20,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-footer>InDresser &copy; {{ new Date().getFullYear() }}</v-footer>
+    <v-footer light>InDresser &copy; {{ new Date().getFullYear() }}</v-footer>
   </footer>
 </template>
 

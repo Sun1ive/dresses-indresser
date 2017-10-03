@@ -1,0 +1,48 @@
+.banner {
+  padding-top: 15px;
+  border-bottom: 1px solid #333;
+  min-height: 470px;
+}
+.preview {
+  max-width: 1100px;
+  margin: 0 auto !important;
+}
+.composition {
+  min-height: 250px;
+  border-bottom: 1px solid #333;
+}
+.composition .container {
+  min-height: inherit
+}
+.composition .container .layout {
+  min-height: inherit
+}
+.desc {
+  border-bottom: 1px solid #333
+}
+.desc .container .layout {
+  min-height: 300px;
+}
+.advantage .container .advLayout {
+  min-height: 150px;
+  border-bottom: 1px solid #333
+}
+.galleryLayout {
+  max-width: 1100px;
+  margin: 0 auto !important;
+}
+.card__title {
+  justify-content: center;
+}
+.card__actions {
+  justify-content: center;
+}
+.gallery {
+  border-bottom: 1px solid #333
+}
+.aboutUs {
+  border-bottom: 1px solid #333
+}
+.delivery {
+  border-bottom: 1px solid #333;
+}

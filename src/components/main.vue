@@ -65,11 +65,23 @@
         </v-layout>
       </v-container>
     </section>
+    <section class="delivery">
+      <v-container fluid>
+        <v-layout justify-center align-center row wrap>
+          <h1>Условия Доставки</h1>
+        </v-layout>
+        <v-layout row wrap justify-center align-center>
+          <v-flex xs12 sm6 class="text-xs-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit esse optio dolores nobis consectetur nisi, nemo beatae delectus quae, accusantium incidunt repudiandae nam nostrum fugiat odit ratione eligendi officiis voluptate!
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </section>
     <section class="aboutUs py-3">
       <v-layout justify-center row wrap align-center>
-        <v-flex xs12 class="text-xs-center">
+        <v-flex xs12 sm6 class="text-xs-center">
           <h1>О Нас</h1>
-          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
           ???
         </v-flex>
       </v-layout>
@@ -96,54 +108,4 @@ import gallery from './gallery'
   }
 </script>
 
-<style scoped>
-.banner {
-  padding-top: 15px;
-  border-bottom: 1px solid #333;
-  min-height: 470px;
-}
-.preview {
-  max-width: 1100px;
-  margin: 0 auto !important;
-}
-.composition {
-  min-height: 250px;
-  border-bottom: 1px solid #333;
-}
-.composition .container {
-  min-height: inherit
-}
-.composition .container .layout {
-  min-height: inherit
-}
-.desc {
-  border-bottom: 1px solid #333
-}
-.desc .container .layout {
-  min-height: 300px;
-}
-.advantage .container .advLayout {
-  min-height: 150px;
-  border-bottom: 1px solid #333
-}
-.galleryLayout {
-  max-width: 1100px;
-  margin: 0 auto !important;
-}
-.card__title {
-  justify-content: center;
-}
-.card__actions {
-  justify-content: center;
-}
-.gallery {
-  border-bottom: 1px solid #333
-}
-.text {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.aboutUs {
-  border-bottom: 1px solid #333
-}
-</style>
+<style src="./main.css" scoped></style>
