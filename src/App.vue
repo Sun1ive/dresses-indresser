@@ -1,8 +1,7 @@
 <template>
   <v-app>
-    <header>
-      <toolbar></toolbar>
-    </header>
+    <app-header></app-header>
+    <toolbar></toolbar>
     <app-main></app-main>
     <footer>
       <app-footer></app-footer>
@@ -14,12 +13,14 @@
 import toolbar from './components/toolbar'
 import main from './components/main'
 import footer from './components/footer'
+import header from './components/header'
 
   export default {
     components: {
       toolbar,
       'app-main': main,
-      'app-footer': footer
+      'app-footer': footer,
+      'app-header': header
     },
     data () {
       return {
@@ -35,6 +36,9 @@ a {
 }
 .container {
   padding: 0;
+}
+.toolbar--fixed + main {
+  padding-top: 0;
 }
 </style>
 

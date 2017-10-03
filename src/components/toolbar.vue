@@ -1,21 +1,26 @@
 <template>
-  <v-toolbar fixed>
-    <v-toolbar-title v-scroll-to="'.collection'">InDresser</v-toolbar-title>
+  <v-toolbar>
+    <v-toolbar-title v-scroll-to="''">InDresser</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
     <v-toolbar-items>
-      <v-btn flat>Cart?</v-btn>
+      <v-btn flat>Телефон</v-btn>
+      <v-btn flat v-scroll-to="">Состав</v-btn>
+      <v-btn flat>Описание</v-btn>
+      <v-btn flat v-scroll-to="">Преимущества</v-btn>
+      <v-btn flat>Галерея</v-btn>
+      <v-btn flat>О нас</v-btn>
+      <v-btn flat>Заказать</v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
+
 
 <script>
   export default {
     data() {
       return {
       }
-    },
-    methods: {
     }
   }
 </script>
