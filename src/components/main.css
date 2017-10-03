@@ -1,6 +1,5 @@
 .banner {
   padding-top: 15px;
-  border-bottom: 1px solid #333;
   min-height: 470px;
 }
 .preview {
@@ -9,7 +8,7 @@
 }
 .composition {
   min-height: 250px;
-  border-bottom: 1px solid #333;
+  background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%);
 }
 .composition .container {
   min-height: inherit
@@ -18,14 +17,15 @@
   min-height: inherit
 }
 .desc {
-  border-bottom: 1px solid #333
 }
 .desc .container .layout {
   min-height: 300px;
 }
+.advantage {
+  background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%);
+}
 .advantage .container .advLayout {
   min-height: 150px;
-  border-bottom: 1px solid #333
 }
 .galleryLayout {
   max-width: 1100px;
@@ -38,11 +38,33 @@
   justify-content: center;
 }
 .gallery {
-  border-bottom: 1px solid #333
 }
 .aboutUs {
-  border-bottom: 1px solid #333
+  background: linear-gradient(to bottom,rgba(208,179,192,1) 0%, rgba(255,221,235,1) 100%);
 }
 .delivery {
-  border-bottom: 1px solid #333;
+  background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%);
+}
+.card__media {
+  transition: .4s;
+  opacity: 1;
+  animation-duration: .6s;  
+}
+.card__media:hover {
+  animation-name: pulse;
+  animation-duration: .6s;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }

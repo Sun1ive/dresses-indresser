@@ -1,6 +1,6 @@
 <template>
   <v-toolbar>
-    <v-toolbar-title v-scroll-to="''">InDresser</v-toolbar-title>
+    <v-toolbar-title v-scroll-to="'.header'">InDresser</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
     <v-toolbar-items>

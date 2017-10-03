@@ -26,7 +26,6 @@ import header from './components/header'
     },
     methods: {
       toolbar () {
-        console.log(window.pageYOffset)
         let offset = window.pageYOffset
         let toolbar = document.querySelector('.toolbar')
         if (offset >= 115) {

@@ -12,9 +12,9 @@
           <v-btn flat>Заказать</v-btn>
         </v-flex>
         <v-flex xs12 sm6 class="text-xs-center">
-          <h3>Контакты?</h3>
-          <h3>Телефоны?</h3>
-          <h3>Какая то информация?</h3>
+          <v-btn flat><v-icon>call</v-icon>067-1112233</v-btn>
+          <v-btn flat><v-icon>call</v-icon>067-1112233</v-btn>
+          <div class="adress">Главный офис: вул. Николая Оводова, буд. 51</div>
         </v-flex>
       </v-layout>
     </v-container>

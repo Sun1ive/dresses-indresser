@@ -26,26 +26,28 @@
       </v-container>
     </section>
     <section class="desc">
-      <v-container fluid>
+      <v-parallax src="../../static/bgpara.jpg" height="500">
         <v-layout row wrap justify-center align-center>
-          <v-flex xs12 md6 class="text-xs-center">Описание:</v-flex>
-          <v-flex xs12 md6 class="text-xs-center">таблица размеров</v-flex>
+          <v-flex xs12 md5 class="black--text text-xs-center">
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed assumenda autem mollitia officia? Sequi, possimus a iure sint, quod quo quaerat laboriosam fuga, dolores nihil dolore! Eum facere obcaecati, nemo doloribus ipsa aperiam eius quisquam iure assumenda nihil voluptas quam sapiente, recusandae impedit fugit quo voluptate dolorum numquam? Eligendi itaque laborum sed pariatur tempore magni sequi, consequuntur maiores repellendus non!</h5>
+          </v-flex>
+          <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
         </v-layout>
-      </v-container>
+      </v-parallax>
     </section>
     <section class="advantage">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4">
-          <h2>Преимущества:</h2>
+          <h5>Преимущества:</h5>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md6 class="text-xs-center">
             <v-icon x-large>directions_bus</v-icon>
-            <h2>Бесплатная доставка</h2>
+            <h5>Бесплатная доставка</h5>
           </v-flex>
           <v-flex xs12 md6 class="text-xs-center">
             <v-icon x-large>check</v-icon>
-            <h2>Подходит под любую обувь</h2>
+            <h5>Подходит под любую обувь</h5>
           </v-flex>
         </v-layout>
       </v-container>
@@ -68,11 +70,12 @@
     <section class="delivery">
       <v-container fluid>
         <v-layout justify-center align-center row wrap>
-          <h2>Условия Доставки</h2>
+          <h5>Условия Доставки</h5>
         </v-layout>
         <v-layout row wrap justify-center align-center>
           <v-flex xs12 sm6 class="text-xs-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit esse optio dolores nobis consectetur nisi, nemo beatae delectus quae, accusantium incidunt repudiandae nam nostrum fugiat odit ratione eligendi officiis voluptate!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
           </v-flex>
         </v-layout>
       </v-container>
@@ -80,7 +83,8 @@
     <section class="aboutUs py-3">
       <v-layout justify-center row wrap align-center>
         <v-flex xs12 sm6 class="text-xs-center">
-          <h2>О Нас</h2>
+          <h5>О Нас</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
           ???
         </v-flex>
