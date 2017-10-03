@@ -40,5 +40,11 @@ a {
 .toolbar--fixed + main {
   padding-top: 0;
 }
+ul > li {
+  list-style-type: none;
+}
+ul {
+  padding: 0;
+}
 </style>
 

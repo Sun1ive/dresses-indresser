@@ -25,7 +25,4 @@
   justify-content: center;
   align-items: center;
 }
-.tt {
-  min-height: inherit
-}
 </style>
