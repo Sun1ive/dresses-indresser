@@ -36,7 +36,7 @@
     <section class="advantage">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4">
-          <h1>Преимущества:</h1>
+          <h2>Преимущества:</h2>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md6 class="text-xs-center">
@@ -68,7 +68,7 @@
     <section class="delivery">
       <v-container fluid>
         <v-layout justify-center align-center row wrap>
-          <h1>Условия Доставки</h1>
+          <h2>Условия Доставки</h2>
         </v-layout>
         <v-layout row wrap justify-center align-center>
           <v-flex xs12 sm6 class="text-xs-center">
@@ -80,7 +80,7 @@
     <section class="aboutUs py-3">
       <v-layout justify-center row wrap align-center>
         <v-flex xs12 sm6 class="text-xs-center">
-          <h1>О Нас</h1>
+          <h2>О Нас</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
           ???
         </v-flex>

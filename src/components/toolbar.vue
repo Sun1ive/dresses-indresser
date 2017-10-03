@@ -5,11 +5,11 @@
     <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
     <v-toolbar-items>
       <v-btn flat>Телефон</v-btn>
-      <v-btn flat v-scroll-to="">Состав</v-btn>
-      <v-btn flat>Описание</v-btn>
-      <v-btn flat v-scroll-to="">Преимущества</v-btn>
-      <v-btn flat>Галерея</v-btn>
-      <v-btn flat>О нас</v-btn>
+      <v-btn flat v-scroll-to="'.composition'">Состав</v-btn>
+      <v-btn flat v-scroll-to="'.desc'">Описание</v-btn>
+      <v-btn flat v-scroll-to="'.advantage'">Преимущества</v-btn>
+      <v-btn flat v-scroll-to="'.gallery'">Галерея</v-btn>
+      <v-btn flat v-scroll-to="'.aboutUs'">О нас</v-btn>
       <v-btn flat>Заказать</v-btn>
     </v-toolbar-items>
   </v-toolbar>

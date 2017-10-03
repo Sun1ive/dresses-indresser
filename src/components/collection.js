@@ -1,3 +1,5 @@
+// @flow
+
 const collection = [
   {
     title: 'Платье 01',

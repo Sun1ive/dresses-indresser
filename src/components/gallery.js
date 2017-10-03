@@ -1,4 +1,5 @@
 // @flow
+
 const gallery = [
   { title: 'Платье 001', url: '../../static/test.png' },
   { title: 'Платье 002', url: '../../static/test.png' },

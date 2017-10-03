@@ -3,15 +3,13 @@
     <v-container fluid>
       <v-layout row wrap justify-center align-center>
         <v-flex xs12 sm6 class="text-xs-center">
-          <ul>
-            <li><v-btn flat>Телефон</v-btn></li>
-            <li><v-btn flat>Состав</v-btn></li>
-            <li><v-btn flat>Описание</v-btn></li>
-            <li><v-btn flat>Преимущества</v-btn></li>
-            <li><v-btn flat>Галерея</v-btn></li>
-            <li><v-btn flat>О Нас</v-btn></li>
-            <li><v-btn flat>Заказать</v-btn></li>
-          </ul>
+          <v-btn flat>Телефон</v-btn>
+          <v-btn flat v-scroll-to="'.composition'">Состав</v-btn>
+          <v-btn flat v-scroll-to="'.desc'">Описание</v-btn>
+          <v-btn flat v-scroll-to="'.advantage'">Преимущества</v-btn>
+          <v-btn flat v-scroll-to="'.gallery'">Галерея</v-btn>
+          <v-btn flat v-scroll-to="'.aboutUs'">О нас</v-btn>
+          <v-btn flat>Заказать</v-btn>
         </v-flex>
         <v-flex xs12 sm6 class="text-xs-center">
           <h3>Контакты?</h3>
@@ -36,5 +34,8 @@
 <style scoped>
 .footer {
   justify-content: center;
+}
+.container .layout .flex {
+  min-height: inherit
 }
 </style>
