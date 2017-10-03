@@ -65,7 +65,15 @@
         </v-layout>
       </v-container>
     </section>
-    <section class="aboutUs"></section>
+    <section class="aboutUs py-3">
+      <v-layout justify-center row wrap align-center>
+        <v-flex xs12 class="text-xs-center">
+          <h1>О Нас</h1>
+          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
+          ???
+        </v-flex>
+      </v-layout>
+    </section>
   </main>
 </template>
 
@@ -127,5 +135,15 @@ import gallery from './gallery'
 }
 .card__actions {
   justify-content: center;
+}
+.gallery {
+  border-bottom: 1px solid #333
+}
+.text {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.aboutUs {
+  border-bottom: 1px solid #333
 }
 </style>

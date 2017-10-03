@@ -3,9 +3,7 @@
     <app-header></app-header>
     <toolbar></toolbar>
     <app-main></app-main>
-    <footer>
-      <app-footer></app-footer>
-    </footer>
+    <app-footer></app-footer>
   </v-app>
 </template>
 
