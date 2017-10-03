@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app @scroll="toolbar">
     <app-header></app-header>
     <toolbar></toolbar>
     <app-main></app-main>
@@ -23,6 +23,24 @@ import header from './components/header'
     data () {
       return {
       }
+    },
+    methods: {
+      toolbar () {
+        console.log(window.pageYOffset)
+        let offset = window.pageYOffset
+        let toolbar = document.querySelector('.toolbar')
+        if (offset >= 115) {
+          toolbar.classList.add('toolbar--fixed')
+        } else {
+          toolbar.classList.remove('toolbar--fixed')
+        }
+      }
+    },
+    created () {
+      window.addEventListener('scroll', this.toolbar)
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.toolbar)
     }
   }
 </script>
