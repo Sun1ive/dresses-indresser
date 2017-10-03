@@ -1,6 +1,6 @@
 <template>
   <v-toolbar>
-    <v-toolbar-title v-scroll-to="'.header'">InDresser</v-toolbar-title>
+    <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="../../static/logo1.png" alt="logo"></v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
     <v-toolbar-items>
@@ -26,12 +26,7 @@
 </script>
 
 <style scoped>
-.toolbar__title {
+.logo {
   cursor: pointer;
-  font-weight: bold;
-  font-size: 22px;
-}
-.toolbar {
-  font-family: 'Cinzel',Arial, serif;
 }
 </style>
