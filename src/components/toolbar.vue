@@ -28,8 +28,10 @@
 <style scoped>
 .toolbar__title {
   cursor: pointer;
+  font-weight: bold;
+  font-size: 22px;
 }
 .toolbar {
-  /* background-color: rgba(255,255,255, 0.4) */
+  font-family: 'Cinzel',Arial, serif;
 }
 </style>

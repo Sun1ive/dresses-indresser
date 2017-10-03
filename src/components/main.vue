@@ -14,7 +14,7 @@
     <section class="composition">
       <v-container fluid>
         <v-layout justify-center align-center>
-          <v-flex xs12 md6 class="text-xs-center">Состав</v-flex>
+          <v-flex xs12 md6 class="text-xs-center">InDresser IND</v-flex>
           <v-flex xs12 md6 class="text-xs-center">
             <ul>
               <li>Вискоза 40%</li>

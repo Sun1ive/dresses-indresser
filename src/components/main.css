@@ -1,3 +1,4 @@
+
 .banner {
   padding-top: 15px;
   min-height: 470px;
@@ -8,7 +9,7 @@
 }
 .composition {
   min-height: 250px;
-  background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%);
+/*   background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
 }
 .composition .container {
   min-height: inherit
@@ -22,7 +23,7 @@
   min-height: 300px;
 }
 .advantage {
-  background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%);
+/*   background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
 }
 .advantage .container .advLayout {
   min-height: 150px;
@@ -40,10 +41,10 @@
 .gallery {
 }
 .aboutUs {
-  background: linear-gradient(to bottom,rgba(208,179,192,1) 0%, rgba(255,221,235,1) 100%);
+  /* background: linear-gradient(to bottom,rgba(208,179,192,1) 0%, rgba(255,221,235,1) 100%); */
 }
 .delivery {
-  background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%);
+  /* background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
 }
 .card__media {
   transition: .4s;
