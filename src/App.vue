@@ -3,7 +3,7 @@
     <app-header></app-header>
     <app-toolbar @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
-    <v-dialog v-model="dialog" width="350">
+    <v-dialog v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
     </v-dialog>
     <app-footer @showOrder="showOrder"></app-footer>

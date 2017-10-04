@@ -1,22 +1,8 @@
 .container {
   padding: 0;
 }
-.banner {
-  min-height: 470px;
-}
-.preview {
-  max-width: 1100px;
-  margin: 0 auto !important;
-}
-.composition {
-  min-height: 250px;
-/*   background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
-}
-.composition .container {
-  min-height: inherit
-}
 .composition .container .layout {
-  min-height: inherit
+  min-height: 250px;
 }
 .desc .container .layout {
   min-height: 300px;
@@ -34,24 +20,18 @@
   padding: 0 15px;
 }
 .aboutUs {
-  /* background: linear-gradient(to bottom,rgba(208,179,192,1) 0%, rgba(255,221,235,1) 100%); */
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.aboutUs .container .aboutContainer {
+  min-height: 200px;
 }
 .delivery {
-  /* background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
-}
-.bannerImg {
-  transition: .4s;
-  opacity: 1;
-  animation-duration: .6s;  
-}
-.bannerImg:hover {
-  animation-name: pulse;
-  animation-duration: .6s;
 }
 .priceBox {
   font-size: 28px
 }
 .compText {
-  color: #333;
+  color: rgb(49, 49, 49);
   text-shadow: 2px 2px 1px #fff
 }
