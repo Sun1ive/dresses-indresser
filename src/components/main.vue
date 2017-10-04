@@ -59,7 +59,7 @@
               <v-card-media :src="item.url" height="350"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
-                <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
+                <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
                 <v-btn flat @click.stop="checkPrice($event, item)">Узнать цену</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
@@ -115,7 +115,7 @@
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
           <v-card>
-            <v-carousel hide-controls>
+            <v-carousel>
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
@@ -142,7 +142,7 @@ import gallery from './gallery'
           url: '',
           price: null
         },
-        slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
+        slider: [],
         price: '',
         showPrice: false
       }
@@ -158,6 +158,9 @@ import gallery from './gallery'
         this.collectionItem.title = item.title
         this.collectionItem.url = item.url
         this.collectionItem.price = item.price
+        this.slider = item.slider
+        console.log(this.slider)
+        /* this.popup = true */
         this.popup = true
       },
       checkPrice ($event, item) {

@@ -21,9 +21,6 @@
 .desc .container .layout {
   min-height: 300px;
 }
-.advText {
-  text-transform: uppercase;
-}
 .advantage .container .advLayout {
   min-height: 150px;
 }

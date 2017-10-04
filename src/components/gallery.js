@@ -4,13 +4,15 @@ const gallery = [
   {
     title: 'Платье 001',
     url: '../../static/test.png',
-    slider: [
-    { src: '../../static/gallery/1.jpg' },
-    { src: '../../static/gallery/2.jpg' },
-    { src: '../../static/gallery/3.jpg' }
-    ],
+    slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
     price: 123,
   },
+  {
+    title: 'Платье 002',
+    url: '../../static/test.png',
+    slider: ['/static/gallery/4.jpg','/static/gallery/5.jpg','/static/gallery/6.jpg'],
+    price: 321,
+  }
 ];
 
 export default gallery;
