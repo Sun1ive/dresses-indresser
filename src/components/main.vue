@@ -50,17 +50,17 @@
     </section>
     <section class="gallery">
       <v-container fluid grid-list-md>
-        <v-layout justify-center align-center>
-          <h3>Коллекция</h3>
+        <v-layout justify-center align-center class="pt-4">
+          <h3 class="mb-0 collectionH">Коллекция</h3>
         </v-layout>
-        <v-layout row wrap class="galleryLayout">
+        <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 md3 v-for="(item,i) in gallery" :key="i">
             <v-card>
               <v-card-media :src="item.url" height="350"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
                 <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
-                <v-btn flat @click.stop="checkPrice($event, item)">Узнать цену</v-btn>
+                <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -69,7 +69,7 @@
         <v-layout>
           <v-dialog v-model="showPrice">
             <v-card>
-              <v-card-title class="priceBox">{{ price }}<v-btn flat @click.stop="showOrder(item)">Заказать</v-btn></v-card-title>
+              <v-card-title class="priceBox">{{ collectionItem.price }}<v-btn flat @click.stop="showOrder(item)">Заказать</v-btn></v-card-title>
               <v-card-actions>
                 <v-btn flat @click.stop="showPrice = false">Закрыть</v-btn>
               </v-card-actions>
@@ -101,21 +101,29 @@
         </v-layout>
       </v-container>
     </section>
-    <section class="aboutUs py-3">
+    <section class="aboutUs py-5">
+     <v-container>
       <v-layout justify-center row wrap align-center>
-        <v-flex xs12 sm6 class="text-xs-center">
-          <h5>О Нас</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere dolorem aspernatur, tempore nobis itaque nostrum corrupti neque, fugiat quod assumenda sed magni minima, deleniti dolores! Sapiente fugit sed perspiciatis, pariatur officia sint illum dolorum incidunt facere culpa id quasi adipisci voluptatem hic voluptates neque, error dicta nihil, et architecto?</p>
-          ???
+        <h4 style="text-transform: uppercase; mb-0">О нас</h4>
+      </v-layout>
+      <v-layout class="aboutContainer" justify-center row wrap align-center>
+        <v-flex xs12 sm4 class="text-xs-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
+        </v-flex>
+        <v-flex xs12 sm4 class="text-xs-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
+        </v-flex>
+        <v-flex xs12 sm4 class="text-xs-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
         </v-flex>
       </v-layout>
+      </v-container>
     </section>
     <section class="popup">
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
           <v-card>
-            <v-carousel>
+            <v-carousel hide-controls>
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
@@ -131,7 +139,6 @@
 </template>
 
 <script>
-import collection from './collection'
 import gallery from './gallery'
   export default {
     data() {
@@ -142,8 +149,8 @@ import gallery from './gallery'
           url: '',
           price: null
         },
-        slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
-        price: '',
+        // slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
+        slider: ['','',''],
         showPrice: false
       }
     },
@@ -160,23 +167,17 @@ import gallery from './gallery'
         this.collectionItem.price = item.price
         this.slider = item.slider
         console.log(this.slider)
-        /* this.popup = true */
         this.popup = true
       },
-      checkPrice ($event, item) {
-        this.price = `${item.price} грн`
-        this.x = $event.clientX - 60
-        this.y = $event.clientY - 30
+      checkPrice (item) {
+        this.collectionItem.price = `${item.price} грн`
         this.showPrice = true
       }
     },
     computed: {
-      collection () {
-        return collection
-      },
       gallery () {
         return gallery
-      },
+      }
     }
   }
 </script>

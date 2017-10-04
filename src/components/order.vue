@@ -1,11 +1,15 @@
 <template>
   <v-container>
-    <v-form @submit.prevent="submitOrder">
+    <v-form @submit.prevent="submitOrder" id="form">
       <v-text-field label="Имя" v-model="userData.name"></v-text-field>
       <v-text-field label="Телефон" v-model="userData.phone"></v-text-field>
       <v-text-field label="e-mail" v-model="userData.email"></v-text-field>
-      <v-btn class="red darken-2 white--text" type="submit">Оформить заказ</v-btn>
-      <v-btn @click="closeOrder">Закрыть</v-btn>
+      <v-checkbox label="Выбрать время?" v-model="pickTime"></v-checkbox>
+      <v-flex xs12 v-show="pickTime">
+        <v-time-picker v-model="userData.hours" format="24hr"></v-time-picker>
+      </v-flex>
+      <v-btn class="red darken-2 white--text ml-0" type="submit">Оформить заказ</v-btn>
+      <v-btn @click="closeOrder" class="white--text grey darken-4">Закрыть</v-btn>
     </v-form>
   </v-container>
 </template>
@@ -21,8 +25,11 @@ export default {
           name: '',
           phone: null,
           email: '',
-          orderedItem: []
-        }
+          orderedItem: [],
+          day: null,
+          hours: null
+        },
+        pickTime: false,
       }
     },
     methods: {
@@ -52,5 +59,8 @@ export default {
   background-color: #fff;
   min-height: 350px;
   min-width: 350px;
+}
+#form {
+  padding: 15px 45px;
 }
 </style>
