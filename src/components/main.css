@@ -28,10 +28,6 @@
 .advantage .container .advLayout {
   min-height: 150px;
 }
-.galleryLayout {
-  max-width: 1100px;
-  margin: 0 auto !important;
-}
 .card__title {
   justify-content: center;
 }

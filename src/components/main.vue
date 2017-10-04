@@ -53,15 +53,14 @@
       </v-container>
     </section>
     <section class="gallery">
-      <v-container fluid grid-list-lg>
+      <v-container fluid grid-list-md>
         <v-layout row wrap class="galleryLayout">
           <v-flex xs12 md3 v-for="(item,i) in gallery" :key="i">
             <v-card>
               <v-card-media :src="item.url" height="350"></v-card-media>
-              <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
-                <v-btn @click.stop="popup = !popup">Посмотреть</v-btn>
-                <v-btn @click.stop="showOrder">Заказать</v-btn>
+                <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
+                <v-btn flat @click.stop="showOrder">Заказать</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -93,11 +92,10 @@
     </section>
     <section class="popup">
       <v-layout>
-        <v-dialog v-model="popup">
+        <v-dialog v-model="popup" persistent width="500">
           <v-card>
-            <v-card-media></v-card-media>
-            <v-card-title>Hello World</v-card-title>
-            <v-card-text>Lorem ipsum dolor sit amet.</v-card-text>
+            <v-card-media height="650" :src="collectionItem.url"></v-card-media>
+            <v-card-title>{{ collectionItem.title }}</v-card-title>
             <v-card-actions>
               <v-btn @click.stop="popup = false">Ок</v-btn>
               <v-btn @click.stop="popup = false">Закрыть</v-btn>
@@ -115,12 +113,22 @@ import gallery from './gallery'
   export default {
     data() {
       return {
-        popup: false
+        popup: false,
+        collectionItem: {
+          title: '',
+          url: ''
+        }
       }
     },
     methods: {
       showOrder () {
         this.$emit('showOrder')
+      },
+      showItem (item) {
+        console.log(item)
+        this.collectionItem.title = item.title
+        this.collectionItem.url = item.url
+        this.popup = true
       }
     },
     computed: {
