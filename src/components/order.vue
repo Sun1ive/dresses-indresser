@@ -11,7 +11,9 @@
 </template>
 
 <script>
-  export default {
+import axios from 'axios'
+
+export default {
     props: ['item'],
     data() {
       return {
@@ -25,8 +27,17 @@
     },
     methods: {
       submitOrder () {
-        this.userData.orderedItem.push(this.item)
+        this.userData.orderedItem = this.item
         console.log(this.userData)
+        axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
+          .then(r => console.log(r))
+          .catch(e => console.log(e))
+        this.userData = {
+          name: null,
+          phone: null,
+          email: null,
+          orderedItem: []
+        }
         this.$emit('closeOrder')
       },
       closeOrder () {

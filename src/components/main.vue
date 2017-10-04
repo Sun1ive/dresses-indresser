@@ -106,7 +106,7 @@
             <v-card-media height="650" :src="collectionItem.url"></v-card-media>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
             <v-card-actions>
-              <v-btn @click.stop="showOrder">Оформить заказ</v-btn>
+              <v-btn @click.stop="showOrder(collectionItem)">Оформить заказ</v-btn>
               <v-btn @click.stop="popup = false">Закрыть</v-btn>
             </v-card-actions>
           </v-card>
@@ -125,7 +125,8 @@ import gallery from './gallery'
         popup: false,
         collectionItem: {
           title: '',
-          url: ''
+          url: '',
+          price: null
         },
         price: '',
         showPrice: false,
@@ -141,9 +142,9 @@ import gallery from './gallery'
         this.$emit('showOrder', item)
       },
       showItem (item) {
-        console.log(item)
         this.collectionItem.title = item.title
         this.collectionItem.url = item.url
+        this.collectionItem.price = item.price
         this.popup = true
       },
       checkPrice ($event, item) {

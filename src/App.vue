@@ -42,7 +42,7 @@ import order from './components/order'
         }
       },
       showOrder (item) {
-        this.item.push(item)
+        this.item = item
         console.log(this.item);
         this.dialog = true
       },
