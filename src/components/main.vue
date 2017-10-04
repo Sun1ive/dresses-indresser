@@ -79,7 +79,7 @@
       </v-container>
     </section>
     <section class="desc">
-      <v-parallax src="../../static/bgpara.jpg" height="500">
+      <v-parallax src="../../static/para22.jpg" height="500">
         <v-layout row wrap justify-center align-center>
           <v-flex xs12 md5 class="black--text text-xs-center">
             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed assumenda autem mollitia officia? Sequi, possimus a iure sint, quod quo quaerat laboriosam fuga, dolores nihil dolore! Eum facere obcaecati, nemo doloribus ipsa aperiam eius quisquam iure assumenda nihil voluptas quam sapiente, recusandae impedit fugit quo voluptate dolorum numquam? Eligendi itaque laborum sed pariatur tempore magni sequi, consequuntur maiores repellendus non!</h5>
@@ -142,7 +142,7 @@ import gallery from './gallery'
           url: '',
           price: null
         },
-        slider: [],
+        slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
         price: '',
         showPrice: false
       }
