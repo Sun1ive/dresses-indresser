@@ -14,7 +14,7 @@
     <section class="advantage">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4">
-          <h5>Преимущества:</h5>
+          <h4 style="text-transform: uppercase; font-weight: bold;">Преимущества</h4>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md3 class="text-xs-center">
@@ -33,7 +33,7 @@
       </v-container>
     </section>
     <section class="composition">
-      <v-parallax src="../../static/bgpara.jpg" height="300">
+      <v-parallax src="../../static/234.jpg" height="300">
         <v-container fluid>
           <v-layout justify-center align-center style="height: 300px">
             <v-flex xs12 md6 class="text-xs-center compText" display-2>Состав</v-flex>
@@ -115,7 +115,9 @@
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
           <v-card>
-            <v-card-media height="650" :src="collectionItem.url"></v-card-media>
+            <v-carousel hide-controls>
+              <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
+            </v-carousel>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
             <v-card-actions>
               <v-btn @click.stop="showOrder(collectionItem)">Оформить заказ</v-btn>
@@ -140,6 +142,7 @@ import gallery from './gallery'
           url: '',
           price: null
         },
+        slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
         price: '',
         showPrice: false
       }
@@ -170,7 +173,7 @@ import gallery from './gallery'
       },
       gallery () {
         return gallery
-      }
+      },
     }
   }
 </script>
