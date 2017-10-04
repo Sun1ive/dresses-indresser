@@ -46,12 +46,12 @@
 .delivery {
   /* background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
 }
-.card__media {
+.bannerImg {
   transition: .4s;
   opacity: 1;
   animation-duration: .6s;  
 }
-.card__media:hover {
+.bannerImg:hover {
   animation-name: pulse;
   animation-duration: .6s;
 }

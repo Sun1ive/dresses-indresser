@@ -2,7 +2,7 @@
   <v-app @scroll="toolbar">
     <app-header></app-header>
     <app-toolbar @showOrder="showOrder"></app-toolbar>
-    <app-main></app-main>
+    <app-main @showOrder="showOrder"></app-main>
     <v-dialog v-model="dialog" width="350">
       <app-order @closeOrder="closeOrder"></app-order>
     </v-dialog>

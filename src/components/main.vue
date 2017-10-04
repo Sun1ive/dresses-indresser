@@ -5,7 +5,7 @@
         <v-layout class="preview" row wrap>
           <v-flex xs12 md3 v-for="(item,i) in collection" :key="i">
             <v-card>
-              <v-card-media :src="item.url" height="370"></v-card-media>
+              <v-card-media :src="item.url" height="370"  class="bannerImg"></v-card-media>
             </v-card>
           </v-flex>
         </v-layout>
@@ -60,7 +60,8 @@
               <v-card-media :src="item.url" height="350"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
-                <v-btn>Заказать</v-btn>
+                <v-btn @click.stop="popup = !popup">Посмотреть</v-btn>
+                <v-btn @click.stop="showOrder">Заказать</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -90,6 +91,21 @@
         </v-flex>
       </v-layout>
     </section>
+    <section class="popup">
+      <v-layout>
+        <v-dialog v-model="popup">
+          <v-card>
+            <v-card-media></v-card-media>
+            <v-card-title>Hello World</v-card-title>
+            <v-card-text>Lorem ipsum dolor sit amet.</v-card-text>
+            <v-card-actions>
+              <v-btn @click.stop="popup = false">Ок</v-btn>
+              <v-btn @click.stop="popup = false">Закрыть</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </v-layout>
+    </section>
   </main>
 </template>
 
@@ -99,6 +115,12 @@ import gallery from './gallery'
   export default {
     data() {
       return {
+        popup: false
+      }
+    },
+    methods: {
+      showOrder () {
+        this.$emit('showOrder')
       }
     },
     computed: {
