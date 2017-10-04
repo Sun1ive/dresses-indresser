@@ -1,6 +1,7 @@
-
+.container {
+  padding: 0;
+}
 .banner {
-  padding-top: 15px;
   min-height: 470px;
 }
 .preview {
@@ -23,6 +24,7 @@
   min-height: 300px;
 }
 .advantage {
+  background: url('../../static/wite.png') center center repeat
 /*   background: linear-gradient(to bottom, rgba(255,221,235,1) 0%,rgba(208,179,192,1) 100%); */
 }
 .advantage .container .advLayout {
@@ -51,17 +53,9 @@
   animation-name: pulse;
   animation-duration: .6s;
 }
-
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+.priceBox {
+  font-size: 28px
+}
+.compText {
+  text-shadow: 2px 2px 1px #333
 }

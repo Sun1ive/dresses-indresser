@@ -1,38 +1,14 @@
 <template>
   <main>
-    <section class="banner">
-      <v-container fluid grid-list-lg>
-        <v-layout class="preview" row wrap>
-          <v-flex xs12 md3 v-for="(item,i) in collection" :key="i">
-            <v-card>
-              <v-card-media :src="item.url" height="370"  class="bannerImg"></v-card-media>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </section>
-    <section class="composition">
-      <v-container fluid>
-        <v-layout justify-center align-center>
-          <v-flex xs12 md6 class="text-xs-center">InDresser IND</v-flex>
-          <v-flex xs12 md6 class="text-xs-center">
-            <ul>
-              <li>Вискоза 40%</li>
-              <li>Полиэстер 55%</li>
-              <li>Эластан 5%</li>
-            </ul>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </section>
-    <section class="desc">
-      <v-parallax src="../../static/bgpara.jpg" height="500">
-        <v-layout row wrap justify-center align-center>
-          <v-flex xs12 md5 class="black--text text-xs-center">
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed assumenda autem mollitia officia? Sequi, possimus a iure sint, quod quo quaerat laboriosam fuga, dolores nihil dolore! Eum facere obcaecati, nemo doloribus ipsa aperiam eius quisquam iure assumenda nihil voluptas quam sapiente, recusandae impedit fugit quo voluptate dolorum numquam? Eligendi itaque laborum sed pariatur tempore magni sequi, consequuntur maiores repellendus non!</h5>
-          </v-flex>
-          <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
-        </v-layout>
+    <section class="banner mt-5">
+      <v-parallax src="../../static/234.jpg" height="600">
+        <v-container fluid>
+          <v-layout row wrap align-center justify-center style="height: 600px">
+            <v-flex xs12>
+              <img style="width: 100%" src="../../static/bgparafirst.png" alt="banner">
+            </v-flex>
+          </v-layout>
+        </v-container>    
       </v-parallax>
     </section>
     <section class="advantage">
@@ -41,19 +17,42 @@
           <h5>Преимущества:</h5>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
-          <v-flex xs12 md6 class="text-xs-center">
-            <v-icon x-large>directions_bus</v-icon>
-            <h5>Бесплатная доставка</h5>
+          <v-flex xs12 md3 class="text-xs-center">
+            <v-icon x-large class="red--text">color_lens</v-icon>
+            <h5>Дизайнерская одежда</h5>
           </v-flex>
-          <v-flex xs12 md6 class="text-xs-center">
-            <v-icon x-large>check</v-icon>
+          <v-flex xs12 md3 class="text-xs-center">
+            <v-icon x-large class="red--text">directions_bus</v-icon>
+            <h5>Быстрая бесплатная доставка</h5>
+          </v-flex>
+          <v-flex xs12 md3 class="text-xs-center">
+            <v-icon x-large class="red--text">check</v-icon>
             <h5>Подходит под любую обувь</h5>
           </v-flex>
         </v-layout>
       </v-container>
     </section>
+    <section class="composition">
+      <v-parallax src="../../static/bgpara.jpg" height="300">
+        <v-container fluid>
+          <v-layout justify-center align-center style="height: 300px">
+            <v-flex xs12 md6 class="text-xs-center compText" display-2>Состав</v-flex>
+            <v-flex xs12 md6 class="text-xs-center compText" display-2>
+              <ul>
+                <li>Вискоза 40%</li>
+                <li>Полиэстер 55%</li>
+                <li>Эластан 5%</li>
+              </ul>
+            </v-flex>
+          </v-layout>
+        </v-container>      
+      </v-parallax>
+    </section>
     <section class="gallery">
       <v-container fluid grid-list-md>
+        <v-layout justify-center align-center>
+          <h3>Коллекция</h3>
+        </v-layout>
         <v-layout row wrap class="galleryLayout">
           <v-flex xs12 md3 v-for="(item,i) in gallery" :key="i">
             <v-card>
@@ -66,15 +65,28 @@
               </v-card-actions>
             </v-card>
           </v-flex>
-          <v-menu min-width="150" offset-y :nudge-width="nudge" lazy v-model="showPrice" position-absolutely :position-x="x" :position-y="y">
-            <v-list>
-              <v-list-tile>
-                <v-list-tile-title class="text-xs-center">{{ price }}</v-list-tile-title>
-              </v-list-tile>
-            </v-list>
-          </v-menu>
+        </v-layout>
+        <v-layout>
+          <v-dialog v-model="showPrice">
+            <v-card>
+              <v-card-title class="priceBox">{{ price }}<v-btn flat @click.stop="showOrder(item)">Заказать</v-btn></v-card-title>
+              <v-card-actions>
+                <v-btn flat @click.stop="showPrice = false">Закрыть</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-layout>
       </v-container>
+    </section>
+    <section class="desc">
+      <v-parallax src="../../static/bgpara.jpg" height="500">
+        <v-layout row wrap justify-center align-center>
+          <v-flex xs12 md5 class="black--text text-xs-center">
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed assumenda autem mollitia officia? Sequi, possimus a iure sint, quod quo quaerat laboriosam fuga, dolores nihil dolore! Eum facere obcaecati, nemo doloribus ipsa aperiam eius quisquam iure assumenda nihil voluptas quam sapiente, recusandae impedit fugit quo voluptate dolorum numquam? Eligendi itaque laborum sed pariatur tempore magni sequi, consequuntur maiores repellendus non!</h5>
+          </v-flex>
+          <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
+        </v-layout>
+      </v-parallax>
     </section>
     <section class="delivery">
       <v-container fluid>
@@ -129,16 +141,14 @@ import gallery from './gallery'
           price: null
         },
         price: '',
-        showPrice: false,
-        x: 0,
-        y: 0,
-        nudge: 200
+        showPrice: false
       }
     },
     methods: {
       showOrder (item) {
         console.log(item);
         this.popup = false
+        this.showPrice = false
         this.$emit('showOrder', item)
       },
       showItem (item) {
