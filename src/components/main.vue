@@ -58,8 +58,10 @@
           <v-flex xs12 md3 v-for="(item,i) in gallery" :key="i">
             <v-card>
               <v-card-media :src="item.url" height="350"></v-card-media>
+              <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
                 <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
+                <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn>
                 <v-btn flat @click.stop="showOrder">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -97,7 +99,7 @@
             <v-card-media height="650" :src="collectionItem.url"></v-card-media>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
             <v-card-actions>
-              <v-btn @click.stop="popup = false">Ок</v-btn>
+              <v-btn @click.stop="popup = false">Оформить заказ</v-btn>
               <v-btn @click.stop="popup = false">Закрыть</v-btn>
             </v-card-actions>
           </v-card>
@@ -117,7 +119,8 @@ import gallery from './gallery'
         collectionItem: {
           title: '',
           url: ''
-        }
+        },
+        price: ''
       }
     },
     methods: {
@@ -129,6 +132,9 @@ import gallery from './gallery'
         this.collectionItem.title = item.title
         this.collectionItem.url = item.url
         this.popup = true
+      },
+      checkPrice (item) {
+        this.price = `${item.price} грн` 
       }
     },
     computed: {

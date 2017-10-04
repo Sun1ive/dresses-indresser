@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-form @submit.prevent="submitOrder">
-      <v-text-field v-model="userData.name"></v-text-field>
-      <v-text-field v-model="userData.phone"></v-text-field>
-      <v-text-field v-model="userData.email"></v-text-field>
-      <v-btn type="submit">Заказать</v-btn>
+      <v-text-field label="Имя" required v-model="userData.name"></v-text-field>
+      <v-text-field label="Телефон" required v-model="userData.phone"></v-text-field>
+      <v-text-field label="e-mail" v-model="userData.email"></v-text-field>
+      <v-btn class="red darken-2 white--text" type="submit">Оформить заказ</v-btn>
       <v-btn @click="closeOrder">Закрыть</v-btn>
     </v-form>
   </v-container>
@@ -24,7 +24,7 @@
     },
     methods: {
       submitOrder () {
-        console.log('Submitted')
+        console.log(this.userData)
         this.$emit('closeOrder')
       },
       closeOrder () {
