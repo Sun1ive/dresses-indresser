@@ -61,11 +61,18 @@
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
                 <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
-                <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn>
-                <v-btn flat @click.stop="showOrder">Заказать</v-btn>
+                <v-btn flat @click.stop="checkPrice($event, item)">Узнать цену</v-btn>
+                <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
+          <v-menu min-width="150" offset-y :nudge-width="nudge" lazy v-model="showPrice" position-absolutely :position-x="x" :position-y="y">
+            <v-list>
+              <v-list-tile>
+                <v-list-tile-title class="text-xs-center">{{ price }}</v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu>
         </v-layout>
       </v-container>
     </section>
@@ -99,7 +106,7 @@
             <v-card-media height="650" :src="collectionItem.url"></v-card-media>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
             <v-card-actions>
-              <v-btn @click.stop="popup = false">Оформить заказ</v-btn>
+              <v-btn @click.stop="showOrder">Оформить заказ</v-btn>
               <v-btn @click.stop="popup = false">Закрыть</v-btn>
             </v-card-actions>
           </v-card>
@@ -120,12 +127,18 @@ import gallery from './gallery'
           title: '',
           url: ''
         },
-        price: ''
+        price: '',
+        showPrice: false,
+        x: 0,
+        y: 0,
+        nudge: 200
       }
     },
     methods: {
-      showOrder () {
-        this.$emit('showOrder')
+      showOrder (item) {
+        console.log(item);
+        this.popup = false
+        this.$emit('showOrder', item)
       },
       showItem (item) {
         console.log(item)
@@ -133,8 +146,11 @@ import gallery from './gallery'
         this.collectionItem.url = item.url
         this.popup = true
       },
-      checkPrice (item) {
-        this.price = `${item.price} грн` 
+      checkPrice ($event, item) {
+        this.price = `${item.price} грн`
+        this.x = $event.clientX - 60
+        this.y = $event.clientY - 30
+        this.showPrice = true
       }
     },
     computed: {

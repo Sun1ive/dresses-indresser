@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-form @submit.prevent="submitOrder">
-      <v-text-field label="Имя" required v-model="userData.name"></v-text-field>
-      <v-text-field label="Телефон" required v-model="userData.phone"></v-text-field>
+      <v-text-field label="Имя" v-model="userData.name"></v-text-field>
+      <v-text-field label="Телефон" v-model="userData.phone"></v-text-field>
       <v-text-field label="e-mail" v-model="userData.email"></v-text-field>
       <v-btn class="red darken-2 white--text" type="submit">Оформить заказ</v-btn>
       <v-btn @click="closeOrder">Закрыть</v-btn>
@@ -12,6 +12,7 @@
 
 <script>
   export default {
+    props: ['item'],
     data() {
       return {
         userData: {
@@ -24,6 +25,7 @@
     },
     methods: {
       submitOrder () {
+        this.userData.orderedItem.push(this.item)
         console.log(this.userData)
         this.$emit('closeOrder')
       },

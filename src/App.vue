@@ -4,7 +4,7 @@
     <app-toolbar @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
     <v-dialog v-model="dialog" width="350">
-      <app-order @closeOrder="closeOrder"></app-order>
+      <app-order :item="item" @closeOrder="closeOrder"></app-order>
     </v-dialog>
     <app-footer @showOrder="showOrder"></app-footer>
   </v-app>
@@ -27,7 +27,8 @@ import order from './components/order'
     },
     data () {
       return {
-        dialog: false
+        dialog: false,
+        item: []
       }
     },
     methods: {
@@ -40,7 +41,9 @@ import order from './components/order'
           toolbar.classList.remove('toolbar--fixed')
         }
       },
-      showOrder () {
+      showOrder (item) {
+        this.item.push(item)
+        console.log(this.item);
         this.dialog = true
       },
       closeOrder () {
@@ -72,6 +75,9 @@ ul > li {
 }
 ul {
   padding: 0;
+}
+.list {
+  padding: 0
 }
 </style>
 
