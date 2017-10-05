@@ -1,11 +1,14 @@
 <template>
-  <header>
-    <div class="header">
-      <v-flex xs6 class="text-xs-right">
-        <v-icon class="mr-3">contact_mail</v-icon>info@indresser.com</v-flex>
-      <v-flex xs6 class="text-xs-right">
-        <v-icon class="mr-3">contact_phone</v-icon>513-12-12</v-flex>
-    </div>
+  <header class="header">
+    <v-container fluid>
+      <v-layout row wrap>
+        <v-flex xs12 class="test pr-4">
+          <v-icon medium class="red--text mx-2">call</v-icon><div>333-333-333</div>
+          <v-icon medium class="red--text mx-2">call</v-icon><div>333-333-333</div>
+          <v-icon medium class="red--text mx-2">email</v-icon><div>info@indresser.com</div>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </header>
 </template>
 
@@ -19,10 +22,20 @@
 </script>
 
 <style scoped>
-.header {
-  height: 50px;
+@font-face {
+  font-family: "Geometric";
+  src: url('/fonts/geometric.woff2') format('woff2');
+}
+.test {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.header {
+  background-color: #333;
 }
 </style>

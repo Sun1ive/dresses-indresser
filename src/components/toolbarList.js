@@ -2,11 +2,11 @@
 
 const toolbarList = [
   { title: 'Телефон', scroll: '.banner', icon: 'call' },
-  { title: 'Состав', scroll: '.composition', icon: '' },
-  { title: 'Описание', scroll: '.desc', icon: '' },
-  { title: 'Преимущества', scroll: '.advantage', icon: '' },
-  { title: 'Галерея', scroll: '.gallery', icon: '' },
-  { title: 'О Нас', scroll: '.aboutUs', icon: '' }
+  { title: 'Состав', scroll: '.composition', icon: 'playlist_add_check' },
+  { title: 'Описание', scroll: '.desc', icon: 'content_paste' },
+  { title: 'Преимущества', scroll: '.advantage', icon: 'grade' },
+  { title: 'Галерея', scroll: '.gallery', icon: 'search' },
+  { title: 'О Нас', scroll: '.aboutUs', icon: 'flash_on' }
 ];
 
 export default toolbarList;

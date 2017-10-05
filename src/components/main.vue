@@ -54,7 +54,7 @@
           <h3 class="mb-0 collectionH">Коллекция</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
-          <v-flex xs12 md3 v-for="(item,i) in gallery" :key="i">
+          <v-flex xs12 lg3 md4 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card>
               <v-card-media :src="item.url" height="350"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
