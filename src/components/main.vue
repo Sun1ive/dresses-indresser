@@ -1,7 +1,7 @@
 <template>
   <main>
-    <section class="banner mt-5">
-      <v-parallax src="../../static/234.jpg" height="600">
+    <section class="banner">
+      <v-parallax src="../../static/234.jpg" height="600" class="py-5">
         <v-container fluid>
           <v-layout row wrap align-center justify-center style="height: 600px">
             <v-flex xs12>

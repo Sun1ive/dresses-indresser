@@ -2,8 +2,8 @@
   <v-toolbar>
     <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="../../static/logo1.png" alt="logo"></v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
-    <v-toolbar-items>
+    <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="showDrawer"></v-toolbar-side-icon>
+    <v-toolbar-items class="hidden-md-and-down">
       <v-btn flat>Телефон</v-btn>
       <v-btn flat v-scroll-to="'.composition'">Состав</v-btn>
       <v-btn flat v-scroll-to="'.desc'">Описание</v-btn>
@@ -25,6 +25,9 @@
     methods: {
       showOrder () {
         this.$emit('showOrder')
+      },
+      showDrawer () {
+        this.$emit('showDrawer')
       }
     }
   }
