@@ -49,14 +49,14 @@
       </v-parallax>
     </section>
     <section class="gallery">
-      <v-container fluid grid-list-md>
+      <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
           <h3 class="mb-0 collectionH">Коллекция</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg3 md4 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card>
-              <v-card-media :src="item.url" height="350"></v-card-media>
+              <v-card-media :src="item.url" height="425"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
                 <v-btn flat @click="showItem(item)">Посмотреть</v-btn>

@@ -1,6 +1,6 @@
 <template>
   <div id="phone" @click.stop="offerCall">
-    <div class="test"></div>
+    <div class="icon"></div>
   </div>
 </template>
 
@@ -32,7 +32,7 @@
   cursor: pointer;
   animation: bounceIn 3s infinite linear both;
 }
-.test {
+.icon {
   background-image: url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/phone1-48.png');
   height: 64px;
   width: 64px;
