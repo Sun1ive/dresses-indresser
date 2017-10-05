@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <app-navigation></app-navigation>
     <app-header></app-header>
     <app-toolbar @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
@@ -17,7 +16,6 @@ import main from './components/main'
 import footer from './components/footer'
 import header from './components/header'
 import order from './components/order'
-import navigation from './components/navigation'
 
   export default {
     components: {
@@ -26,12 +24,11 @@ import navigation from './components/navigation'
       'app-footer': footer,
       'app-header': header,
       'app-order': order,
-      'app-navigation': navigation
     },
     data () {
       return {
         dialog: false,
-        item: []
+        item: [],
       }
     },
     methods: {
