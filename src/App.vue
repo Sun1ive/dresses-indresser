@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <app-header></app-header>
-    <app-toolbar @showCallForm="showCallForm" @showOrder="showOrder"></app-toolbar>
+    <app-toolbar :showNumbers="showNumbers" @showCallForm="showCallForm" @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
     <v-dialog scrollable v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
@@ -37,6 +37,7 @@ import phone from './components/phone'
       return {
         dialog: false,
         callDialog: false,
+        showNumbers: false,
         item: [],
       }
     },
@@ -46,8 +47,10 @@ import phone from './components/phone'
         let toolbar = document.querySelector('.toolbar')
         if (offset >= 115) {
           toolbar.classList.add('toolbar--fixed')
+          this.showNumbers = true
         } else {
           toolbar.classList.remove('toolbar--fixed')
+          this.showNumbers = false
         }
       },
       showOrder (item) {

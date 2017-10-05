@@ -29,6 +29,11 @@
     <v-toolbar>
       <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="../../static/logo1.png" alt="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-items class="dFlex" v-if="showNumbers">
+        <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
+        <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
+      </v-toolbar-items>
+      <v-spacer></v-spacer>
       <v-toolbar-side-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-items class="hidden-md-and-down" v-for="(item, i) in toolbar" :key="i">
         <v-btn flat v-scroll-to="item.scroll">{{ item.title }}</v-btn>
@@ -45,9 +50,10 @@
 import toolbarList from './toolbarList'
 
 export default {
+  props: ['showNumbers'],
   data() {
     return {
-      drawer: null
+      drawer: null,
     }
   },
   methods: {
@@ -66,5 +72,15 @@ export default {
 <style scoped>
 .logo {
   cursor: pointer;
+}
+.dFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+.dFlex a {
+  color: #333;
 }
 </style>

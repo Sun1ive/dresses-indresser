@@ -5,7 +5,7 @@
         <v-container fluid>
           <v-layout row wrap align-center justify-center style="height: 600px">
             <v-flex xs12>
-              <img style="width: 100%" src="../../static/bgparafirst.png" alt="banner">
+              <img style="width: 100%" src="../../static/1980x600-4.png" alt="banner">
             </v-flex>
           </v-layout>
         </v-container>    
@@ -14,7 +14,7 @@
     <section class="advantage">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4">
-          <h4 style="text-transform: uppercase; font-weight: bold;">Преимущества</h4>
+          <h4 style="text-transform: uppercase; font-weight: bold;">Почему выгодно покупать у нас?</h4>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md3 class="text-xs-center">
@@ -82,7 +82,7 @@
       <v-parallax src="../../static/para22.jpg" height="500">
         <v-layout row wrap justify-center align-center>
           <v-flex xs12 md5 class="black--text text-xs-center">
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed assumenda autem mollitia officia? Sequi, possimus a iure sint, quod quo quaerat laboriosam fuga, dolores nihil dolore! Eum facere obcaecati, nemo doloribus ipsa aperiam eius quisquam iure assumenda nihil voluptas quam sapiente, recusandae impedit fugit quo voluptate dolorum numquam? Eligendi itaque laborum sed pariatur tempore magni sequi, consequuntur maiores repellendus non!</h5>
+            <h5>ТАБЛИЦА РАЗМЕРОВ</h5>
           </v-flex>
           <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
         </v-layout>
@@ -101,19 +101,19 @@
         </v-layout>
       </v-container>
     </section>
-    <section class="aboutUs py-5">
-     <v-container>
-      <v-layout justify-center row wrap align-center>
-        <h4 style="text-transform: uppercase; mb-0">О нас</h4>
+    <section class="aboutUs">
+     <v-container fluid>
+      <v-layout class="aboutContainer__one" justify-center row wrap align-end>
+        <h4 style="text-transform: uppercase;" class="mb-0">О нас</h4>
       </v-layout>
       <v-layout class="aboutContainer" justify-center row wrap align-center>
-        <v-flex xs12 sm4 class="text-xs-center">
+        <v-flex xs12 sm3 class="text-xs-center">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
         </v-flex>
-        <v-flex xs12 sm4 class="text-xs-center">
+        <v-flex xs12 sm3 class="text-xs-center">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
         </v-flex>
-        <v-flex xs12 sm4 class="text-xs-center">
+        <v-flex xs12 sm3 class="text-xs-center">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
         </v-flex>
       </v-layout>

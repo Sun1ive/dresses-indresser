@@ -23,11 +23,15 @@
   padding: 0 15px;
 }
 .aboutUs {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  color: #fafafa;
+  text-shadow: 2px 2px 1px #333;
+  background: url('/static/1980x600-about-us.png') center center no-repeat;
 }
 .aboutUs .container .aboutContainer {
-  min-height: 200px;
+  min-height: 300px;
+}
+.aboutContainer__one {
+  min-height: 100px;
 }
 .delivery {
 }
