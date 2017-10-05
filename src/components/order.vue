@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <v-form @submit.prevent="submitOrder" id="form">
+      <h5 class="mb-0 text-xs-center">Оформить заказ</h5>
       <v-text-field label="Имя" v-model="userData.name"></v-text-field>
       <v-text-field label="Телефон" v-model="userData.phone"></v-text-field>
       <v-text-field label="e-mail" v-model="userData.email"></v-text-field>

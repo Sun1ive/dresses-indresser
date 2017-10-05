@@ -3,12 +3,13 @@
     <app-header></app-header>
     <app-toolbar @showCallForm="showCallForm" @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
-    <v-dialog v-model="dialog" width="400">
+    <v-dialog scrollable v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
     </v-dialog>
-    <v-dialog v-model="callDialog" width="370">
+    <v-dialog scrollable v-model="callDialog" width="370">
       <app-call @closeCall="closeCall"></app-call>
     </v-dialog>
+    <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone>
     <app-footer @showOrder="showOrder"></app-footer>
   </v-app>
 </template>
@@ -20,6 +21,7 @@ import footer from './components/footer'
 import header from './components/header'
 import order from './components/order'
 import orderCall from './components/orderCall'
+import phone from './components/phone'
 
   export default {
     components: {
@@ -28,7 +30,8 @@ import orderCall from './components/orderCall'
       'app-footer': footer,
       'app-header': header,
       'app-order': order,
-      'app-call': orderCall
+      'app-call': orderCall,
+      'widget-phone': phone
     },
     data () {
       return {

@@ -123,13 +123,13 @@
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
           <v-card>
-            <v-carousel hide-controls>
+            <v-carousel hide-controls v-if="popup">
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
             <v-card-actions>
-              <v-btn @click.stop="showOrder(collectionItem)">Оформить заказ</v-btn>
-              <v-btn @click.stop="popup = false">Закрыть</v-btn>
+              <v-btn @click.stop="showOrder(collectionItem)" class="red darken-2 white--text ml-0">Оформить заказ</v-btn>
+              <v-btn flat @click.stop="popup = false" class="white--text grey darken-4">Закрыть</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>

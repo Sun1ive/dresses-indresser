@@ -51,9 +51,6 @@ export default {
     }
   },
   methods: {
-    showOrder () {
-      this.$emit('showOrder')
-    },
     showCallForm () {
       this.$emit('showCallForm')
     }
