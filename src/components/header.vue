@@ -2,7 +2,7 @@
   <header class="header">
     <v-container fluid>
       <v-layout row wrap>
-        <v-flex xs12 class="test pr-4">
+        <v-flex xs12 class="headerBox pr-4">
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
           <v-icon medium class="red--text mx-2">email</v-icon><a href="mailto:info@indresser.com">info@indresser.com</a>
@@ -22,7 +22,7 @@
 </script>
 
 <style scoped>
-.test {
+.headerBox {
   display: flex;
   justify-content: flex-end;
   align-items: center;

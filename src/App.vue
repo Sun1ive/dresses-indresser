@@ -10,6 +10,7 @@
       <app-call @closeCall="closeCall"></app-call>
     </v-dialog>
     <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone>
+    <scroll-top></scroll-top>
     <app-footer @showOrder="showOrder"></app-footer>
   </v-app>
 </template>
@@ -22,6 +23,8 @@ import header from './components/header'
 import order from './components/order'
 import orderCall from './components/orderCall'
 import phone from './components/phone'
+import scrollTop from './components/scrolltop'
+
 
   export default {
     components: {
@@ -31,7 +34,8 @@ import phone from './components/phone'
       'app-header': header,
       'app-order': order,
       'app-call': orderCall,
-      'widget-phone': phone
+      'widget-phone': phone,
+      'scroll-top': scrollTop
     },
     data () {
       return {
