@@ -37,28 +37,28 @@
 
 
 <script>
-import toolbar from './toolbar'
+import toolbarList from './toolbarList'
 
-  export default {
-    data() {
-      return {
-        drawer: null
-      }
+export default {
+  data() {
+    return {
+      drawer: null
+    }
+  },
+  methods: {
+    showOrder () {
+      this.$emit('showOrder')
     },
-    methods: {
-      showOrder () {
-        this.$emit('showOrder')
-      },
-      showSide () {
-        this.$emit('showSide')
-      }
-    },
-    computed: {
-      toolbar () {
-        return toolbar
-      }
+    showSide () {
+      this.$emit('showSide')
+    }
+  },
+  computed: {
+    toolbar () {
+      return toolbarList
     }
   }
+}
 </script>
 
 <style scoped>

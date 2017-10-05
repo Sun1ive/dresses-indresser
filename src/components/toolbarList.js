@@ -1,6 +1,6 @@
 // @flow
 
-const toolbar = [
+const toolbarList = [
   { title: 'Телефон', scroll: '.banner', icon: 'call' },
   { title: 'Состав', scroll: '.composition', icon: '' },
   { title: 'Описание', scroll: '.desc', icon: '' },
@@ -9,4 +9,4 @@ const toolbar = [
   { title: 'О Нас', scroll: '.aboutUs', icon: '' }
 ];
 
-export default toolbar;
+export default toolbarList;
