@@ -1,6 +1,6 @@
-# y
+# InDresser Landing Page
 
-> y
+> InDresser Landing page for dresses.indersser.com
 
 ## Build Setup
 

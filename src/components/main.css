@@ -4,9 +4,6 @@
 .carousel__item {
   transition: .8s ease-out;
 }
-.composition .container .layout {
-  min-height: 250px;
-}
 .desc .container .layout {
   min-height: 300px;
 }

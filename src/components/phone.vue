@@ -20,9 +20,10 @@
 
 <style scoped>
 #phone {
+  display: none;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 30px;
+  right: 30px;
   width: 90px;
   height: 90px;
   border-radius: 50%;

@@ -33,21 +33,21 @@
       </v-container>
     </section>
     <section class="composition">
-      <v-parallax src="../../static/234.jpg" height="300">
+      <v-parallax src="/static/paralaks.jpg" height="500">
         <v-container fluid>
-          <v-layout justify-center align-center style="height: 300px">
-            <v-flex xs12 md6 class="text-xs-center compText" display-2>Состав</v-flex>
-            <v-flex xs12 md6 class="text-xs-center compText" display-2>
-              <ul>
-                <li>Вискоза 40%</li>
-                <li>Полиэстер 55%</li>
-                <li>Эластан 5%</li>
-              </ul>
-            </v-flex>
+          <v-layout column justify-center align-center style="height: 500px; color: #000">
+            <h5>Кому подходит наша одежда?</h5>
+            <ul>
+              <li>Тем кому нравится модная, удобная, стильная и эксклюзивная одежда</li>
+              <li>Практичные и повседневные вещи</li>
+              <li>Женственные платья с карманами</li>
+              <li>Не стесняющие движений</li>
+            </ul>
           </v-layout>
         </v-container>      
       </v-parallax>
     </section>
+    <!-- карточки товаров -->
     <section class="gallery">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
@@ -60,13 +60,15 @@
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions>
                 <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
-                <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn>
+                <!-- <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn> -->
+                <v-btn flat v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
-        <v-layout>
+        <!-- проверка цены -->
+<!--         <v-layout>
           <v-dialog v-model="showPrice">
             <v-card>
               <v-card-title class="priceBox">{{ collectionItem.price }}<v-btn flat @click.stop="showOrder(item)">Заказать</v-btn></v-card-title>
@@ -75,7 +77,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
-        </v-layout>
+        </v-layout> -->
       </v-container>
     </section>
     <section class="desc">
@@ -119,6 +121,7 @@
       </v-layout>
       </v-container>
     </section>
+    <!-- слайдер карточки товара -->
     <section class="popup">
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
