@@ -58,7 +58,6 @@ export default {
 .container {
   background-color: #fff;
   min-height: 350px;
-  min-width: 350px;
 }
 #form {
   padding: 15px 45px;

@@ -22,10 +22,6 @@
 </script>
 
 <style scoped>
-@font-face {
-  font-family: "Geometric";
-  src: url('/fonts/geometric.woff2') format('woff2');
-}
 .test {
   display: flex;
   justify-content: flex-end;

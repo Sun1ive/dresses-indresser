@@ -34,7 +34,7 @@
         <v-btn flat v-scroll-to="item.scroll">{{ item.title }}</v-btn>
       </v-toolbar-items>
       <v-toolbar-items class="hidden-md-and-down">
-        <v-btn flat @click.stop="showOrder">Заказать</v-btn>
+        <v-btn flat @click.stop="showCallForm">Заказать звонок</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>
@@ -53,6 +53,9 @@ export default {
   methods: {
     showOrder () {
       this.$emit('showOrder')
+    },
+    showCallForm () {
+      this.$emit('showCallForm')
     }
   },
   computed: {

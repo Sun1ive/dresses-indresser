@@ -1,7 +1,6 @@
 // @flow
 
 const toolbarList = [
-  { title: 'Телефон', scroll: '.banner', icon: 'call' },
   { title: 'Состав', scroll: '.composition', icon: 'playlist_add_check' },
   { title: 'Описание', scroll: '.desc', icon: 'content_paste' },
   { title: 'Преимущества', scroll: '.advantage', icon: 'grade' },

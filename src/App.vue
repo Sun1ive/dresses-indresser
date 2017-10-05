@@ -1,10 +1,13 @@
 <template>
   <v-app>
     <app-header></app-header>
-    <app-toolbar @showOrder="showOrder"></app-toolbar>
+    <app-toolbar @showCallForm="showCallForm" @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
     <v-dialog v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
+    </v-dialog>
+    <v-dialog v-model="callDialog" width="370">
+      <app-call @closeCall="closeCall"></app-call>
     </v-dialog>
     <app-footer @showOrder="showOrder"></app-footer>
   </v-app>
@@ -16,6 +19,7 @@ import main from './components/main'
 import footer from './components/footer'
 import header from './components/header'
 import order from './components/order'
+import orderCall from './components/orderCall'
 
   export default {
     components: {
@@ -24,10 +28,12 @@ import order from './components/order'
       'app-footer': footer,
       'app-header': header,
       'app-order': order,
+      'app-call': orderCall
     },
     data () {
       return {
         dialog: false,
+        callDialog: false,
         item: [],
       }
     },
@@ -48,6 +54,12 @@ import order from './components/order'
       },
       closeOrder () {
         this.dialog = false
+      },
+      showCallForm () {
+        this.callDialog = true
+      },
+      closeCall () {
+        this.callDialog = false
       }
     },
     created () {
