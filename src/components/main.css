@@ -7,6 +7,9 @@
 .desc .container .layout {
   min-height: 300px;
 }
+.advantage {
+  background: url('/static/grunde.png') center center repeat;
+}
 .advantage .container .advLayout {
   min-height: 150px;
 }

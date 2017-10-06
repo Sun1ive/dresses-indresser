@@ -20,7 +20,6 @@
 
 <style scoped>
 #phone {
-  display: none;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -28,10 +27,10 @@
   height: 90px;
   border-radius: 50%;
   padding: 15px;
-  z-index: 5;
+  z-index: 16;
   background-color: #40bc6b;
   cursor: pointer;
-  animation: bounceIn 3s infinite linear both;
+  /* animation: bounceIn 3s infinite linear both; */
 }
 .icon {
   background-image: url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/phone1-48.png');

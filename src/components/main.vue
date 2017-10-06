@@ -84,7 +84,8 @@
       <v-parallax src="../../static/para22.jpg" height="500">
         <v-layout row wrap justify-center align-center>
           <v-flex xs12 md5 class="black--text text-xs-center">
-            <h5>ТАБЛИЦА РАЗМЕРОВ</h5>
+            <h5>Таблица размеров</h5>
+            <app-table></app-table>
           </v-flex>
           <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
         </v-layout>
@@ -143,7 +144,11 @@
 
 <script>
 import gallery from './gallery'
+import table from './table'
   export default {
+    components: {
+      'app-table': table
+    },
     data() {
       return {
         popup: false,
