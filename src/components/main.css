@@ -1,6 +1,14 @@
 .container {
   padding: 0;
 }
+.banner .image {
+  background: url('/static/1980x600-4.png') center center no-repeat;
+  min-height: 600px;
+  width: 100%;
+}
+.parallax__content {
+  padding: 0;
+}
 .carousel__item {
   transition: .8s ease-out;
 }
@@ -34,6 +42,7 @@
   min-height: 100px;
 }
 .delivery {
+  /* 123 */
 }
 .priceBox {
   font-size: 28px
@@ -41,4 +50,10 @@
 .compText {
   color: rgb(49, 49, 49);
   text-shadow: 2px 2px 1px #fff
+}
+
+@media (max-width: 500px) {
+  .cardActions {
+    flex-direction: column;
+  }
 }

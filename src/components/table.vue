@@ -6,11 +6,11 @@
     >
     <template slot="items" scope="props">
       <td>{{ props.item.name }}</td>
-      <td class="text-xs-right">{{ props.item.xs }}</td>
-      <td class="text-xs-right">{{ props.item.s }}</td>
-      <td class="text-xs-right">{{ props.item.m }}</td>
-      <td class="text-xs-right">{{ props.item.l }}</td>
-      <td class="text-xs-right">{{ props.item.xl }}</td>
+      <td class="text-xs-center">{{ props.item.xs }}</td>
+      <td class="text-xs-center">{{ props.item.s }}</td>
+      <td class="text-xs-center">{{ props.item.m }}</td>
+      <td class="text-xs-center">{{ props.item.l }}</td>
+      <td class="text-xs-center">{{ props.item.xl }}</td>
     </template>
   </v-data-table>
 </template>
@@ -25,11 +25,11 @@
             align: 'center',
             sortable: false,
           },
-          { text: '34 / XS', value: '123', sortable: false },
-          { text: '36 / S', value: '123', sortable: false },
-          { text: '38 / M', value: '123', sortable: false },
-          { text: '40 / L', value: '123', sortable: false },
-          { text: '42 / XL', value: '123', sortable: false },
+          { text: '34 / XS', value: '123', sortable: false, align: 'center' },
+          { text: '36 / S', value: '123', sortable: false, align: 'center' },
+          { text: '38 / M', value: '123', sortable: false, align: 'center' },
+          { text: '40 / L', value: '123', sortable: false, align: 'center' },
+          { text: '42 / XL', value: '123', sortable: false, align: 'center' },
         ],
         items: [
           {
@@ -74,4 +74,5 @@
   }
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

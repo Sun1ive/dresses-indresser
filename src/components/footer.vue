@@ -1,6 +1,6 @@
 <template>
-  <footer>
-    <v-card dark height="200px">
+<!--   <footer> -->
+<!--     <v-card dark height="200px">
       <div class="headline text-xs-center pa-5">FOOTER</div>
       <v-bottom-nav absolute :active.sync="e2">
         <v-btn v-scroll-to="item.scroll" flat v-for="(item,i) in toolbar" :key="i">
@@ -8,8 +8,11 @@
           <v-icon>{{ item.icon }}</v-icon>
         </v-btn>
       </v-bottom-nav>
-    </v-card>
-  </footer> 
+    </v-card> -->
+    <v-footer>
+      <div class="ml-3">&copy; InDresser {{ new Date().getFullYear() }}</div><v-spacer></v-spacer>
+    </v-footer>
+<!--   </footer>  -->
 </template>
 
 
@@ -35,13 +38,11 @@ import toolbarList from './toolbarList'
 </script>
 
 <style scoped>
-.bottom-nav {
-  min-height: 65px;
-  height: auto;
+.footer {
   background-color: #333;
-  align-items: center;
-}
-.bottom-nav .btn {
-  color: #fff
+  color: #fff;
+  align-items: flex-start;
+  min-height: 50px;
+  font-size: 20px;
 }
 </style>

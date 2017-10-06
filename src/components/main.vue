@@ -5,7 +5,8 @@
         <v-container fluid>
           <v-layout row wrap align-center justify-center style="height: 600px">
             <v-flex xs12>
-              <img style="width: 100%" src="../../static/1980x600-4.png" alt="banner">
+              <!-- <img style="width: 100%" src="/static/1980x600-4.png" alt="banner"> -->
+              <div class="image"></div>
             </v-flex>
           </v-layout>
         </v-container>    
@@ -13,7 +14,7 @@
     </section>
     <section class="advantage">
       <v-container fluid>
-        <v-layout justify-center align-center class="pt-4">
+        <v-layout justify-center align-center class="pt-4 text-xs-center">
           <h4 style="text-transform: uppercase; font-weight: bold;">Почему выгодно покупать у нас?</h4>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
@@ -58,7 +59,7 @@
             <v-card>
               <v-card-media :src="item.url" height="425"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
-              <v-card-actions>
+              <v-card-actions class="cardActions">
                 <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
                 <!-- <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn> -->
                 <v-btn flat v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
@@ -68,7 +69,7 @@
           </v-flex>
         </v-layout>
         <!-- проверка цены -->
-<!--         <v-layout>
+<!--    <v-layout>
           <v-dialog v-model="showPrice">
             <v-card>
               <v-card-title class="priceBox">{{ collectionItem.price }}<v-btn flat @click.stop="showOrder(item)">Заказать</v-btn></v-card-title>
@@ -82,8 +83,8 @@
     </section>
     <section class="desc">
       <v-parallax src="../../static/para22.jpg" height="500">
-        <v-layout row wrap justify-center align-center>
-          <v-flex xs12 md5 class="black--text text-xs-center">
+        <v-layout row wrap justify-start align-center>
+          <v-flex xs12 md8 sm11 class="black--text text-xs-center">
             <h5>Таблица размеров</h5>
             <app-table></app-table>
           </v-flex>

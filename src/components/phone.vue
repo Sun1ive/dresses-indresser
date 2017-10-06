@@ -30,7 +30,7 @@
   z-index: 16;
   background-color: #40bc6b;
   cursor: pointer;
-  /* animation: bounceIn 3s infinite linear both; */
+  animation: bounceIn 3s infinite linear both;
 }
 .icon {
   background-image: url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/phone1-48.png');
@@ -62,7 +62,7 @@
   }
 
   60% {
-    opacity: 1;
+    opacity: 0.7;
     transform: scale3d(1.03, 1.03, 1.03);
   }
 

@@ -34,4 +34,10 @@
 .header {
   background-color: #333;
 }
+
+@media (max-width: 500px) {
+  .headerBox {
+    flex-direction: column;
+  }
+}
 </style>

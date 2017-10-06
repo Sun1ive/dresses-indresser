@@ -27,9 +27,9 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar>
-      <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="../../static/logo1.png" alt="logo"></v-toolbar-title>
+      <v-toolbar-title class="ml-1" v-scroll-to="'.header'"><img class="logo" src="../../static/logo1.png" alt="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="dFlex" v-if="showNumbers">
+      <v-toolbar-items class="dFlex hidden-xs-only" v-if="showNumbers">
         <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
         <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
       </v-toolbar-items>
