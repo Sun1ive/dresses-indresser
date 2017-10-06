@@ -10,7 +10,7 @@ Vue.use(_)
 Vue.use(Scroll, {
   container: 'body',
   duration: 500,
-  offset: -150,
+  offset: -300,
   cancelable: true,
   easing: 'ease'
 })

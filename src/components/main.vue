@@ -92,7 +92,7 @@
         </v-layout>
       </v-parallax>
     </section>
-    <section class="delivery">
+    <section class="delivery py-5">
       <v-container fluid>
         <v-layout justify-center align-center row wrap>
           <h5>Условия Доставки</h5>
@@ -132,6 +132,13 @@
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
             <v-card-title>{{ collectionItem.title }}</v-card-title>
+            <v-card-text>
+              <v-layout row wrap>
+                <v-flex xs12 sm4 class="text-xs-center"><div class="avatar">35%</div>Эластан</v-flex>
+                <v-flex xs12 sm4 class="text-xs-center"><div class="avatar">35%</div>Эластан</v-flex>
+                <v-flex xs12 sm4 class="text-xs-center"><div class="avatar">35%</div>Эластан</v-flex>
+              </v-layout>
+            </v-card-text>
             <v-card-actions>
               <v-btn @click.stop="showOrder(collectionItem)" class="red darken-2 white--text ml-0">Оформить заказ</v-btn>
               <v-btn flat @click.stop="popup = false" class="white--text grey darken-4">Закрыть</v-btn>
