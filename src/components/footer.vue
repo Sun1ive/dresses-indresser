@@ -1,18 +1,19 @@
 <template>
-<!--   <footer> -->
-<!--     <v-card dark height="200px">
-      <div class="headline text-xs-center pa-5">FOOTER</div>
-      <v-bottom-nav absolute :active.sync="e2">
-        <v-btn v-scroll-to="item.scroll" flat v-for="(item,i) in toolbar" :key="i">
-          <span>{{ item.title }}</span>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-btn>
-      </v-bottom-nav>
-    </v-card> -->
     <v-footer>
-      <div class="ml-3">&copy; InDresser {{ new Date().getFullYear() }}</div><v-spacer></v-spacer>
+      <v-layout row wrap justify-center align-center>
+        <v-flex xs12 sm6 class="text-xs-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A qui possimus expedita iste, provident porro dolores eligendi alias magnam velit, veniam mollitia!
+        </v-flex>
+        <v-flex xs12 sm6 class="text-xs-center">
+          <div>Телефоны:</div> 
+          <ul>
+            <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a></li>
+            <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a></li>
+            <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a></li>
+          </ul>
+        </v-flex>
+      </v-layout>
     </v-footer>
-<!--   </footer>  -->
 </template>
 
 
@@ -39,10 +40,13 @@ import toolbarList from './toolbarList'
 
 <style scoped>
 .footer {
-  background-color: #333;
   color: #fff;
   align-items: flex-start;
-  min-height: 50px;
   font-size: 20px;
+}
+.layout {
+  margin: 0;
+  min-height: 200px;
+  background-color: #333;
 }
 </style>

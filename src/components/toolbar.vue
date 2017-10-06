@@ -30,8 +30,9 @@
       <v-toolbar-title class="ml-1" v-scroll-to="'.header'"><img class="logo" src="../../static/logo1.png" alt="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="dFlex hidden-xs-only" v-if="showNumbers">
-        <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
-        <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">333-66-21</a>
+          <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a>
+          <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a>
+          <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a>
       </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>

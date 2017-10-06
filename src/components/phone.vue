@@ -29,6 +29,7 @@
   padding: 15px;
   z-index: 16;
   background-color: #40bc6b;
+  border: 1px solid #333;
   cursor: pointer;
   animation: bounceIn 3s infinite linear both;
 }

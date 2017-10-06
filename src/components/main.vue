@@ -81,10 +81,10 @@
         </v-layout> -->
       </v-container>
     </section>
-    <section class="desc">
+    <section class="sizeTable">
       <v-parallax src="../../static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
-          <v-flex xs12 md8 sm11 class="black--text text-xs-center">
+          <v-flex xs12 md8 sm11 lg7 class="black--text text-xs-center">
             <h5>Таблица размеров</h5>
             <app-table></app-table>
           </v-flex>
