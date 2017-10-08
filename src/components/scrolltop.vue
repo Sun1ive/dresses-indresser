@@ -52,6 +52,9 @@
       left: 50%;
       margin-left: -5px
     }
+    .scrollTop:before {
+      margin-left: -4px;
+    }
   }
   @media (max-width: 1024px) {
     .scrollTop:after {

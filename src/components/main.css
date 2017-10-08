@@ -1,11 +1,6 @@
 .container {
   padding: 0;
 }
-.banner .image {
-  background: url('/static/1980x600-4.png') center center no-repeat;
-  min-height: 600px;
-  width: 100%;
-}
 .parallax__content {
   padding: 0;
 }

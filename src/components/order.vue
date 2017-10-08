@@ -2,13 +2,9 @@
   <v-container>
     <v-form @submit.prevent="submitOrder" id="form">
       <h5 class="mb-0 text-xs-center">Оформить заказ</h5>
-      <v-text-field label="Имя" v-model="userData.name"></v-text-field>
-      <v-text-field label="Телефон" v-model="userData.phone"></v-text-field>
-      <v-text-field label="e-mail" v-model="userData.email"></v-text-field>
-      <v-checkbox label="Выбрать время?" v-model="pickTime"></v-checkbox>
-      <v-flex xs12 v-show="pickTime">
-        <v-time-picker v-model="userData.hours" format="24hr"></v-time-picker>
-      </v-flex>
+      <v-text-field name="name" label="Имя" v-model="userData.name"></v-text-field>
+      <v-text-field name="phone" label="Телефон" v-model="userData.phone"></v-text-field>
+      <v-text-field name="email" label="e-mail" v-model="userData.email"></v-text-field>
       <v-btn class="red darken-2 white--text ml-0" type="submit">Оформить заказ</v-btn>
       <v-btn @click="closeOrder" class="white--text grey darken-4">Закрыть</v-btn>
     </v-form>
@@ -27,19 +23,24 @@ export default {
           phone: null,
           email: '',
           orderedItem: [],
-          day: null,
-          hours: null
-        },
-        pickTime: false,
+        }
       }
     },
     methods: {
       submitOrder () {
         this.userData.orderedItem = this.item
-        console.log(this.userData)
-        axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
+        let data = this.userData
+        emailjs.send('smtp_server','test', {
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          order: `Товар: ${data.orderedItem.title} Цена: ${data.orderedItem.price}`
+        })
+        .then(r => console.log(r))
+        .catch(e => console.log(e))
+/*         axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
           .then(r => console.log(r))
-          .catch(e => console.log(e))
+          .catch(e => console.log(e)) */
         this.userData = {
           name: null,
           phone: null,

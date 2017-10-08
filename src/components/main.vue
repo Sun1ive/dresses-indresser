@@ -5,8 +5,7 @@
         <v-container fluid>
           <v-layout row wrap align-center justify-center style="height: 600px">
             <v-flex xs12>
-              <!-- <img style="width: 100%" src="/static/1980x600-4.png" alt="banner"> -->
-              <div class="image"></div>
+              <img style="width: 100%" src="/static/1980x600-4.png" alt="banner">
             </v-flex>
           </v-layout>
         </v-container>    
@@ -82,7 +81,7 @@
       </v-container>
     </section>
     <section class="sizeTable">
-      <v-parallax src="../../static/para22.jpg" height="500">
+      <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
           <v-flex xs12 md8 sm11 lg7 class="black--text text-xs-center">
             <h5>Таблица размеров</h5>
@@ -98,8 +97,13 @@
           <h5>Условия Доставки</h5>
         </v-layout>
         <v-layout row wrap justify-center align-center>
-          <v-flex xs12 sm6 class="text-xs-center">
+          <v-flex xs12 lg4 class="text-xs-center px-2">
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
+          </v-flex>
+          <v-flex xs12 lg4 class="text-xs-center px-2">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
+          </v-flex>
+          <v-flex xs12 lg4 class="text-xs-center px-2">
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
           </v-flex>
         </v-layout>

@@ -9,8 +9,9 @@
     <v-dialog scrollable v-model="callDialog" width="370">
       <app-call @closeCall="closeCall"></app-call>
     </v-dialog>
-    <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone>
+    <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
     <scroll-top></scroll-top>
+    <app-widget></app-widget>
     <app-footer @showOrder="showOrder"></app-footer>
   </v-app>
 </template>
@@ -24,6 +25,7 @@ import order from './components/order'
 import orderCall from './components/orderCall'
 import phone from './components/phone'
 import scrollTop from './components/scrolltop'
+import sideWidget from './components/sidewidget'
 
 
   export default {
@@ -35,7 +37,8 @@ import scrollTop from './components/scrolltop'
       'app-order': order,
       'app-call': orderCall,
       'widget-phone': phone,
-      'scroll-top': scrollTop
+      'scroll-top': scrollTop,
+      'app-widget': sideWidget
     },
     data () {
       return {
