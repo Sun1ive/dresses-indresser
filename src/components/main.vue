@@ -38,9 +38,9 @@
     <section class="why">
       <v-parallax src="/static/paralaks.jpg" height="500">
         <v-container fluid>
-          <v-layout column justify-center align-center>
-            <v-flex xs12 sm6 class="test">
-            <h5>Кому подходит наша одежда?</h5>
+          <v-layout>
+            <v-flex xs12 sm6 offset-sm5 class="test" style="min-height: 500px;">
+            <h3 class="headline">Кому подходит наша одежда?</h3>
               <ul>
                 <li>Тем кому нравится модная, удобная, стильная и эксклюзивная одежда</li>
                 <li>Практичные и повседневные вещи</li>
@@ -100,18 +100,8 @@
     <!-- условия доставки -->
     <section class="delivery py-5">
       <v-container fluid>
-        <v-layout justify-center align-center row wrap>
-          <h5>Условия Доставки</h5>
-        </v-layout>
         <v-layout row wrap justify-center align-center>
-          <v-flex xs12 lg4 class="text-xs-center px-2">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
-          </v-flex>
-          <v-flex xs12 lg4 class="text-xs-center px-2">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
-          </v-flex>
-          <v-flex xs12 lg4 class="text-xs-center px-2">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laborum blanditiis voluptatem, et pariatur quod voluptates quam repellendus perferendis illo necessitatibus quisquam odio ullam? Beatae, inventore animi veritatis id mollitia, tenetur, unde quam hic voluptates eius saepe? Quis a vero laudantium libero voluptatibus maxime, unde cupiditate cum tempora quas molestiae provident, temporibus sed delectus repudiandae hic. Suscipit, quae?
+          <v-flex xs12 lg3 class="text-xs-center px-2">
           </v-flex>
         </v-layout>
       </v-container>
@@ -120,33 +110,64 @@
     <section class="requestConsult">
       <v-layout row wrap justify-center align-center>
         <v-flex xs12 sm6 md4 lg3>
-          <v-form class="requestForm">
-            <v-text-field label="Имя"></v-text-field>
-            <v-text-field label="Телефон"></v-text-field>
-            <v-text-field label="E-mail"></v-text-field>
-            <v-btn type="submit" class="ml-0">Заказать</v-btn>
+          <v-form class="requestForm" @submit.prevent="requestConsult">
+            <h3 class="headline mb-0 text-xs-center">Заказать консультацию</h3>
+            <v-text-field required v-model="user.name" label="Имя"></v-text-field>
+            <v-text-field required v-model="user.phone" label="Телефон"></v-text-field>
+            <v-text-field v-model="user.email" label="E-mail"></v-text-field>
+            <v-btn type="submit" class="ml-0 black white--text">Заказать</v-btn>
           </v-form>
         </v-flex>
       </v-layout>
     </section>
     <!-- отзывы -->
-    <section class="reviews">
-      ОТЗЫВЫ
+    <section class="reviews pt-3 pb-5">
+      <v-container fluid>
+        <v-layout justify-center align-center>
+          <h5>Отзывы клиентов</h5>
+        </v-layout>
+        <v-layout row wrap class="reviewsContainer">
+          <v-flex xs12 lg4 class="text-xs-center client">
+            <v-icon large>star</v-icon>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae illo dolores voluptatibus voluptates excepturi id praesentium, natus tempore ratione minus labore eaque enim, porro saepe sunt libero deleniti? Deleniti?</p>
+          </v-flex>
+          <v-flex xs12 lg4 class="text-xs-center client">
+            <v-icon large>star</v-icon>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae illo dolores voluptatibus voluptates excepturi id praesentium, natus tempore ratione minus labore eaque enim, porro saepe sunt libero deleniti? Deleniti?</p>
+          </v-flex>
+          <v-flex xs12 lg4 class="text-xs-center client">
+            <v-icon large>star</v-icon>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae illo dolores voluptatibus voluptates excepturi id praesentium, natus tempore ratione minus labore eaque enim, porro saepe sunt libero deleniti? Deleniti?</p>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </section>
     <!-- слайдер карточки товара -->
     <section class="popup">
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
-          <v-card>
+          <v-card class="collectionCard">
             <v-carousel hide-controls v-if="popup">
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
-            <v-card-title>{{ collectionItem.title }}</v-card-title>
+            <v-card-title primary-title>{{ collectionItem.title }}</v-card-title>
             <v-card-text>
-              <v-layout row wrap>
-                <v-flex xs12 sm4 class="text-xs-center"><div class="avatar">35%</div>Эластан</v-flex>
-                <v-flex xs12 sm4 class="text-xs-center"><div class="avatar">35%</div>Эластан</v-flex>
-                <v-flex xs12 sm4 class="text-xs-center"><div class="avatar">35%</div>Эластан</v-flex>
+              <v-layout>
+                <v-flex xs12 class="text-xs-center">{{collectionItem.desc }}</v-flex>
+              </v-layout>
+              <v-layout row wrap justify-center align-center>
+                <v-flex xs12 sm4 class="text-xs-center">
+                  <div class="avatar">35%</div><div>Полиэстр</div>
+                </v-flex>
+                <v-flex xs12 sm4 class="text-xs-center">
+                  <div class="avatar">35%</div><div>Вискоза</div>
+                </v-flex>
+                <v-flex xs12 sm4 class="text-xs-center">
+                  <div class="avatar">30%</div><div>Эластан</div>
+                </v-flex>
+              </v-layout>
+              <v-layout>
+                <v-flex xs12 class="text-xs-center">{{ collectionItem.price }}грн</v-flex>
               </v-layout>
             </v-card-text>
             <v-card-actions>
@@ -163,6 +184,7 @@
 <script>
 import gallery from './gallery'
 import table from './table'
+
   export default {
     components: {
       'app-table': table
@@ -173,7 +195,13 @@ import table from './table'
         collectionItem: {
           title: '',
           url: '',
-          price: null
+          price: null,
+          desc: ''
+        },
+        user: {
+          name: '',
+          phone: '',
+          email: ''
         },
         // slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
         slider: ['','',''],
@@ -192,12 +220,21 @@ import table from './table'
         this.collectionItem.url = item.url
         this.collectionItem.price = item.price
         this.slider = item.slider
+        this.collectionItem.desc = item.desc
         console.log(this.slider)
         this.popup = true
       },
       checkPrice (item) {
         this.collectionItem.price = `${item.price} грн`
         this.showPrice = true
+      },
+      requestConsult () {
+        console.log(this.user)
+        this.user = {
+          name: null,
+          phone: null,
+          email: null
+        }
       }
     },
     computed: {

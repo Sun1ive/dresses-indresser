@@ -1,14 +1,15 @@
 <template>
   <v-app>
     <app-header></app-header>
-    <app-toolbar :showNumbers="showNumbers" @showCallForm="showCallForm" @showOrder="showOrder"></app-toolbar>
+    <!-- <app-toolbar :showNumbers="showNumbers" @showCallForm="showCallForm" @showOrder="showOrder"></app-toolbar> -->
+    <app-toolbar :showNumbers="showNumbers" @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
     <v-dialog scrollable v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
     </v-dialog>
-    <v-dialog scrollable v-model="callDialog" width="370">
+    <!-- <v-dialog scrollable v-model="callDialog" width="370">
       <app-call @closeCall="closeCall"></app-call>
-    </v-dialog>
+    </v-dialog> -->
     <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
     <scroll-top></scroll-top>
     <app-widget></app-widget>
@@ -22,7 +23,7 @@ import main from './components/main'
 import footer from './components/footer'
 import header from './components/header'
 import order from './components/order'
-import orderCall from './components/orderCall'
+// import orderCall from './components/orderCall'
 import phone from './components/phone'
 import scrollTop from './components/scrolltop'
 import sideWidget from './components/sidewidget'
@@ -35,7 +36,7 @@ import sideWidget from './components/sidewidget'
       'app-footer': footer,
       'app-header': header,
       'app-order': order,
-      'app-call': orderCall,
+      // 'app-call': orderCall,
       'widget-phone': phone,
       'scroll-top': scrollTop,
       'app-widget': sideWidget
@@ -43,7 +44,7 @@ import sideWidget from './components/sidewidget'
     data () {
       return {
         dialog: false,
-        callDialog: false,
+        // callDialog: false,
         showNumbers: false,
         item: [],
       }
@@ -68,9 +69,9 @@ import sideWidget from './components/sidewidget'
       closeOrder () {
         this.dialog = false
       },
-      showCallForm () {
-        this.callDialog = true
-      },
+      // showCallForm () {
+      //   this.callDialog = true
+      // },
       closeCall () {
         this.callDialog = false
       }

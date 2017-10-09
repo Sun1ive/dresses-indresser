@@ -33,9 +33,12 @@
 .requestForm {
   background-color: #fff;
   padding: 15px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px #333;
+  border: 1px solid #f2e3d2;
 }
-.aboutContainer__one {
-  min-height: 100px;
+.requestForm .headline {
+  color: #333;
 }
 .delivery {
   /* background: url('/static/grunde.png') repeat; */
@@ -48,16 +51,50 @@
   text-shadow: 2px 2px 1px #fff
 }
 .avatar {
-  padding: 3px;
-  margin-right: 7px;
+  padding: 8px;
   border: 2px solid #333;
+  background-color: #333;
+  color: #fff;
+  transition: .4s ease;
+  cursor: pointer;
+}
+.avatar:hover {
+  background-color: #F44336;
+  border-color: #F44336;
+  transition: .4s ease;
 }
 .test {
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .bradius {
   border-radius: 10px;
 }
+.bradius .card__media {
+  transition: .4s ease;
+}
+.bradius .card__media:hover {
+  transform: scale(1.1);
+  transition: .4s ease;
+}
+.bradius, .card {
+  overflow: hidden;
+}
+.bradius .card__title {
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.bradius, .card__title, .card {
+  background-image: url('/static/grunde.png');
+}
+.card__actions {
+  background-image: url('/static/grunde.png');
+}
+
 @media (max-width: 500px) {
   .cardActions {
     flex-direction: column;

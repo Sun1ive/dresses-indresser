@@ -39,9 +39,9 @@
       <v-toolbar-items class="hidden-md-and-down" v-for="(item, i) in toolbar" :key="i">
         <v-btn flat v-scroll-to="item.scroll">{{ item.title }}</v-btn>
       </v-toolbar-items>
-      <v-toolbar-items class="hidden-lg-and-down">
+<!--       <v-toolbar-items class="hidden-lg-and-down">
         <v-btn flat @click.stop="showCallForm">Заказать звонок</v-btn>
-      </v-toolbar-items>
+      </v-toolbar-items> -->
     </v-toolbar>
   </div>
 </template>
