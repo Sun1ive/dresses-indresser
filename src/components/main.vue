@@ -98,13 +98,8 @@
       </v-parallax>
     </section>
     <!-- условия доставки -->
-    <section class="delivery py-5">
-      <v-container fluid>
-        <v-layout row wrap justify-center align-center>
-          <v-flex xs12 lg3 class="text-xs-center px-2">
-          </v-flex>
-        </v-layout>
-      </v-container>
+    <section class="terms py-5">
+      <app-terms></app-terms>
     </section>
     <!-- заказать звонок -->
     <section class="requestConsult">
@@ -184,10 +179,12 @@
 <script>
 import gallery from './gallery'
 import table from './table'
+import terms from './terms'
 
   export default {
     components: {
-      'app-table': table
+      'app-table': table,
+      'app-terms': terms
     },
     data() {
       return {

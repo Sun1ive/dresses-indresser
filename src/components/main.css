@@ -26,7 +26,7 @@
   background: #fafafa;
 }
 .requestConsult {
-  padding: 20px 0;
+  padding: 110px 0;
   color: #fafafa;
   background: url('/static/1980x600-about-us.png') center center no-repeat;
 }
@@ -40,7 +40,7 @@
 .requestForm .headline {
   color: #333;
 }
-.delivery {
+.terms {
   /* background: url('/static/grunde.png') repeat; */
 }
 .priceBox {
@@ -94,7 +94,9 @@
 .card__actions {
   background-image: url('/static/grunde.png');
 }
-
+.expansion-panel__body .card {
+  background-image: none;
+}
 @media (max-width: 500px) {
   .cardActions {
     flex-direction: column;

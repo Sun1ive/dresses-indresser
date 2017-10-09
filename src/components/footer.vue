@@ -1,23 +1,27 @@
 <template>
     <footer>
       <v-layout row wrap justify-center align-center class="text">
-        <v-flex xs12 lg4 sm4 class="text-xs-center">
+        <v-flex xs12 lg3 sm4 class="text-xs-center">
           <img src="/static/logo1.png" alt="logo" v-scroll-to="'.header'" style="cursor:pointer;">
         </v-flex>
-        <v-spacer></v-spacer>
         <v-flex xs12 lg3 sm3 class="text-xs-left">
+          <h5 class="head mb-0">Режим работы:</h5>
+          <div>Наш магазин InDresser работает с понедельника по пятницу <br>с 09:00 до 18:00.</div>
+          <div>Выходные дни -  суббота и воскресенье</div>
+        </v-flex>
+        <v-flex xs12 lg3 sm4 class="text-xs-left paddingLeft">
+          <h5 class="head mb-0">Телефоны:</h5> 
+          <ul>
+            <li><a href="tel:+380980202092"><v-icon medium class="red--text pr-2">call</v-icon>098-02-02-092</a></li>
+            <!-- <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a></li> -->
+            <li><a href="tel:+380730202090"><v-icon medium class="red--text pr-2">call</v-icon>073-02-02-090</a></li>
+          </ul>
+        </v-flex>
+        <v-flex xs12 lg3 sm3 class="text-xs-left pl-5">
           <h5 class="head mb-0">Адресс:</h5>
           <div>г. Винница</div>
           <div>ул. Николая Оводова, 51</div>
           <div>Главный офис</div>
-        </v-flex>
-        <v-flex xs12 lg4 sm4 class="text-xs-center">
-          <h5 class="head mb-0">Телефоны:</h5> 
-          <ul>
-            <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a></li>
-            <!-- <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a></li> -->
-            <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a></li>
-          </ul>
         </v-flex>
       </v-layout>
       <v-layout row wrap align-center class="socialContainer">
@@ -45,6 +49,9 @@ import socials from './socials'
 </script>
 
 <style scoped>
+  .paddingLeft {
+    padding-left: 100px;
+  }
   .text {
     font-size: 14px;
     min-height: 150px;

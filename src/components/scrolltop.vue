@@ -46,7 +46,24 @@
     opacity: 1;
   }
 
-
+  @media (max-width: 1930px) {
+    .scrollTop:after {
+      left: 50%;
+      margin-left: -5px
+    }
+    .scrollTop:before {
+      margin-left: -11px;
+    }
+  }
+  @media (max-width: 1600px) {
+    .scrollTop:after {
+      left: 50%;
+      margin-left: -5px
+    }
+    .scrollTop:before {
+      margin-left: -8px;
+    }
+  }
   @media (max-width: 1280px) {
     .scrollTop:after {
       left: 50%;
