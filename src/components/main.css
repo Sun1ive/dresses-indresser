@@ -8,7 +8,8 @@
   transition: .8s ease-out;
 }
 .advantage {
-  background: url('/static/grunde.png') center center repeat;
+  /* background: url('/static/grunde.png') center center repeat; */
+  background-color: #fafafa;
 }
 .advantage .container .advLayout {
   min-height: 150px;
@@ -21,20 +22,23 @@
 }
 .gallery {
   padding: 0 15px;
+  /* background: url('/static/234.jpg') center center repeat; */
+  background: #fafafa;
 }
-.aboutUs {
+.requestConsult {
+  padding: 20px 0;
   color: #fafafa;
-  text-shadow: 2px 2px 1px #333;
   background: url('/static/1980x600-about-us.png') center center no-repeat;
 }
-.aboutUs .container .aboutContainer {
-  min-height: 300px;
+.requestForm {
+  background-color: #fff;
+  padding: 15px;
 }
 .aboutContainer__one {
   min-height: 100px;
 }
 .delivery {
-  background: url('/static/grunde.png') repeat;
+  /* background: url('/static/grunde.png') repeat; */
 }
 .priceBox {
   font-size: 28px
@@ -48,8 +52,12 @@
   margin-right: 7px;
   border: 2px solid #333;
 }
-
-
+.test {
+  color: #333;
+}
+.bradius {
+  border-radius: 10px;
+}
 @media (max-width: 500px) {
   .cardActions {
     flex-direction: column;

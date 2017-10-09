@@ -1,5 +1,6 @@
 <template>
   <main>
+    <!-- баннер -->
     <section class="banner">
       <v-parallax src="../../static/234.jpg" height="600" class="py-5">
         <v-container fluid>
@@ -11,6 +12,7 @@
         </v-container>    
       </v-parallax>
     </section>
+    <!-- преимущества -->
     <section class="advantage">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4 text-xs-center">
@@ -32,17 +34,20 @@
         </v-layout>
       </v-container>
     </section>
-    <section class="composition">
+    <!-- почему -->
+    <section class="why">
       <v-parallax src="/static/paralaks.jpg" height="500">
         <v-container fluid>
-          <v-layout column justify-center align-center style="height: 500px; color: #000">
+          <v-layout column justify-center align-center>
+            <v-flex xs12 sm6 class="test">
             <h5>Кому подходит наша одежда?</h5>
-            <ul>
-              <li>Тем кому нравится модная, удобная, стильная и эксклюзивная одежда</li>
-              <li>Практичные и повседневные вещи</li>
-              <li>Женственные платья с карманами</li>
-              <li>Не стесняющие движений</li>
-            </ul>
+              <ul>
+                <li>Тем кому нравится модная, удобная, стильная и эксклюзивная одежда</li>
+                <li>Практичные и повседневные вещи</li>
+                <li>Женственные платья с карманами</li>
+                <li>Не стесняющие движений</li>
+              </ul>
+            </v-flex>
           </v-layout>
         </v-container>      
       </v-parallax>
@@ -54,14 +59,14 @@
           <h3 class="mb-0 collectionH">Коллекция</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
-          <v-flex xs12 lg3 md4 sm6 v-for="(item,i) in gallery" :key="i">
-            <v-card>
-              <v-card-media :src="item.url" height="425"></v-card-media>
+          <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
+            <v-card class="bradius">
+              <v-card-media :src="item.url" height="250"></v-card-media>
               <v-card-title>{{ item.title }}</v-card-title>
               <v-card-actions class="cardActions">
                 <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
                 <!-- <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn> -->
-                <v-btn flat v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
+                <v-btn flat v-tooltip:top="{ html: `${item.price} грн` }">Цена</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -80,6 +85,7 @@
         </v-layout> -->
       </v-container>
     </section>
+    <!-- таблица размеров -->
     <section class="sizeTable">
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
@@ -91,6 +97,7 @@
         </v-layout>
       </v-parallax>
     </section>
+    <!-- условия доставки -->
     <section class="delivery py-5">
       <v-container fluid>
         <v-layout justify-center align-center row wrap>
@@ -109,23 +116,22 @@
         </v-layout>
       </v-container>
     </section>
-    <section class="aboutUs">
-     <v-container fluid>
-      <v-layout class="aboutContainer__one" justify-center row wrap align-end>
-        <h4 style="text-transform: uppercase;" class="mb-0">О нас</h4>
-      </v-layout>
-      <v-layout class="aboutContainer" justify-center row wrap align-center>
-        <v-flex xs12 sm3 class="text-xs-center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
-        </v-flex>
-        <v-flex xs12 sm3 class="text-xs-center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
-        </v-flex>
-        <v-flex xs12 sm3 class="text-xs-center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, voluptas soluta sapiente culpa magni mollitia laudantium fugiat eius eaque porro accusantium, blanditiis beatae accusamus similique in quis magnam explicabo? At!
+    <!-- заказать звонок -->
+    <section class="requestConsult">
+      <v-layout row wrap justify-center align-center>
+        <v-flex xs12 sm6 md4 lg3>
+          <v-form class="requestForm">
+            <v-text-field label="Имя"></v-text-field>
+            <v-text-field label="Телефон"></v-text-field>
+            <v-text-field label="E-mail"></v-text-field>
+            <v-btn type="submit" class="ml-0">Заказать</v-btn>
+          </v-form>
         </v-flex>
       </v-layout>
-      </v-container>
+    </section>
+    <!-- отзывы -->
+    <section class="reviews">
+      ОТЗЫВЫ
     </section>
     <!-- слайдер карточки товара -->
     <section class="popup">
