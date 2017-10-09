@@ -124,15 +124,24 @@
         <v-layout row wrap class="reviewsContainer">
           <v-flex xs12 lg4 class="text-xs-center client">
             <v-icon large>star</v-icon>
-            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae illo dolores voluptatibus voluptates excepturi id praesentium, natus tempore ratione minus labore eaque enim, porro saepe sunt libero deleniti? Deleniti?</p>
+            <p><blockquote>Катя, предприниматель</blockquote></p>
+            <p class="mb-0">
+              <q>Я очень-очень довольна покупкой! Мне понравился крой и дизайн синего платья 009 . Отличное качество пошива.! Благодарю команду InDresser за консультацию при выборе!</q>
+            </p>
           </v-flex>
           <v-flex xs12 lg4 class="text-xs-center client">
             <v-icon large>star</v-icon>
-            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae illo dolores voluptatibus voluptates excepturi id praesentium, natus tempore ratione minus labore eaque enim, porro saepe sunt libero deleniti? Deleniti?</p>
+            <p><blockquote>Катя, предприниматель</blockquote></p>
+            <p class="mb-0">
+              <q>Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! <br> Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!</q>
+            </p>
           </v-flex>
           <v-flex xs12 lg4 class="text-xs-center client">
             <v-icon large>star</v-icon>
-            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae illo dolores voluptatibus voluptates excepturi id praesentium, natus tempore ratione minus labore eaque enim, porro saepe sunt libero deleniti? Deleniti?</p>
+            <p><blockquote>Катя, предприниматель</blockquote></p>
+            <p class="mb-0">
+              <q>Я ризикнула і замовила плаття через Інтернет! Мене приємно вразила якість пошиву. Колір той, який я дивилася на фото, абсолютно ідентичний. Дякую Вам, дійсно гарне плаття, те що і радив менеджер!</q>
+            </p>
           </v-flex>
         </v-layout>
       </v-container>
