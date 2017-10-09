@@ -13,7 +13,7 @@
       </v-parallax>
     </section>
     <!-- преимущества -->
-    <section class="advantage">
+    <section class="advantage py-3">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4 text-xs-center">
           <h4 style="text-transform: uppercase; font-weight: bold;">Почему выгодно покупать у нас?</h4>
