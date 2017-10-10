@@ -7,6 +7,14 @@
 .carousel__item {
   transition: .8s ease-out;
 }
+.collectionH {
+  padding-top: 24px;
+}
+.head {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 .advantage {
   /* background: url('/static/grunde.png') center center repeat; */
   background-color: #fafafa;
@@ -34,7 +42,7 @@
   background-color: #fff;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 1px 1px 1px #333;
+  box-shadow: 10px 7px 15px #727174;
   border: 1px solid #f2e3d2;
 }
 .requestForm .headline {

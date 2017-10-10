@@ -16,7 +16,7 @@
     <section class="advantage py-3">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4 text-xs-center">
-          <h4 style="text-transform: uppercase; font-weight: bold;">Почему выгодно покупать у нас?</h4>
+          <h4 class="mt-3 head">Почему выгодно покупать у нас?</h4>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md3 class="text-xs-center">
@@ -56,7 +56,7 @@
     <section class="gallery">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
-          <h3 class="mb-0 collectionH">Коллекция</h3>
+          <h3 class="mb-0 collectionH head">Наша коллекция осень-зима 17/18</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
@@ -90,7 +90,7 @@
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
           <v-flex xs12 md8 sm11 lg7 class="black--text text-xs-center">
-            <h5>Таблица размеров</h5>
+            <h5 class="head">Таблица размеров</h5>
             <app-table></app-table>
           </v-flex>
           <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
@@ -109,7 +109,7 @@
             <h3 class="headline mb-0 text-xs-center">Заказать консультацию</h3>
             <v-text-field required v-model="user.name" label="Имя"></v-text-field>
             <v-text-field required v-model="user.phone" label="Телефон"></v-text-field>
-            <v-text-field v-model="user.email" label="E-mail"></v-text-field>
+            <v-text-field v-model="user.email" label="e-mail"></v-text-field>
             <v-btn type="submit" class="ml-0 black white--text">Заказать</v-btn>
           </v-form>
         </v-flex>
@@ -119,7 +119,7 @@
     <section class="reviews pt-3 pb-5">
       <v-container fluid>
         <v-layout justify-center align-center>
-          <h5>Отзывы клиентов</h5>
+          <h5 class="head pt-5 pb-3">Отзывы клиентов</h5>
         </v-layout>
         <v-layout row wrap class="reviewsContainer">
           <v-flex xs12 lg4 class="text-xs-center client">
@@ -131,14 +131,14 @@
           </v-flex>
           <v-flex xs12 lg4 class="text-xs-center client">
             <v-icon large>star</v-icon>
-            <p><blockquote>Катя, предприниматель</blockquote></p>
+            <p><blockquote>Наталия, домохозяйка</blockquote></p>
             <p class="mb-0">
               <q>Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! <br> Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!</q>
             </p>
           </v-flex>
           <v-flex xs12 lg4 class="text-xs-center client">
             <v-icon large>star</v-icon>
-            <p><blockquote>Катя, предприниматель</blockquote></p>
+            <p><blockquote>Юлия, студентка мед университета</blockquote></p>
             <p class="mb-0">
               <q>Я ризикнула і замовила плаття через Інтернет! Мене приємно вразила якість пошиву. Колір той, який я дивилася на фото, абсолютно ідентичний. Дякую Вам, дійсно гарне плаття, те що і радив менеджер!</q>
             </p>

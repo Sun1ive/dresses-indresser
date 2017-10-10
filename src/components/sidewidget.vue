@@ -4,10 +4,10 @@
       <a class="telegram" href="https://google.com" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a>
     </div>
     <div class="box">
-      <a class="phone" href="https://google.com" target="_blank"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+      <a class="facebook" href="https://google.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     </div>
     <div class="box">
-      <a class="facebook" href="https://google.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a class="phone" href="https://google.com" target="_blank"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
     </div>
   </div>
 </template>

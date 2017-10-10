@@ -28,4 +28,9 @@
     transition: .4s ease;
     color: #F44336
   }
+  @media (max-width: 350px) {
+    .socialList {
+      justify-content: center;
+    }
+  }
 </style>

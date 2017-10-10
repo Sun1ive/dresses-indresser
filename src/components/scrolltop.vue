@@ -88,10 +88,13 @@
       margin-left: 1px;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 350px) {
     .scrollTop:after {
       left: 50%;
       margin-left: -15px;
+    }
+    .scrollTop:before {
+      margin-left: -6px;
     }
   }
 </style>
