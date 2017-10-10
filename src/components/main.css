@@ -10,6 +10,29 @@
 .collectionH {
   padding-top: 24px;
 }
+.collectionCard {
+  border-radius: 10px;
+}
+.whyUsContainer {
+  min-height: 75px;
+  color: #333;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px rgba(0,0,0,.3);
+  transition: .4s ease;
+}
+.whyUsContainer:hover {
+  background-color: rgba(255,255,255, .7);
+}
 .head {
   font-size: 38px;
   text-transform: uppercase;
@@ -28,6 +51,23 @@
   position: absolute;
   content: "";
   border-right: 1px solid #333;
+}
+.layout .client:nth-child(2) {
+  align-self: flex-end;
+}
+.client {
+  margin: 5px;
+  padding: 25px 25px 0 25px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  background: url('/static/grunde.png') center center repeat;
+}
+.reviewClient {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: auto;
+  margin-top: 15px;
 }
 .advantage {
   /* background: url('/static/grunde.png') center center repeat; */
@@ -69,26 +109,8 @@
   font-size: 24px;
   text-transform: uppercase;
 }
-.priceBox {
-  font-size: 28px;
-  padding-bottom: 0;
-}
-.compText {
-  color: rgb(49, 49, 49);
-  text-shadow: 2px 2px 1px #fff
-}
-/* .avatar {
-  padding: 15px;
-  border: 2px solid #333;
-  background-color: #333;
-  color: #fff;
-  transition: .4s ease;
-  cursor: pointer;
-} */
-.avatar:hover {
-  background-color: #F44336;
-  border-color: #F44336;
-  transition: .4s ease;
+.review {
+  text-indent: 2.3rem;
 }
 .white {
   background-image: none !important;
@@ -96,13 +118,6 @@
 .circleBtn {
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-}
-.test {
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .bradius {
   border-radius: 10px;

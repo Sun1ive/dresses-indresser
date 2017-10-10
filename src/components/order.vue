@@ -5,7 +5,7 @@
       <v-text-field name="name" label="Имя" v-model="userData.name"></v-text-field>
       <v-text-field name="phone" label="Телефон" v-model="userData.phone"></v-text-field>
       <v-text-field name="email" label="e-mail" v-model="userData.email"></v-text-field>
-      <v-select :items="items" v-model="userData.size" label="Select" single-line bottom></v-select>
+      <v-select :items="items" v-model="userData.size" label="Выбрать размер" single-line bottom></v-select>
       <v-btn class="red darken-2 white--text ml-0" type="submit">Оформить заказ</v-btn>
       <v-btn @click="closeOrder" class="white--text grey darken-4">Закрыть</v-btn>
     </v-form>
@@ -32,16 +32,14 @@ export default {
     methods: {
       submitOrder () {
         this.userData.orderedItem = this.item
-        let data = this.userData
-        console.log(data);
-        // emailjs.send('smtp_server','test', {
-        //   name: data.name,
-        //   phone: data.phone,
-        //   email: data.email,
-        //   order: `Товар: ${data.orderedItem.title} Размер: ${data.size} Цена: ${data.orderedItem.price}`
-        // })
-        // .then(r => console.log(r))
-        // .catch(e => console.log(e))
+        emailjs.send('smtp_server','test', {
+          name: this.userData.name,
+          phone: this.userData.phone,
+          email: this.userData.email,
+          order: `Товар: ${this.userData.orderedItem.title} Размер: ${this.userData.size} Цена: ${this.userData.orderedItem.price}`
+        })
+        .then(r => console.log(r))
+        .catch(e => console.log(e))
 /*         axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
           .then(r => console.log(r))
           .catch(e => console.log(e)) */
@@ -66,6 +64,7 @@ export default {
 .container {
   background-color: #fff;
   min-height: 350px;
+  border-radius: 10px;
 }
 #form {
   padding: 15px 45px;

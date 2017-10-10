@@ -16,7 +16,7 @@
     <section class="advantage py-3">
       <v-container fluid>
         <v-layout justify-center align-center class="pt-4 text-xs-center">
-          <h4 class="mt-3 head">Почему выгодно покупать у нас?</h4>
+          <h4 class="mt-3 head">Почему мы?</h4>
         </v-layout>
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md3 class="text-xs-center">
@@ -25,11 +25,11 @@
           </v-flex>
           <v-flex xs12 md3 class="text-xs-center">
             <v-icon x-large class="red--text">directions_bus</v-icon>
-            <h5>Быстрая бесплатная доставка</h5>
+            <h5>Бесплатная доставка по Украине</h5>
           </v-flex>
           <v-flex xs12 md3 class="text-xs-center">
             <v-icon x-large class="red--text">check</v-icon>
-            <h5>Подходит под любую обувь</h5>
+            <h5>Сочетание качества и дизайна</h5>
           </v-flex>
         </v-layout>
       </v-container>
@@ -38,15 +38,18 @@
     <section class="why">
       <v-parallax src="/static/paralaks.jpg" height="500">
         <v-container fluid>
-          <v-layout>
-            <v-flex xs12 sm6 offset-sm5 class="test" style="min-height: 500px;">
-            <h3 class="headline">Кому подходит наша одежда?</h3>
-              <ul>
-                <li>Тем кому нравится модная, удобная, стильная и эксклюзивная одежда</li>
-                <li>Практичные и повседневные вещи</li>
-                <li>Женственные платья с карманами</li>
-                <li>Не стесняющие движений</li>
-              </ul>
+          <v-layout justify-center>
+            <h3 class="head mt-5 pt-3" style="color: #000">Кому подходит наша одежда?</h3>
+          </v-layout>
+          <v-layout column wrap align-center justify-center>
+            <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
+              <v-icon large class="red--text mr-3">thumb_up</v-icon><p class="mb-0">Для любительниц что-то носить с собой, теперь ЕСТЬ решение - это практичное и элегантоное платье с карманами!</p>
+            </v-flex>
+            <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
+              <v-icon large class="red--text mr-3">thumb_up</v-icon><p class="mb-0">Для тех, кто предпочитает стильные, удобные и женственные платья в cтиле Casual!</p>
+            </v-flex>
+            <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
+              <v-icon large class="red--text mr-3">thumb_up</v-icon><p class="mb-0">Для тех, кто живет в ритме города и не беспокоится по мелочам!</p>
             </v-flex>
           </v-layout>
         </v-container>      
@@ -79,11 +82,10 @@
     <section class="sizeTable">
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
-          <v-flex xs12 md8 sm11 lg7 class="black--text text-xs-center">
-            <h5 class="head">Таблица размеров</h5>
+          <v-flex xs12 md8 sm11 lg5 offset-lg3 class="black--text text-xs-center">
+            <h5 class="head mb-5">Таблица размеров</h5>
             <app-table></app-table>
           </v-flex>
-          <v-flex xs12 md6 class="black--text text-xs-center"></v-flex>
         </v-layout>
       </v-parallax>
     </section>
@@ -113,27 +115,24 @@
         <v-layout justify-center align-center>
           <h5 class="head pt-5 pb-3">Отзывы клиентов</h5>
         </v-layout>
-        <v-layout row wrap class="reviewsContainer">
-          <v-flex xs12 lg4 class="text-xs-center client">
-            <v-icon large>star</v-icon>
-            <p><blockquote>Катя, предприниматель</blockquote></p>
-            <p class="mb-0">
+          <v-layout row wrap justify-center class="reviewsContainer">
+          <v-flex xs12 lg3 class="text-xs-right client">
+            <p class="mb-0 review black--text" align="justify">
               <q>Я очень-очень довольна покупкой! Мне понравился крой и дизайн синего платья 009 . Отличное качество пошива.! Благодарю команду InDresser за консультацию при выборе!</q>
             </p>
+            <p class="reviewClient black--text">Катя, предприниматель</p>
           </v-flex>
-          <v-flex xs12 lg4 class="text-xs-center client">
-            <v-icon large>star</v-icon>
-            <p><blockquote>Наталия, домохозяйка</blockquote></p>
-            <p class="mb-0">
-              <q>Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! <br> Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!</q>
+          <v-flex xs12 lg3 class="text-xs-right client">
+            <p class="mb-0 review black--text" align="justify">
+              <q>Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!</q>
             </p>
+            <p class="reviewClient black--text">Наталия, молодая мама</p>
           </v-flex>
-          <v-flex xs12 lg4 class="text-xs-center client">
-            <v-icon large>star</v-icon>
-            <p><blockquote>Юлия, студентка мед университета</blockquote></p>
-            <p class="mb-0">
+          <v-flex xs12 lg3 class="text-xs-right client">
+            <p class="mb-0 review black--text" align="justify">
               <q>Я ризикнула і замовила плаття через Інтернет! Мене приємно вразила якість пошиву. Колір той, який я дивилася на фото, абсолютно ідентичний. Дякую Вам, дійсно гарне плаття, те що і радив менеджер!</q>
             </p>
+            <p class="reviewClient black--text">Юлия, студентка мед университета</p>
           </v-flex>
         </v-layout>
       </v-container>
@@ -209,7 +208,7 @@ import terms from './terms'
         this.collectionItem.price = item.price
         this.slider = item.slider
         this.collectionItem.desc = item.desc
-        console.log(this.slider)
+        // console.log(this.slider)
         this.popup = true
       },
       requestConsult () {

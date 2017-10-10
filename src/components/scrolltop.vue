@@ -55,6 +55,15 @@
       margin-left: -11px;
     }
   }
+  @media (max-width: 1750px) {
+    .scrollTop:after {
+      left: 50%;
+      margin-left: -5px
+    }
+    .scrollTop:before {
+      margin-left: -8px;
+    }
+  }
   @media (max-width: 1600px) {
     .scrollTop:after {
       left: 50%;
@@ -82,19 +91,36 @@
       bottom: 90%;
     }
   }
+  @media (max-width: 1000px) {
+    .scrollTop:before {
+      margin-left: -7px;
+    }
+  }
   @media (max-width: 650px) {
     .scrollTop:after {
       left: 48%;
       margin-left: 1px;
     }
+    .scrollTop:before {
+      margin-left: -2px;
+    }
+  }
+  @media (max-width: 420px) {
+    .scrollTop:after {
+      left: 47%;
+      margin-left: 1px;
+    }
+    .scrollTop:before {
+      margin-left: -2px;
+    }
   }
   @media (max-width: 350px) {
     .scrollTop:after {
       left: 50%;
-      margin-left: -15px;
+      margin-left: -22px;
     }
     .scrollTop:before {
-      margin-left: -6px;
+      margin-left: -12px;
     }
   }
 </style>
