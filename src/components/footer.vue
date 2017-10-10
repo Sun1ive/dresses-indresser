@@ -6,7 +6,7 @@
         </v-flex>
         <v-flex xs12 lg3 sm3 class="text-xs-left">
           <h5 class="head mb-0">Режим работы:</h5>
-          <div>Наш магазин InDresser работает с понедельника по пятницу <br>с 09:00 до 18:00.</div>
+          <div>С понедельника по пятницу с 09:00 до 18:00.</div>
           <div>Выходные дни -  суббота и воскресенье</div>
         </v-flex>
         <v-flex xs12 lg3 sm4 class="text-xs-left paddingLeft">
@@ -61,7 +61,7 @@ import socials from './socials'
     color: #fff;
   }
   footer {
-    background-color: #D3D0D7;
+    background-color: #E2E2E4;
   }
   .socialList__box {
     min-height: 50px;

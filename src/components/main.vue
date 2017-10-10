@@ -21,7 +21,7 @@
         <v-layout row wrap justify-center align-center class="advLayout">
           <v-flex xs12 md3 class="text-xs-center">
             <v-icon x-large class="red--text">color_lens</v-icon>
-            <h5>Дизайнерская одежда</h5>
+            <h5>Экслюзивная дизайнерская одежда</h5>
           </v-flex>
           <v-flex xs12 md3 class="text-xs-center">
             <v-icon x-large class="red--text">directions_bus</v-icon>
@@ -29,7 +29,7 @@
           </v-flex>
           <v-flex xs12 md3 class="text-xs-center">
             <v-icon x-large class="red--text">check</v-icon>
-            <h5>Сочетание качества и дизайна</h5>
+            <h5>Сочетание цены и качества</h5>
           </v-flex>
         </v-layout>
       </v-container>
@@ -43,13 +43,16 @@
           </v-layout>
           <v-layout column wrap align-center justify-center>
             <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
-              <v-icon large class="red--text mr-3">thumb_up</v-icon><p class="mb-0">Для любительниц что-то носить с собой, теперь ЕСТЬ решение - это практичное и элегантоное платье с карманами!</p>
+              <v-icon large class="red--text mr-3">thumb_up</v-icon>
+                <p class="mb-0">Для любительниц что-то носить с собой, теперь ЕСТЬ решение - это практичное и элегантоное платье с карманами!</p>
             </v-flex>
             <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
-              <v-icon large class="red--text mr-3">thumb_up</v-icon><p class="mb-0">Для тех, кто предпочитает стильные, удобные и женственные платья в cтиле Casual!</p>
+              <v-icon large class="red--text mr-3">thumb_up</v-icon>
+                <p class="mb-0">Для тех, кто предпочитает стильные, удобные и женственные платья в cтиле Casual!</p>
             </v-flex>
             <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
-              <v-icon large class="red--text mr-3">thumb_up</v-icon><p class="mb-0">Для тех, кто живет в ритме города и не беспокоится по мелочам!</p>
+              <v-icon large class="red--text mr-3">thumb_up</v-icon>
+                <p class="mb-0">Для тех, кто живет в ритме города и не беспокоится по мелочам!</p>
             </v-flex>
           </v-layout>
         </v-container>      

@@ -84,4 +84,7 @@ export default {
 .dFlex a {
   color: #333;
 }
+.toolbar {
+  background: url('/static/grunde.png') center center repeat;
+}
 </style>

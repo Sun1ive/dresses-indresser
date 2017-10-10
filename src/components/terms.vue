@@ -3,7 +3,7 @@
    <v-layout row wrap>
      <v-flex xs12 sm6 lg3 class="text-xs-center" v-for="(item, i) in terms" :key="i">
        <h5 class="head flexx"><v-icon large class="red--text mr-2">{{ item.icon }}</v-icon>{{ item.title }}</h5>
-       <v-btn flat @click.stop="showTerms(item)">Подробнее <v-icon right>keyboard_arrow_right</v-icon><v-icon style="margin-left: -15px;">keyboard_arrow_right</v-icon></v-btn>
+       <v-btn flat @click.stop="showTerms(item)">Узнать подробнее <v-icon right>keyboard_arrow_right</v-icon><v-icon style="margin-left: -15px;">keyboard_arrow_right</v-icon></v-btn>
      </v-flex>
    </v-layout>
    <v-container>

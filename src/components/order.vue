@@ -2,10 +2,10 @@
   <v-container>
     <v-form @submit.prevent="submitOrder" id="form">
       <h5 class="mb-0 text-xs-center">Оформить заказ</h5>
-      <v-text-field name="name" label="Имя" v-model="userData.name"></v-text-field>
-      <v-text-field name="phone" label="Телефон" v-model="userData.phone"></v-text-field>
+      <v-text-field name="name" label="Укажите Ваше имя" v-model="userData.name"></v-text-field>
+      <v-text-field name="phone" label="Укажите Ваш телефон" v-model="userData.phone"></v-text-field>
       <v-text-field name="email" label="e-mail" v-model="userData.email"></v-text-field>
-      <v-select :items="items" v-model="userData.size" label="Выбрать размер" single-line bottom></v-select>
+      <v-select :items="items" v-model="userData.size" label="Выберите размер платья" single-line bottom></v-select>
       <v-btn class="red darken-2 white--text ml-0" type="submit">Оформить заказ</v-btn>
       <v-btn @click="closeOrder" class="white--text grey darken-4">Закрыть</v-btn>
     </v-form>
