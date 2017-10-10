@@ -63,7 +63,7 @@ import sideWidget from './components/sidewidget'
       },
       showOrder (item) {
         this.item = item
-        console.log(this.item);
+        // console.log(this.item);
         this.dialog = true
       },
       closeOrder () {

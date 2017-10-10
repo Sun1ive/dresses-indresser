@@ -1,9 +1,5 @@
 <template>
-  <v-data-table
-      :headers="headers"
-      :items="items"
-      hide-actions
-    >
+  <v-data-table :headers="headers" :items="items" hide-actions >
     <template slot="items" scope="props">
       <td>{{ props.item.name }}</td>
       <td class="text-xs-center">{{ props.item.xs }}</td>

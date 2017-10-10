@@ -62,27 +62,17 @@
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card class="bradius">
               <v-card-media :src="item.url" height="250"></v-card-media>
-              <v-card-title>{{ item.title }}</v-card-title>
+              <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
+              <v-card-actions>
+                <v-btn style="border-radius: 8px; background-color: rgba(255,255,255,.2)" v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
+              </v-card-actions>
               <v-card-actions class="cardActions">
                 <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
-                <!-- <v-btn flat @click.stop="checkPrice(item)">Узнать цену</v-btn> -->
-                <v-btn flat v-tooltip:top="{ html: `${item.price} грн` }">Цена</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
-        <!-- проверка цены -->
-<!--    <v-layout>
-          <v-dialog v-model="showPrice">
-            <v-card>
-              <v-card-title class="priceBox">{{ collectionItem.price }}<v-btn flat @click.stop="showOrder(item)">Заказать</v-btn></v-card-title>
-              <v-card-actions>
-                <v-btn flat @click.stop="showPrice = false">Закрыть</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </v-layout> -->
       </v-container>
     </section>
     <!-- таблица размеров -->
@@ -110,7 +100,9 @@
             <v-text-field required v-model="user.name" label="Имя"></v-text-field>
             <v-text-field required v-model="user.phone" label="Телефон"></v-text-field>
             <v-text-field v-model="user.email" label="e-mail"></v-text-field>
-            <v-btn type="submit" class="ml-0 black white--text">Заказать</v-btn>
+            <v-card-actions class="white">
+              <v-btn type="submit" class="ml-0 red darken-2 white--text circleBtn">Заказать</v-btn>
+            </v-card-actions>
           </v-form>
         </v-flex>
       </v-layout>
@@ -151,27 +143,17 @@
       <v-layout>
         <v-dialog v-model="popup" persistent width="500">
           <v-card class="collectionCard">
-            <v-carousel hide-controls v-if="popup">
+            <v-carousel hide-controls v-show="popup">
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
-            <v-card-title primary-title>{{ collectionItem.title }}</v-card-title>
+            <v-card-title class="popupTitle">{{ collectionItem.title }}<v-spacer></v-spacer>
+              <!-- <div>{{ collectionItem.price }} <span class="valute">грн</span></div></v-card-title> -->
+             <span class="valute">{{ collectionItem.price }} грн</span></v-card-title>
             <v-card-text>
               <v-layout>
-                <v-flex xs12 class="text-xs-center">{{collectionItem.desc }}</v-flex>
-              </v-layout>
-              <v-layout row wrap justify-center align-center>
-                <v-flex xs12 sm4 class="text-xs-center">
-                  <div class="avatar">35%</div><div>Полиэстр</div>
+                <v-flex xs12 class="text-xs-left">
+                  <p align="justify">{{collectionItem.desc }}</p>
                 </v-flex>
-                <v-flex xs12 sm4 class="text-xs-center">
-                  <div class="avatar">35%</div><div>Вискоза</div>
-                </v-flex>
-                <v-flex xs12 sm4 class="text-xs-center">
-                  <div class="avatar">30%</div><div>Эластан</div>
-                </v-flex>
-              </v-layout>
-              <v-layout>
-                <v-flex xs12 class="text-xs-center">{{ collectionItem.price }}грн</v-flex>
               </v-layout>
             </v-card-text>
             <v-card-actions>
@@ -216,7 +198,7 @@ import terms from './terms'
     },
     methods: {
       showOrder (item) {
-        console.log(item);
+        // console.log(item);
         this.popup = false
         this.showPrice = false
         this.$emit('showOrder', item)
@@ -229,10 +211,6 @@ import terms from './terms'
         this.collectionItem.desc = item.desc
         console.log(this.slider)
         this.popup = true
-      },
-      checkPrice (item) {
-        this.collectionItem.price = `${item.price} грн`
-        this.showPrice = true
       },
       requestConsult () {
         console.log(this.user)
