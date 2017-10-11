@@ -2,8 +2,8 @@
  <v-container fluid>
    <v-layout row wrap>
      <v-flex xs12 sm6 lg3 class="text-xs-center" v-for="(item, i) in terms" :key="i">
-       <h5 class="head flexx"><v-icon large class="red--text mr-2">{{ item.icon }}</v-icon>{{ item.title }}</h5>
-       <v-btn flat @click.stop="showTerms(item)">Узнать подробнее <v-icon right>keyboard_arrow_right</v-icon><v-icon style="margin-left: -15px;">keyboard_arrow_right</v-icon></v-btn>
+       <h3 class="flexx"><v-icon large class="red--text mr-2">{{ item.icon }}</v-icon>{{ item.title }}</h3>
+       <v-btn flat @click.stop="showTerms(item)">Узнать подробнее <v-icon right>keyboard_arrow_right</v-icon><v-icon style="margin-left: -30px;">keyboard_arrow_right</v-icon></v-btn>
      </v-flex>
    </v-layout>
    <v-container>
@@ -76,11 +76,6 @@
 ul > li {
   margin: 0 10px;
 }
-.head {
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
 .flexx {
   display: flex;
   align-items: center;
@@ -94,5 +89,13 @@ ul > li {
 }
 .text {
   text-indent: 1.5rem;
+  font-size: 1.2rem;
+}
+.icon {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: 300;
 }
 </style>

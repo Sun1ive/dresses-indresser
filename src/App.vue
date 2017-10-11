@@ -6,6 +6,10 @@
     <v-dialog scrollable v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
     </v-dialog>
+    <v-dialog v-model="showSubForm" width="400" scrollable>
+      <app-subform @closeSubForm="closeSubForm"></app-subform>
+    </v-dialog>
+    <present-widget v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
     <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
     <scroll-top></scroll-top>
     <app-widget></app-widget>
@@ -16,12 +20,15 @@
 <script>
 import toolbar from './components/toolbar'
 import main from './components/main'
+// import orderCall from './components/orderCall'
 import footer from './components/footer'
 import header from './components/header'
 import order from './components/order'
 import phone from './components/phone'
 import scrollTop from './components/scrolltop'
 import sideWidget from './components/sidewidget'
+import present from './components/present'
+import subform from './components/subform'
 
 
   export default {
@@ -34,11 +41,14 @@ import sideWidget from './components/sidewidget'
       // 'app-call': orderCall,
       'widget-phone': phone,
       'scroll-top': scrollTop,
-      'app-widget': sideWidget
+      'app-widget': sideWidget,
+      'present-widget': present,
+      'app-subform': subform
     },
     data () {
       return {
         dialog: false,
+        showSubForm: false,
         // callDialog: false,
         showNumbers: false,
         item: [],
@@ -61,12 +71,21 @@ import sideWidget from './components/sidewidget'
         // console.log(this.item);
         this.dialog = true
       },
+/*       showCallForm () {
+        this.callDialog = true 
+      }, */
       closeOrder () {
         this.dialog = false
       },
-      closeCall () {
+      showSubscribeForm () {
+        this.showSubForm = true
+      },
+      closeSubForm () {
+        this.showSubForm = false
+      },
+/*       closeCall () {
         this.callDialog = false
-      }
+      } */
     },
     created () {
       window.addEventListener('scroll', this.toolbar)

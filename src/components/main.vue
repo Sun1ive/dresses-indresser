@@ -48,7 +48,7 @@
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
           <v-flex xs12 md8 sm11 lg5 offset-lg3 class="black--text text-xs-center">
-            <h5 class="head mb-5">Таблица размеров</h5>
+            <h3 class="collectionH mb-5">Таблица размеров</h3>
             <app-table></app-table>
           </v-flex>
         </v-layout>
@@ -62,11 +62,11 @@
     <section class="requestConsult">
       <v-layout row wrap justify-center align-center>
         <v-flex xs12 sm6 md4 lg3>
-          <v-form class="requestForm" @submit.prevent="requestConsult">
+          <v-form class="requestForm" @submit.prevent="requestConsult" v-model="valid">
             <h3 class="headline mb-0 text-xs-center">Заказать консультацию</h3>
             <v-text-field required v-model="user.name" label="Имя"></v-text-field>
             <v-text-field required v-model="user.phone" label="Телефон"></v-text-field>
-            <v-text-field v-model="user.email" label="e-mail"></v-text-field>
+            <v-text-field required type="email" v-model="user.email" label="e-mail"></v-text-field>
             <v-card-actions class="white">
               <v-btn type="submit" class="ml-0 red darken-2 white--text circleBtn">Заказать</v-btn>
             </v-card-actions>
@@ -124,6 +124,7 @@ import why from './why'
     },
     data() {
       return {
+        valid: false,
         popup: false,
         collectionItem: {
           title: '',
@@ -136,7 +137,6 @@ import why from './why'
           phone: '',
           email: ''
         },
-        // slider: ['/static/gallery/1.jpg','/static/gallery/2.jpg','/static/gallery/3.jpg'],
         slider: ['','',''],
         showPrice: false
       }

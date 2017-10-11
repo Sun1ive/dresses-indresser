@@ -7,6 +7,9 @@
 .carousel__item {
   transition: .8s ease-out;
 }
+.sizeTable .collectionH {
+  font-size: 5rem
+}
 .collectionH {
   padding-top: 24px;
   text-transform: uppercase;

@@ -1,22 +1,22 @@
 <template>
   <v-container fluid>
     <v-layout justify-center align-center>
-      <h5 class="head pt-5 pb-3">Отзывы клиентов</h5>
+      <h5 class="head">Отзывы клиентов</h5>
     </v-layout>
       <v-layout row wrap justify-center class="reviewsContainer">
-      <v-flex xs12 lg3 class="text-xs-right client">
+      <v-flex xs10 lg3 class="text-xs-right client">
         <p class="mb-0 review black--text" align="justify">
           <q>Я очень-очень довольна покупкой! Мне понравился крой и дизайн синего платья 009 . Отличное качество пошива.! Благодарю команду InDresser за консультацию при выборе!</q>
         </p>
         <p class="reviewClient black--text">Катя, предприниматель</p>
       </v-flex>
-      <v-flex xs12 lg3 class="text-xs-right client">
+      <v-flex xs10 lg3 class="text-xs-right client">
         <p class="mb-0 review black--text" align="justify">
           <q>Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!</q>
         </p>
         <p class="reviewClient black--text">Наталия, молодая мама</p>
       </v-flex>
-      <v-flex xs12 lg3 class="text-xs-right client">
+      <v-flex xs10 lg3 class="text-xs-right client">
         <p class="mb-0 review black--text" align="justify">
           <q>Я ризикнула і замовила плаття через Інтернет! Мене приємно вразила якість пошиву. Колір той, який я дивилася на фото, абсолютно ідентичний. Дякую Вам, дійсно гарне плаття, те що і радив менеджер!</q>
         </p>
@@ -27,6 +27,7 @@
 </template>
 
 <style scoped>
+
 .client {
   margin: 5px 25px;
   padding: 25px 25px 0 25px;
@@ -35,11 +36,16 @@
   background: url('/static/grunde.png') center center repeat;
   transition: .3s ease;
 }
+.client:first-child .reviewClient {
+  margin-top: 55px;
+}
+.client:last-child .reviewClient {
+  margin-top: 35px;
+}
 .reviewClient {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
   font-weight: 500;
-  margin-top: auto;
   margin-top: 15px;
 }
 .client:hover {
@@ -48,8 +54,25 @@
   box-shadow: 3px 2px 8px rgba(0,0,0,.7);
 }
 .head {
-  font-size: 38px;
+  font-size: 6rem;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 300;
+  padding: 20px 0;
+  line-height: 6rem;
+}
+
+
+
+
+@media (max-width: 1280px) {
+.client:first-child .reviewClient {
+  margin-top: 0px;
+}
+.client:last-child .reviewClient {
+  margin-top: 0px;
+}
+.client .reviewClient {
+  margin-top: 0;
+}
 }
 </style>

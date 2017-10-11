@@ -22,7 +22,7 @@
     },
     methods: {
       offerCall () {
-        console.log(this.userCall)
+        console.log(`Имя: ${this.userCall.name}`)
         this.$emit('closeCall')
         this.userCall = {
           name: null,
