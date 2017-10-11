@@ -13,38 +13,18 @@
       </v-parallax>
     </section>
     <!-- преимущества -->
-    <section class="advantage py-3">
+    <section class="advantage pt-3 pb-5">
       <app-advantages></app-advantages>
     </section>
     <!-- почему -->
     <section class="why">
-      <v-parallax src="/static/paralaks.jpg" height="500">
-        <v-container fluid>
-          <v-layout justify-center>
-            <h3 class="head mt-5 pt-3" style="color: #000">Кому подходит наша одежда?</h3>
-          </v-layout>
-          <v-layout column wrap align-center justify-center>
-            <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
-              <v-icon large class="red--text mr-3">thumb_up</v-icon>
-                <p class="mb-0">Для любительниц что-то носить с собой, теперь ЕСТЬ решение - это практичное и элегантоное платье с карманами!</p>
-            </v-flex>
-            <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
-              <v-icon large class="red--text mr-3">thumb_up</v-icon>
-                <p class="mb-0">Для тех, кто предпочитает стильные, удобные и женственные платья в cтиле Casual!</p>
-            </v-flex>
-            <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">
-              <v-icon large class="red--text mr-3">thumb_up</v-icon>
-                <p class="mb-0">Для тех, кто живет в ритме города и не беспокоится по мелочам!</p>
-            </v-flex>
-          </v-layout>
-        </v-container>      
-      </v-parallax>
+      <app-why></app-why>
     </section>
     <!-- карточки товаров -->
     <section class="gallery">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
-          <h3 class="mb-0 collectionH head">Наша коллекция осень-зима 17/18</h3>
+          <h3 class="mb-0 collectionH">Наша коллекция осень-зима 17/18</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
@@ -55,7 +35,7 @@
                 <v-btn style="border-radius: 8px; background-color: rgba(255,255,255,.2)" v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
               </v-card-actions>
               <v-card-actions class="cardActions">
-                <v-btn flat @click="showItem(item)">Посмотреть</v-btn>
+                <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -101,7 +81,7 @@
     <!-- слайдер карточки товара -->
     <section class="popup">
       <v-layout>
-        <v-dialog v-model="popup" persistent width="500">
+        <v-dialog v-model="popup" width="500">
           <v-card class="collectionCard">
             <v-carousel hide-controls v-show="popup">
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
@@ -132,13 +112,15 @@ import table from './table'
 import terms from './terms'
 import reviews from './reviews'
 import adv from './advantages'
+import why from './why'
 
   export default {
     components: {
       'app-table': table,
       'app-terms': terms,
       'app-reviews': reviews,
-      'app-advantages': adv
+      'app-advantages': adv,
+      'app-why': why
     },
     data() {
       return {

@@ -1,0 +1,38 @@
+.whyUsContainer
+  min-height: 75px
+  color: #000
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  font-size: 1.2rem
+  font-weight: 500
+  cursor: pointer
+  margin-top: 5px
+  margin-bottom: 5px
+  border-radius: 10px
+  padding: 15px
+  box-shadow: 2px 2px rgba(0,0,0,.3)
+  transition: 1s ease
+  position: relative
+  &:before
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .2;
+    background: url('/static/favicon.ico') 97% center no-repeat
+    transition .5s ease
+  &:hover
+    transition .5s ease
+    background-color: #fff
+    &:before
+      transition .5s ease
+      opacity 1
+
+h2
+  text-transform uppercase
+  color #000
+  font-size 6.2em
+  font-weight 300

@@ -4,17 +4,17 @@
       <h1 class="mt-3">Почему мы?</h1>
     </v-layout>
     <v-layout row wrap justify-center align-center class="advLayout">
-      <v-flex xs12 md3 class="text-xs-center">
-        <v-icon x-large class="red--text">color_lens</v-icon>
-        <h5>Экслюзивная дизайнерская одежда</h5>
+      <v-flex xs12 lg4 md4 sm3 class="text-xs-center">
+        <v-icon class="red--text">color_lens</v-icon>
+        <div class="something">Экслюзивная дизайнерская одежда</div>
       </v-flex>
-      <v-flex xs12 md3 class="text-xs-center">
-        <v-icon x-large class="red--text">directions_bus</v-icon>
-        <h5>Бесплатная доставка по Украине</h5>
+      <v-flex xs12 lg4 md4 sm3 class="text-xs-center">
+        <v-icon class="red--text">directions_bus</v-icon>
+        <div class="something">Бесплатная доставка по Украине</div>
       </v-flex>
-      <v-flex xs12 md3 class="text-xs-center">
-        <v-icon x-large class="red--text">check</v-icon>
-        <h5>Сочетание цены и качества</h5>
+      <v-flex xs12 lg4 md4 sm3 class="text-xs-center">
+        <v-icon class="red--text">check</v-icon>
+        <div class="something">Сочетание цены и качества</div>
       </v-flex>
     </v-layout>
   </v-container>
@@ -28,5 +28,11 @@
 }
 h1 {
   text-transform: uppercase;
+}
+.something {
+  font-size: 1.8em;
+}
+.icon {
+  font-size: 9rem;
 }
 </style>
