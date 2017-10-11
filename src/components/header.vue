@@ -7,7 +7,6 @@
           <v-spacer></v-spacer>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a>
           <v-spacer></v-spacer>
-          <!-- <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a> -->
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a>
         </v-flex>
         <v-flex xs12 sm6>

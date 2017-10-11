@@ -10,10 +10,10 @@
       <app-subform @closeSubForm="closeSubForm"></app-subform>
     </v-dialog>
     <present-widget v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
-    <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
     <scroll-top></scroll-top>
     <app-widget></app-widget>
     <app-footer @showOrder="showOrder"></app-footer>
+    <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
   </v-app>
 </template>
 

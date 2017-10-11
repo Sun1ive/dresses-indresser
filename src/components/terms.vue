@@ -98,4 +98,10 @@ h3 {
   font-size: 3rem;
   font-weight: 300;
 }
+
+@media (max-width: 1280px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+}
 </style>

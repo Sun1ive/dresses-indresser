@@ -2,20 +2,28 @@ import Vue from 'vue'
 import App from './App.vue'
 import Vuetify from 'vuetify'
 import './stylus/main.styl'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 import _ from 'lodash'
 import Scroll from 'vue-scrollto'
 
 Vue.use(Vuetify)
 Vue.use(_)
+
+Vue.use(AOS)
+
 Vue.use(Scroll, {
   container: 'body',
   duration: 500,
-  offset: -100,
+  offset: -200,
   cancelable: true,
   easing: 'ease'
 })
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  mounted () {
+    AOS.init();
+  }
 })

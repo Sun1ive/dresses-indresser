@@ -84,4 +84,9 @@ import socials from './socials'
       padding-left: 0;
     }
   }
+  @media (max-width: 400px) {
+    .flex {
+      padding-left: 0 !important;
+    }
+  }
 </style>

@@ -14,14 +14,14 @@
     </section>
     <!-- преимущества -->
     <section class="advantage pt-3 pb-5">
-      <app-advantages></app-advantages>
+      <app-advantages data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-advantages>
     </section>
     <!-- почему -->
     <section class="why">
-      <app-why></app-why>
+      <app-why data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-why>
     </section>
     <!-- карточки товаров -->
-    <section class="gallery">
+    <section class="gallery" data-aos="fade-left">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
           <h3 class="mb-0 collectionH">Наша коллекция осень-зима 17/18</h3>
@@ -44,7 +44,7 @@
       </v-container>
     </section>
     <!-- таблица размеров -->
-    <section class="sizeTable">
+    <section class="sizeTable" data-aos="fade-right">
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
           <v-flex xs12 md8 sm11 lg5 offset-lg3 class="black--text text-xs-center">
@@ -113,6 +113,9 @@ import terms from './terms'
 import reviews from './reviews'
 import adv from './advantages'
 import why from './why'
+import axios from 'axios'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
   export default {
     components: {
@@ -159,6 +162,9 @@ import why from './why'
       },
       requestConsult () {
         console.log(this.user)
+        axios.post('https://myvuewebapp.firebaseio.com/request.json', this.user)
+          .then(r => console.log(r))
+          .catch(e => console.log(e))
         this.user = {
           name: null,
           phone: null,

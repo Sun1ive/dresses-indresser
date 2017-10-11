@@ -24,9 +24,9 @@
   bottom: 30px;
   right: 30px;
   /* background-color: #c0c0c0; */
+  /* border: 1px solid #333; */
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #333;
   animation: fadeOut 5s infinite linear both;
 }
 .present:hover {
