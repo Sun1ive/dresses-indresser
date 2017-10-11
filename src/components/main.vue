@@ -1,5 +1,9 @@
 <template>
   <main>
+    <!-- bot? -->
+    <section class="bot">
+      <app-bot></app-bot>
+    </section>
     <!-- баннер -->
     <section class="banner">
       <v-parallax src="../../static/234.jpg" height="600" class="py-5">
@@ -114,6 +118,7 @@ import reviews from './reviews'
 import adv from './advantages'
 import why from './why'
 import axios from 'axios'
+import bot from './bot'
 
   export default {
     components: {
@@ -121,7 +126,8 @@ import axios from 'axios'
       'app-terms': terms,
       'app-reviews': reviews,
       'app-advantages': adv,
-      'app-why': why
+      'app-why': why,
+      'app-bot': bot
     },
     data() {
       return {
