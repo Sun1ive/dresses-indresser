@@ -69,9 +69,6 @@ import sideWidget from './components/sidewidget'
       closeOrder () {
         this.dialog = false
       },
-      // showCallForm () {
-      //   this.callDialog = true
-      // },
       closeCall () {
         this.callDialog = false
       }

@@ -52,30 +52,6 @@
   content: "";
   border-right: 1px solid #333;
 }
-.layout .client:nth-child(2) {
-  align-self: flex-end;
-}
-.client {
-  margin: 5px 25px;
-  padding: 25px 25px 0 25px;
-  border-radius: 7px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
-  background: url('/static/grunde.png') center center repeat;
-}
-.reviewClient {
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 500;
-  margin-top: auto;
-  margin-top: 15px;
-}
-.advantage {
-  /* background: url('/static/grunde.png') center center repeat; */
-  background-color: #fafafa;
-}
-.advantage .container .advLayout {
-  min-height: 150px;
-}
 .card__title {
   justify-content: center;
 }
@@ -84,7 +60,6 @@
 }
 .gallery {
   padding: 0 15px;
-  /* background: url('/static/234.jpg') center center repeat; */
   background: #fafafa;
 }
 .requestConsult {
@@ -101,9 +76,6 @@
 }
 .requestForm .headline {
   color: #333;
-}
-.terms {
-  /* background: url('/static/grunde.png') repeat; */
 }
 .popupTitle {
   font-size: 24px;

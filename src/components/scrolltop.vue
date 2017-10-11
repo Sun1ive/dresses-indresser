@@ -48,11 +48,11 @@
 
   @media (max-width: 1930px) {
     .scrollTop:after {
-      left: 50%;
+      left: 49%;
       margin-left: -5px
     }
     .scrollTop:before {
-      margin-left: -11px;
+      margin-left: -31px;
     }
   }
   @media (max-width: 1750px) {
