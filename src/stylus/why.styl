@@ -29,10 +29,26 @@
     background-color: #fff
     &:before
       transition .5s ease
-      opacity 1
 
 h2
   text-transform uppercase
   color #000
   font-size 6.2em
   font-weight 300
+
+@media screen and (max-width: 1500px)
+  h2
+    font-size: 4em
+
+@media screen and (max-width: 1000px)
+  h2
+    font-size: 3em
+
+@media screen and (max-width: 400px)
+  h2
+    font-size: 2em
+  
+  .whyUsContainer
+    &:before
+      background: url('/static/favicon.ico') 90% center no-repeat
+

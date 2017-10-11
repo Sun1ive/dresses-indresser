@@ -4,11 +4,9 @@ import Vuetify from 'vuetify'
 import './stylus/main.styl'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
-import _ from 'lodash'
 import Scroll from 'vue-scrollto'
 
 Vue.use(Vuetify)
-Vue.use(_)
 
 Vue.use(AOS)
 

@@ -39,10 +39,6 @@ import socials from './socials'
   export default {
     components: {
       'app-socials': socials
-    },
-    data() {
-      return {
-      }
     }
   }
 </script>
@@ -60,7 +56,9 @@ import socials from './socials'
     color: #fff;
   }
   footer {
-    background-color: #E2E2E4;
+    /* background-color: #E2E2E4; */
+    background-image: url('/static/grunde.png');
+    background-repeat: repeat;
   }
   .socialList__box {
     min-height: 50px;
