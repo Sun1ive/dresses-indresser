@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -23,7 +25,9 @@ export default {
   },
   methods: {
     addSubscriber () {
-      // axios
+      axios.post('https://myvuewebapp.firebaseio.com/subscribers.json', this.subscriber)
+        .then(r => console.log(r))
+        .catch(e => console.log(e))
       this.subscriber = {
         name: null,
         email: null

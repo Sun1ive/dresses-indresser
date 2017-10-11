@@ -30,7 +30,6 @@
       <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="/static/logo1.png" alt="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="dFlex hidden-xs-only" v-if="showNumbers">
-          <!-- <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a> -->
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a>
       </v-toolbar-items>
@@ -39,9 +38,6 @@
       <v-toolbar-items class="hidden-md-and-down" v-for="(item, i) in toolbar" :key="i">
         <v-btn flat v-scroll-to="item.scroll">{{ item.title }}</v-btn>
       </v-toolbar-items>
-<!--       <v-toolbar-items class="hidden-lg-and-down">
-        <v-btn flat @click.stop="showCallForm">Заказать звонок</v-btn>
-      </v-toolbar-items> -->
     </v-toolbar>
   </div>
 </template>

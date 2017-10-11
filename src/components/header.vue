@@ -22,10 +22,6 @@ import socials from './socials'
   export default {
     components: {
       'app-socials': socials
-    },
-    data() {
-      return {
-      }
     }
   }
 </script>
@@ -51,8 +47,5 @@ import socials from './socials'
   .icon {
     display: none;
   }
-}
-@media (max-width: 350px) {
-  
 }
 </style>

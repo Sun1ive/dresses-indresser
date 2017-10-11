@@ -21,8 +21,8 @@
   position: fixed;
   width: 90px;
   height: 90px;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 10px;
   /* background-color: #c0c0c0; */
   /* border: 1px solid #333; */
   border-radius: 50%;

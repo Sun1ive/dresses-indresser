@@ -7,6 +7,9 @@
 .carousel__item {
   transition: .8s ease-out;
 }
+.card__media__background {
+  background-size: initial !important;
+}
 .sizeTable .collectionH {
   font-size: 5rem
 }

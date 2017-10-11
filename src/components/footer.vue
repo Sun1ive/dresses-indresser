@@ -13,7 +13,6 @@
           <h5 class="head mb-0">Телефоны:</h5> 
           <ul>
             <li><a href="tel:+380980202092"><v-icon medium class="red--text pr-2">call</v-icon>098-02-02-092</a></li>
-            <!-- <li><v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a></li> -->
             <li><a href="tel:+380730202090"><v-icon medium class="red--text pr-2">call</v-icon>073-02-02-090</a></li>
           </ul>
         </v-flex>

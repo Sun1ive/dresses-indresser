@@ -4,30 +4,39 @@
       <h5 class="head">Отзывы клиентов</h5>
     </v-layout>
       <v-layout row wrap justify-center class="reviewsContainer">
-      <v-flex xs10 lg3 class="text-xs-right client">
-        <p class="mb-0 review black--text" align="justify">
-          <q>Я очень-очень довольна покупкой! Мне понравился крой и дизайн синего платья 009 . Отличное качество пошива.! Благодарю команду InDresser за консультацию при выборе!</q>
-        </p>
-        <p class="reviewClient black--text">Катя, предприниматель</p>
-      </v-flex>
-      <v-flex xs10 lg3 class="text-xs-right client">
-        <p class="mb-0 review black--text" align="justify">
-          <q>Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!</q>
-        </p>
-        <p class="reviewClient black--text">Наталия, молодая мама</p>
-      </v-flex>
-      <v-flex xs10 lg3 class="text-xs-right client">
-        <p class="mb-0 review black--text" align="justify">
-          <q>Я ризикнула і замовила плаття через Інтернет! Мене приємно вразила якість пошиву. Колір той, який я дивилася на фото, абсолютно ідентичний. Дякую Вам, дійсно гарне плаття, те що і радив менеджер!</q>
-        </p>
-        <p class="reviewClient black--text">Юлия, студентка мед университета</p>
+      <v-flex xs10 lg3 class="text-xs-right client" v-for="(item, i) in reviews" :key="i">
+        <p class="mb-0 review black--text" align="justify">{{ item.desc }}</p>
+        <div class="py-3">
+          <span class="name mr-2">{{ item.name }}</span><span class="job">{{ item.job }}</span>
+        </div>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
-<style scoped>
 
+<script>
+export default {
+  data () {
+    return {
+      reviews: [
+        { name: 'Катя', job: 'предприниматель' , desc: '"Я очень-очень довольна покупкой! Мне понравился крой и дизайн синего платья 009 . Отличное качество пошива.! Благодарю команду InDresser за консультацию при выборе!"' },
+        { name: 'Наталия', job: 'молодая мама' , desc: 'Спасибо огромное за модное и практичное платье с карманами, у вас это платье 002! Приятно, когда встречаешь профессионала своего дела. Правда, я ошиблась в размере, но все оперативно поменяли. Буду у вас заказывать теперь всегда и советовать всем своим знакомым! От души, спасибо!' },
+        { name: 'Юлия', job: 'студентка мед университета' , desc: 'Я ризикнула і замовила плаття через Інтернет! Мене приємно вразила якість пошиву. Колір той, який я дивилася на фото, абсолютно ідентичний. Дякую Вам, дійсно гарне плаття, те що і радив менеджер!' },
+      ]
+    }
+  }
+}
+
+</script>
+
+
+
+
+
+
+
+<style scoped>
 .client {
   margin: 5px 25px;
   padding: 25px 25px 0 25px;
@@ -36,11 +45,12 @@
   background: url('/static/grunde.png') center center repeat;
   transition: .3s ease;
 }
-.client:first-child .reviewClient {
-  margin-top: 55px;
+p {
+  min-height: 120px;
 }
-.client:last-child .reviewClient {
-  margin-top: 35px;
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 .reviewClient {
   font-size: 1.2rem;
@@ -61,18 +71,14 @@
   line-height: 6rem;
 }
 
-
-
-
-@media (max-width: 1280px) {
-.client:first-child .reviewClient {
-  margin-top: 0px;
+@media (max-width: 1660px) {
+  p {
+    min-height: 180px;
+  }
 }
-.client:last-child .reviewClient {
-  margin-top: 0px;
-}
-.client .reviewClient {
-  margin-top: 0;
-}
+@media (max-width: 1270px) {
+  p {
+    min-height: 50px;
+  }
 }
 </style>

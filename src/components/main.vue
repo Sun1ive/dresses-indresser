@@ -76,7 +76,7 @@
     </section>
     <!-- отзывы -->
     <section class="reviews pt-3 pb-5">
-      <app-reviews></app-reviews>
+      <app-reviews data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-reviews>
     </section>
     <!-- слайдер карточки товара -->
     <section class="popup">
@@ -114,8 +114,6 @@ import reviews from './reviews'
 import adv from './advantages'
 import why from './why'
 import axios from 'axios'
-import 'aos/dist/aos.css'
-import AOS from 'aos'
 
   export default {
     components: {
