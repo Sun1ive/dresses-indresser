@@ -13,19 +13,20 @@
       <app-why data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-why>
     </section>
     <!-- карточки товаров -->
-    <section class="gallery" data-aos="fade-left">
+    <section class="gallery">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
-          <h3 class="mb-0 collectionH">Наша коллекция осень-зима 17/18</h3>
+          <h3 class="mb-0 collectionH">Коллекция осень-зима 17/18</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card class="bradius">
               <v-card-media :src="item.url" height="400"></v-card-media>
               <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
-              <v-card-actions>
+              <!-- <v-card-actions>
                 <v-btn style="border-radius: 8px; background-color: rgba(255,255,255,.2)" v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
-              </v-card-actions>
+              </v-card-actions> -->
+              <v-card-text class="text-xs-center py-0"><span class="priceBold">{{ item.price }}</span> грн</v-card-text>
               <v-card-actions class="cardActions">
                 <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
                 <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
@@ -36,10 +37,10 @@
       </v-container>
     </section>
     <!-- таблица размеров -->
-    <section class="sizeTable" data-aos="fade-right">
+    <section class="sizeTable">
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
-          <v-flex xs12 md8 sm11 lg5 offset-lg3 class="black--text text-xs-center">
+          <v-flex xs12 md9 sm12 lg6 offset-lg3 class="black--text text-xs-center">
             <h3 class="collectionH mb-5">Таблица размеров</h3>
             <app-table></app-table>
           </v-flex>

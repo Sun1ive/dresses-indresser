@@ -16,7 +16,7 @@
 
 <style scoped lang="stylus">
 .banner
-  min-height 650px
+  min-height 600px
   // background-color #c0c0c0
   background-image url('../../static/1980x600-about-us.png')
   justify-content center

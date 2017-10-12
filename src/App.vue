@@ -9,7 +9,7 @@
     <v-dialog v-model="showSubForm" width="400" scrollable>
       <app-subform @closeSubForm="closeSubForm"></app-subform>
     </v-dialog>
-    <present-widget v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
+    <present-widget v-show="showPresent" v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
     <scroll-top></scroll-top>
     <!-- <app-widget></app-widget> -->
     <app-footer @showOrder="showOrder"></app-footer>
@@ -49,6 +49,7 @@ import subform from './components/subform'
       return {
         dialog: false,
         showSubForm: false,
+        showPresent: false,
         // callDialog: false,
         showNumbers: false,
         item: [],
@@ -89,6 +90,11 @@ import subform from './components/subform'
     },
     created () {
       window.addEventListener('scroll', this.toolbar)
+    },
+    mounted () {
+      setTimeout(() => {
+        this.showPresent = true
+      }, 10000)
     },
     beforeDestroy () {
       window.removeEventListener('scroll', this.toolbar)

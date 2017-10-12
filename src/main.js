@@ -22,6 +22,6 @@ new Vue({
   el: '#app',
   render: h => h(App),
   mounted () {
-    AOS.init();
+    AOS.init({});
   }
 })

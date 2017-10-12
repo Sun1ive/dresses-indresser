@@ -52,6 +52,10 @@
   padding: 0 15px;
   background: #fafafa;
 }
+.priceBold {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
 .requestConsult {
   padding: 110px 0;
   color: #fafafa;
@@ -88,7 +92,7 @@
   transition: .4s ease;
 }
 .bradius .card__media:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   transition: .7s ease;
 }
 .bradius, .card {
@@ -112,8 +116,16 @@
 .expansion-panel__body .card {
   background-image: none;
 }
+@media (max-width: 1500px) {
+  .collectionH {
+    font-size: 4rem !important;
+  }
+}
 @media (max-width: 500px) {
   .cardActions {
     flex-direction: column;
+  }
+  .collectionH {
+    font-size: 3rem !important;
   }
 }

@@ -26,7 +26,7 @@ export default {
           orderedItem: [],
           size: null
         },
-        items: ['XS', 'S','M','L','XL']
+        items: ['XS', 'S','M','L']
       }
     },
     methods: {

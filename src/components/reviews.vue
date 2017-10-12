@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-layout justify-center align-center>
-      <h5 class="head">Отзывы клиентов</h5>
+      <h5 class="head mb-0">Отзывы клиентов</h5>
     </v-layout>
       <v-layout row wrap justify-center class="reviewsContainer">
       <v-flex xs10 lg3 class="text-xs-right client" v-for="(item, i) in reviews" :key="i">
@@ -64,21 +64,35 @@ p {
   box-shadow: 3px 2px 8px rgba(0,0,0,.7);
 }
 .head {
-  font-size: 6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   font-weight: 300;
   padding: 20px 0;
   line-height: 6rem;
+  text-align: center;
 }
 
 @media (max-width: 1660px) {
   p {
     min-height: 180px;
   }
+  .head {
+    font-size: 4.6rem;
+  }
 }
 @media (max-width: 1270px) {
   p {
     min-height: 50px;
+  }
+  .head {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 800px) {
+  .head {
+    font-size: 3rem;
+    padding: 5px 0;
+    line-height: 4rem;
   }
 }
 </style>
