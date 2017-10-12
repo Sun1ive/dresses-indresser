@@ -96,6 +96,7 @@
 }
 .bradius .card__media {
   transition: .4s ease;
+  cursor: pointer;
 }
 .bradius .card__media:hover {
   transform: scale(1.2);

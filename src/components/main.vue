@@ -21,7 +21,7 @@
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card class="bradius">
-              <v-card-media :src="item.url" height="400"></v-card-media>
+              <v-card-media :src="item.url" height="400" @click.stop="showSlider(item)"></v-card-media>
               <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
               <v-card-text class="text-xs-center py-0"><span class="priceBold">{{ item.price }}</span> грн</v-card-text>
               <v-card-actions class="cardActions">
@@ -93,6 +93,25 @@
         </v-dialog>
       </v-layout>
     </section>
+    <section class="poputData">
+      <v-dialog v-model="popupData" lazy>
+        <v-card>
+          <v-card-title class="popupTitle">{{ collectionItem.title }}<v-spacer></v-spacer>
+             <span class="valute">{{ collectionItem.price }} грн</span></v-card-title>
+            <v-card-text>
+              <v-layout>
+                <v-flex xs12 class="text-xs-left">
+                  <p align="justify">{{collectionItem.desc }}</p>
+                </v-flex>
+              </v-layout>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn @click.stop="showOrder(collectionItem)" class="red darken-2 white--text ml-0">Оформить заказ</v-btn>
+              <v-btn @click.stop="popupData = false" class="white--text grey darken-4">Закрыть</v-btn>
+            </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </section>
   </main>
 </template>
 
@@ -119,6 +138,7 @@ import axios from 'axios'
       return {
         valid: false,
         popup: false,
+        popupData: false,
         collectionItem: {
           title: '',
           url: '',
@@ -145,9 +165,14 @@ import axios from 'axios'
         this.collectionItem.title = item.title
         this.collectionItem.url = item.url
         this.collectionItem.price = item.price
-        this.slider = item.slider
+        // this.slider = item.slider
         this.collectionItem.desc = item.desc
         // console.log(this.slider)
+        // this.popup = true
+        this.popupData = true
+      },
+      showSlider (item) {
+        this.slider = item.slider
         this.popup = true
       },
       requestConsult () {

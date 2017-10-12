@@ -18,7 +18,7 @@ const gallery = [
   {
     title: 'Платье 03',
     url: '/static/gallery/d3blue1.jpg',
-    slider: ['/static/gallery/d3blue2.jpg','/static/gallery/d3blue3.jpg','/static/gallery/d3blue1.jpg'],
+    slider: ['/static/gallery/d3blue2.jpg','/static/gallery/d3blue3.jpg','/static/gallery/d3blue1.jpg', '/static/gallery/d3blue3.jpg'],
     price: 554,
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum. Laudantium nihil odit doloremque, facilis similique tempora. Est tenetur culpa, ad laboru'
   },
