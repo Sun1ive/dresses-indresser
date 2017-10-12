@@ -29,7 +29,7 @@
               <v-card-text class="text-xs-center py-0"><span class="priceBold">{{ item.price }}</span> грн</v-card-text>
               <v-card-actions class="cardActions">
                 <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
-                <v-btn flat @click.stop="showOrder(item)">Заказать</v-btn>
+                <v-btn class="myButn" flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -74,12 +74,12 @@
     <!-- слайдер карточки товара -->
     <section class="popup">
       <v-layout>
-        <v-dialog v-model="popup" width="500">
+        <v-dialog v-model="popup" width="80vh">
           <v-card class="collectionCard">
             <v-carousel hide-controls v-show="popup">
               <v-carousel-item v-for="(item, i) in slider" :key="i" :src="item"></v-carousel-item>
             </v-carousel>
-            <v-card-title class="popupTitle">{{ collectionItem.title }}<v-spacer></v-spacer>
+            <!-- <v-card-title class="popupTitle">{{ collectionItem.title }}<v-spacer></v-spacer>
              <span class="valute">{{ collectionItem.price }} грн</span></v-card-title>
             <v-card-text>
               <v-layout>
@@ -91,7 +91,7 @@
             <v-card-actions>
               <v-btn @click.stop="showOrder(collectionItem)" class="red darken-2 white--text ml-0">Оформить заказ</v-btn>
               <v-btn flat @click.stop="popup = false" class="white--text grey darken-4">Закрыть</v-btn>
-            </v-card-actions>
+            </v-card-actions> -->
           </v-card>
         </v-dialog>
       </v-layout>

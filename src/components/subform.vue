@@ -33,6 +33,7 @@ export default {
         email: null
       }
       this.$emit('closeSubForm')
+      this.$emit('removePresent')
     },
     close () {
       this.$emit('closeSubForm')

@@ -32,14 +32,15 @@ export default {
     methods: {
       submitOrder () {
         this.userData.orderedItem = this.item
-        emailjs.send('smtp_server','test', {
+        console.log(this.userData);
+/*         emailjs.send('smtp_server','test', {
           name: this.userData.name,
           phone: this.userData.phone,
           email: this.userData.email,
           order: `Товар: ${this.userData.orderedItem.title} Размер: ${this.userData.size} Цена: ${this.userData.orderedItem.price}`
         })
         .then(r => console.log(r))
-        .catch(e => console.log(e))
+        .catch(e => console.log(e)) */
 /*         axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
           .then(r => console.log(r))
           .catch(e => console.log(e)) */
@@ -49,11 +50,11 @@ export default {
           email: null,
           orderedItem: []
         }
-        this.e1 = null
+        this.userData.size = null
         this.$emit('closeOrder')
       },
       closeOrder () {
-        this.e1 = null
+        this.userData.size = null
         this.$emit('closeOrder')
       }
     }

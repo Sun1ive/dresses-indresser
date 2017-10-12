@@ -7,7 +7,7 @@
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
     </v-dialog>
     <v-dialog v-model="showSubForm" width="400" scrollable>
-      <app-subform @closeSubForm="closeSubForm"></app-subform>
+      <app-subform @removePresent="removePresent" @closeSubForm="closeSubForm"></app-subform>
     </v-dialog>
     <present-widget v-show="showPresent" v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
     <scroll-top></scroll-top>
@@ -84,6 +84,9 @@ import subform from './components/subform'
       closeSubForm () {
         this.showSubForm = false
       },
+      removePresent () {
+        this.showPresent = false
+      }
 /*       closeCall () {
         this.callDialog = false
       } */
