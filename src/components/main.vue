@@ -1,20 +1,8 @@
 <template>
   <main>
-    <!-- bot? -->
-    <section class="bot">
-      <app-bot></app-bot>
-    </section>
     <!-- баннер -->
     <section class="banner">
-      <v-parallax src="../../static/234.jpg" height="600" class="py-5">
-        <v-container fluid>
-          <v-layout row wrap align-center justify-center style="height: 600px">
-            <v-flex xs12>
-              <img style="width: 100%" src="/static/1980x600-4.png" alt="banner">
-            </v-flex>
-          </v-layout>
-        </v-container>    
-      </v-parallax>
+      <app-banner></app-banner>
     </section>
     <!-- преимущества -->
     <section class="advantage pt-3 pb-5">
@@ -117,8 +105,8 @@ import terms from './terms'
 import reviews from './reviews'
 import adv from './advantages'
 import why from './why'
+import banner from './banner'
 import axios from 'axios'
-import bot from './bot'
 
   export default {
     components: {
@@ -127,7 +115,7 @@ import bot from './bot'
       'app-reviews': reviews,
       'app-advantages': adv,
       'app-why': why,
-      'app-bot': bot
+      'app-banner': banner
     },
     data() {
       return {
