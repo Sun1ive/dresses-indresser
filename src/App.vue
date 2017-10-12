@@ -11,7 +11,7 @@
     </v-dialog>
     <present-widget v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
     <scroll-top></scroll-top>
-    <app-widget></app-widget>
+    <!-- <app-widget></app-widget> -->
     <app-footer @showOrder="showOrder"></app-footer>
     <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
   </v-app>
@@ -26,7 +26,7 @@ import header from './components/header'
 import order from './components/order'
 import phone from './components/phone'
 import scrollTop from './components/scrolltop'
-import sideWidget from './components/sidewidget'
+// import sideWidget from './components/sidewidget'
 import present from './components/present'
 import subform from './components/subform'
 
@@ -41,7 +41,7 @@ import subform from './components/subform'
       // 'app-call': orderCall,
       'widget-phone': phone,
       'scroll-top': scrollTop,
-      'app-widget': sideWidget,
+      // 'app-widget': sideWidget,
       'present-widget': present,
       'app-subform': subform
     },

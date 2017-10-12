@@ -88,14 +88,18 @@
   transition: .4s ease;
 }
 .bradius .card__media:hover {
-  transform: scale(1.1);
-  transition: .4s ease;
+  transform: scale(1.4);
+  transition: .7s ease;
 }
 .bradius, .card {
   overflow: hidden;
 }
 .bradius .card__title {
   background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.bradius .card__actions {
   overflow: hidden;
   position: relative;
 }

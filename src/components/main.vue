@@ -21,7 +21,7 @@
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card class="bradius">
-              <v-card-media :src="item.url" height="250"></v-card-media>
+              <v-card-media :src="item.url" height="400"></v-card-media>
               <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
               <v-card-actions>
                 <v-btn style="border-radius: 8px; background-color: rgba(255,255,255,.2)" v-tooltip:top="{ html: `${item.price} грн` }">Узнать цену</v-btn>
