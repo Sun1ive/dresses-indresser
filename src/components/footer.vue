@@ -24,7 +24,7 @@
         </v-flex>
       </v-layout>
       <v-layout row wrap align-center class="socialContainer">
-        <v-flex xs12 sm6 class="pl-4 InD">&copy; InDresser {{ new Date().getFullYear() }}</v-flex>
+        <v-flex xs12 sm6 class="pl-4 InD text-xs-center">&copy; InDresser {{ new Date().getFullYear() }}</v-flex>
         <v-flex xs12 sm6 class="socialList__box pr-4">
           <app-socials></app-socials>
         </v-flex>
