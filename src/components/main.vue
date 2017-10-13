@@ -2,7 +2,15 @@
   <main>
     <!-- баннер -->
     <section class="banner">
-      <app-banner></app-banner>
+      <!-- <app-banner></app-banner> -->
+    </section>
+    <!-- мотивация? -->
+    <section class="motivation">
+      <app-motivation></app-motivation>
+    </section>
+    <!-- все просто -->
+    <section class="easy">
+      <app-easy></app-easy>
     </section>
     <!-- преимущества -->
     <section class="advantage pt-3 pb-5">
@@ -15,7 +23,7 @@
     <!-- карточки товаров -->
     <section class="gallery">
       <v-container fluid grid-list-lg>
-        <v-layout style="color: #F44336" justify-center align-center class="pt-4">
+        <v-layout justify-center align-center class="pt-4">
           <h3 class="mb-0 collectionH">Выбери себе платье</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
@@ -25,7 +33,7 @@
               <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
               <v-card-text class="text-xs-center py-0"><span class="priceBold">{{ item.price }}</span> грн</v-card-text>
               <v-card-actions class="cardActions">
-                <v-btn flat @click.stop="showItem(item)">Посмотреть</v-btn>
+                <v-btn flat @click.stop="showItem(item)">Подробно</v-btn>
                 <v-btn class="myButn" flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -123,6 +131,9 @@ import reviews from './reviews'
 import adv from './advantages'
 import why from './why'
 import banner from './banner'
+import motivation from './motivation'
+import easy from './easy'
+
 import axios from 'axios'
 
   export default {
@@ -132,7 +143,9 @@ import axios from 'axios'
       'app-reviews': reviews,
       'app-advantages': adv,
       'app-why': why,
-      'app-banner': banner
+      'app-banner': banner,
+      'app-motivation': motivation,
+      'app-easy': easy
     },
     data() {
       return {

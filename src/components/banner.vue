@@ -22,6 +22,7 @@
   export default {
     data () {
       return {
+        
       }
     },
 /*     mounted () {
@@ -48,7 +49,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:700&subset=cyrillic')
 
 .class
-  min-height 100vh
+  min-height 85vh
 
 // .layout
 //   min-height 850px
