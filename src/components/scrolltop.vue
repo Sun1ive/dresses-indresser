@@ -66,57 +66,65 @@
   }
   @media (max-width: 1600px) {
     .scrollTop:after {
-      left: 50%;
-      margin-left: -5px
+      left: 49%;
+      margin-left: -10px
     }
     .scrollTop:before {
-      margin-left: -8px;
+      margin-left: -29px;
     }
   }
   @media (max-width: 1400px) {
     .scrollTop:after {
-      left: 50%;
-      margin-left: -5px
+      left: 48%;
+      margin-left: 1px
     }
     .scrollTop:before {
-      margin-left: -5px;
+      margin-left: -27px;
     }
   }
   @media (max-width: 1280px) {
     .scrollTop:after {
-      left: 50%;
-      margin-left: -5px
+      left: 48%;
+      margin-left: -1px
     }
     .scrollTop:before {
-      margin-left: -4px;
+      margin-left: -26px;
     }
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
     .scrollTop:after {
-      left: 50%;
-      margin-left: -10px;
+      left: 48%;
+      margin-left: -5px;
     }
     .scrollTop:before {
-      bottom: 90%;
+      margin-left: -22px;
     }
   }
   @media (max-width: 1000px) {
+    .scrollTop:after {
+      left: 48%;
+      margin-left: -5px;
+    }
     .scrollTop:before {
-      margin-left: -7px;
+      margin-left: -22px;
     }
   }
   @media (max-width: 800px) {
+    .scrollTop:after {
+      left: 47%;
+      margin-left: -3px;
+    }
     .scrollTop:before {
-      margin-left: -5px;
+      margin-left: -21px;
     }
   }
   @media (max-width: 630px) {
     .scrollTop:after {
-      left: 48%;
-      margin-left: 1px;
+      left: 46%;
+      margin-left: -3px;
     }
     .scrollTop:before {
-      margin-left: -2px;
+      margin-left: -20px;
     }
   }
   @media (max-width: 500px) {

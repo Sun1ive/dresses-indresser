@@ -45,7 +45,6 @@ h3
 
 .container
   background-color #fff
-  min-height 500px
 
 .box
   display flex
@@ -54,7 +53,7 @@ h3
   flex-flow column wrap
   text-align center
   // margin 0 15px
-  min-height 400px
+  min-height 300px
   transition .4s ease
   &:hover
     background-color #fff - 50%

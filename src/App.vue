@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <app-header></app-header>
-    <app-toolbar :showNumbers="showNumbers" @showOrder="showOrder"></app-toolbar>
+    <app-toolbar @requestConsult="requestConsult" :showNumbers="showNumbers" @showOrder="showOrder"></app-toolbar>
     <app-main @showOrder="showOrder"></app-main>
     <v-dialog scrollable v-model="dialog" width="400">
       <app-order :item="item" @closeOrder="closeOrder"></app-order>
@@ -11,6 +11,9 @@
     </v-dialog>
     <present-widget v-show="showPresent" v-if="!showSubForm" @showSubForm="showSubscribeForm"></present-widget>
     <scroll-top></scroll-top>
+    <v-dialog v-model="callDialog" width="400">
+      <app-call @closeCall="closeCall"></app-call>
+    </v-dialog>
     <!-- <app-widget></app-widget> -->
     <app-footer @showOrder="showOrder"></app-footer>
     <!-- <widget-phone v-if="!callDialog" @showCallForm="showCallForm"></widget-phone> -->
@@ -20,7 +23,7 @@
 <script>
 import toolbar from './components/toolbar'
 import main from './components/main'
-// import orderCall from './components/orderCall'
+import orderCall from './components/orderCall'
 import footer from './components/footer'
 import header from './components/header'
 import order from './components/order'
@@ -38,7 +41,7 @@ import subform from './components/subform'
       'app-footer': footer,
       'app-header': header,
       'app-order': order,
-      // 'app-call': orderCall,
+      'app-call': orderCall,
       'widget-phone': phone,
       'scroll-top': scrollTop,
       // 'app-widget': sideWidget,
@@ -50,7 +53,7 @@ import subform from './components/subform'
         dialog: false,
         showSubForm: false,
         showPresent: false,
-        // callDialog: false,
+        callDialog: false,
         showNumbers: false,
         item: [],
       }
@@ -72,9 +75,6 @@ import subform from './components/subform'
         // console.log(this.item);
         this.dialog = true
       },
-/*       showCallForm () {
-        this.callDialog = true 
-      }, */
       closeOrder () {
         this.dialog = false
       },
@@ -84,12 +84,15 @@ import subform from './components/subform'
       closeSubForm () {
         this.showSubForm = false
       },
+      requestConsult () {
+        this.callDialog = true
+      },
       removePresent () {
         this.showPresent = false
-      }
-/*       closeCall () {
+      },
+      closeCall () {
         this.callDialog = false
-      } */
+      }
     },
     created () {
       window.addEventListener('scroll', this.toolbar)

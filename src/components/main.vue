@@ -25,7 +25,7 @@
     <section class="gallery py-5">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pb-3">
-          <h3 id="fontSize">Выбери себе платье</h3>
+          <h3 id="fontSize" class="text-xs-center">Выбери себе платье</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
@@ -104,7 +104,7 @@
     </section>
     <section class="poputData">
       <v-dialog v-model="popupData" lazy width="400">
-        <v-card>
+        <v-card style="border-radius: 6px">
           <v-card-title class="popupTitle">{{ collectionItem.title }}<v-spacer></v-spacer>
              <span class="valute">{{ collectionItem.price }} грн</span></v-card-title>
             <v-card-text>

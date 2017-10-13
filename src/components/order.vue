@@ -33,7 +33,7 @@ export default {
       submitOrder () {
         this.userData.orderedItem = this.item
         console.log(this.userData);
-/*         emailjs.send('smtp_server','test', {
+  /*         emailjs.send('smtp_server','test', {
           name: this.userData.name,
           phone: this.userData.phone,
           email: this.userData.email,
@@ -41,7 +41,7 @@ export default {
         })
         .then(r => console.log(r))
         .catch(e => console.log(e)) */
-/*         axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
+  /*         axios.post('https://myvuewebapp.firebaseio.com/order.json', this.userData)
           .then(r => console.log(r))
           .catch(e => console.log(e)) */
         this.userData = {
@@ -76,6 +76,7 @@ export default {
 #form 
   padding: 15px 45px;
   background-color #fff
+  border-radius 6px
 
 .red
   border-radius 6px

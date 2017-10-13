@@ -29,7 +29,7 @@
     <v-toolbar>
       <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="/static/logo1.png" alt="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
-        <v-btn flat class="request" v-scroll-to="'.requestConsult'">Закажите консультацию</v-btn>
+        <v-btn flat class="request hidden-xs-only" @click.stop="requestConsult">Закажите консультацию</v-btn>
       <!-- <v-toolbar-items class="dFlex hidden-xs-only" v-if="showNumbers">
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a>
@@ -57,6 +57,9 @@ export default {
   methods: {
     showCallForm () {
       this.$emit('showCallForm')
+    },
+    requestConsult () {
+      this.$emit('requestConsult')
     }
   },
   computed: {

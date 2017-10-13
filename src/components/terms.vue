@@ -136,7 +136,7 @@ h3 {
   border-right: 2px solid rgba(255,25,12,.6);
 } 
 
-@media (max-width: 1263px) {
+@media (max-width: 1384px) {
   h3 {
     font-size: 2.2rem;
   }
