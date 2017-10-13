@@ -24,7 +24,7 @@
     <section class="gallery">
       <v-container fluid grid-list-lg>
         <v-layout justify-center align-center class="pt-4">
-          <h3 class="mb-0 collectionH">Выбери себе платье</h3>
+          <h3 id="fontSize">Выбери себе платье</h3>
         </v-layout>
         <v-layout row wrap class="galleryLayout py-5">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
@@ -46,7 +46,7 @@
       <v-parallax src="/static/para22.jpg" height="500">
         <v-layout row wrap justify-start align-center>
           <v-flex xs12 md9 sm12 lg6 offset-lg3 class="black--text text-xs-center">
-            <h3 class="collectionH mb-5">Таблица размеров</h3>
+            <h3 id="fontSize">Таблица размеров</h3>
             <app-table></app-table>
           </v-flex>
         </v-layout>
@@ -59,7 +59,7 @@
     <!-- заказать звонок -->
     <section class="requestConsult">
       <v-layout row wrap justify-center align-center>
-        <v-flex xs12 sm6 md4 lg3>
+        <v-flex xs12 sm6 md5 lg3>
           <v-form class="requestForm" @submit.prevent="requestConsult" v-model="valid">
             <h3 class="head text-xs-center">Получить консультацию</h3>
             <v-text-field required v-model="user.name" label="Имя"></v-text-field>

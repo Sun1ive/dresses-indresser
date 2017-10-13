@@ -64,9 +64,9 @@ p {
   box-shadow: 3px 2px 8px rgba(0,0,0,.7);
 }
 .head {
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 700;
   padding: 20px 0;
   line-height: 6rem;
   text-align: center;

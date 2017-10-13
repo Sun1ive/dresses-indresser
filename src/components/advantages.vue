@@ -30,9 +30,8 @@
 
 h3
   text-transform: uppercase;
-  font-size: 5rem;
-  font-weight: 300;
-  line-height: 6rem;
+  font-size: 4rem;
+  font-weight: 700;
 
 .something
   font-size: 1.8rem

@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
     <v-layout justify-center align-center>
-      <h3 class="text-xs-center">Все просто!</h3>
+      <h3 class="mb-0 text-xs-center">Все просто!</h3>
     </v-layout>
     <v-layout row wrap justify-center align-center>
       <v-flex class="box" xs12 sm6 lg2 v-for="(item, i) in steps" :key="i">
         <v-avatar size="100">
           <div class="back">{{ item.step }}</div>
         </v-avatar>
-        <h3 class="exhortation text-xs-center">{{ item.title }}</h3>
+        <div class="exhortation text-xs-center">{{ item.title }}</div>
       </v-flex>
     </v-layout>
   </v-container>
@@ -36,6 +36,11 @@ export default {
 .exhortation
   font-size 1.6rem
   word-wrap wrap
+
+h3
+  font-size 4rem
+  font-weight bold
+  text-transform uppercase
 
 .layout
   background-color #fff
