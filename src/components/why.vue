@@ -2,7 +2,7 @@
   <v-parallax src="/static/paralaks.jpg" height="600">
     <v-container fluid>
       <v-layout justify-center>
-        <h2 class="mt-5 pt-3 text-xs-center">Кому подходит наша одежда?</h2>
+        <h2 class="text-xs-center">Кому подходит наша одежда?</h2>
       </v-layout>
       <v-layout column wrap align-center justify-center>
         <v-flex xs12 lg7 offset-lg2 class="whyUsContainer">

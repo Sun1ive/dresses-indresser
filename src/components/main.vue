@@ -13,12 +13,12 @@
       <app-easy></app-easy>
     </section>
     <!-- преимущества -->
-    <section class="advantage pt-3 pb-5">
+    <section class="advantage">
       <app-advantages data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-advantages>
     </section>
     <!-- почему -->
     <section class="why">
-      <app-why data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-why>
+      <app-why data-aos="" data-aos-duration="1000" data-aos-offset="300"></app-why>
     </section>
     <!-- карточки товаров -->
     <section class="gallery">
@@ -33,7 +33,7 @@
               <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
               <v-card-text class="text-xs-center py-0"><span class="priceBold">{{ item.price }}</span> грн</v-card-text>
               <v-card-actions class="cardActions">
-                <v-btn flat @click.stop="showItem(item)">Подробно</v-btn>
+                <v-btn style="font-weight: bold;" flat @click.stop="showItem(item)">Подробно</v-btn>
                 <v-btn class="myButn" flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -53,7 +53,7 @@
       </v-parallax>
     </section>
     <!-- условия доставки -->
-    <section class="terms py-5">
+    <section class="terms">
       <app-terms></app-terms>
     </section>
     <!-- заказать звонок -->
@@ -61,19 +61,19 @@
       <v-layout row wrap justify-center align-center>
         <v-flex xs12 sm6 md4 lg3>
           <v-form class="requestForm" @submit.prevent="requestConsult" v-model="valid">
-            <h3 class="headline mb-0 text-xs-center">Заказать консультацию</h3>
+            <h3 class="head text-xs-center">Получить консультацию</h3>
             <v-text-field required v-model="user.name" label="Имя"></v-text-field>
             <v-text-field required v-model="user.phone" label="Телефон"></v-text-field>
             <v-text-field required type="email" v-model="user.email" label="e-mail"></v-text-field>
             <v-card-actions class="white">
-              <v-btn type="submit" class="ml-0 red darken-2 white--text circleBtn">Заказать</v-btn>
+              <v-btn type="submit" class="ml-0 circleBtn">Получить консультацию</v-btn>
             </v-card-actions>
           </v-form>
         </v-flex>
       </v-layout>
     </section>
     <!-- отзывы -->
-    <section class="reviews pt-3 pb-5">
+    <section class="reviews">
       <app-reviews data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-reviews>
     </section>
     <!-- слайдер карточки товара -->

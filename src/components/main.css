@@ -1,5 +1,10 @@
 .container {
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+h3,h2,h1,h4 {
+  line-height: initial;
+  margin-bottom: 0 !important;
 }
 .parallax__content {
   padding: 0;
@@ -18,9 +23,9 @@
   font-size: 5rem
 }
 .collectionH {
-  padding-top: 24px;
+  /* padding-top: 24px; */
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: 5rem;
   text-align: center;
   font-weight: 300;
 }
@@ -28,9 +33,12 @@
   border-radius: 10px;
 }
 .head {
-  font-size: 38px;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: #000;
 }
 .itemTitle {
   font-size: 22px;
@@ -61,7 +69,6 @@
   font-size: 1.6rem;
 }
 .requestConsult {
-  padding: 110px 0;
   color: #fafafa;
   background: url('/static/1980x600-about-us.png') center center no-repeat;
 }
@@ -86,13 +93,20 @@
   background-image: none !important;
 }
 .circleBtn {
-  border-radius: 8px;
+  border-radius: 6px;
+  background-color: #F44336 !important;
+  color: #fff;
+  font-weight: 700;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
 .bradius {
   border-radius: 10px;
   transition: .4s;
+  font-weight: bold;
+}
+.bradius .myButn {
+  font-weight: bold;
 }
 .bradius .card__media {
   transition: .4s ease;
@@ -108,7 +122,7 @@
 }
 .bradius:hover .myButn {
   color: #F44336;
-  background-color: #F44336
+  background-color: #F44336;
 }
 
 .bradius, .card {
@@ -124,10 +138,10 @@
   position: relative;
 }
 .bradius, .card__title, .card {
-  background-image: url('/static/grunde.png');
+  /* background-image: url('/static/grunde.png'); */
 }
 .card__actions {
-  background-image: url('/static/grunde.png');
+  /* background-image: url('/static/grunde.png'); */
 }
 .expansion-panel__body .card {
   background-image: none;

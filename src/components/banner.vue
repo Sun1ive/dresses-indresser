@@ -49,7 +49,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:700&subset=cyrillic')
 
 .class
-  min-height 85vh
+  min-height 90vh
 
 // .layout
 //   min-height 850px

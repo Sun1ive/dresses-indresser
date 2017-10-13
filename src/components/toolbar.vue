@@ -29,14 +29,15 @@
     <v-toolbar>
       <v-toolbar-title v-scroll-to="'.header'"><img class="logo" src="/static/logo1.png" alt="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="dFlex hidden-xs-only" v-if="showNumbers">
+        <v-btn flat class="request" v-scroll-to="'.requestConsult'">Закажите консультацию</v-btn>
+      <!-- <v-toolbar-items class="dFlex hidden-xs-only" v-if="showNumbers">
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">068-02-02-092</a>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a>
-      </v-toolbar-items>
+      </v-toolbar-items> -->
       <v-spacer></v-spacer>
       <v-toolbar-side-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-items class="hidden-md-and-down" v-for="(item, i) in toolbar" :key="i">
-        <v-btn flat v-scroll-to="item.scroll">{{ item.title }}</v-btn>
+        <v-btn flat v-scroll-to="item.scroll" class="myBtn">{{ item.title }}</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>
@@ -66,21 +67,29 @@ export default {
 }
 </script>
 
-<style scoped>
-.logo {
+<style scoped lang="stylus">
+.logo
   cursor: pointer;
-}
-.dFlex {
+
+.dFlex
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
   font-weight: 600;
-}
-.dFlex a {
-  color: #333;
-}
-.toolbar {
-  background: url('/static/grunde.png') center center repeat;
-}
+  a
+    color: #333;
+
+.myBtn
+  font-weight bold
+
+.request
+  background-color #F44336 !important
+  color #fff !important
+  font-weight bold
+  border-radius 8px
+
+// .toolbar {
+//   /* background: url('/static/grunde.png') center center repeat; */
+// }
 </style>

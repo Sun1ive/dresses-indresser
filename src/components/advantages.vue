@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-layout justify-center align-center class="pt-4 text-xs-center">
-      <h3 class="mt-3">Почему мы?</h3>
+      <h3 class="">Почему мы?</h3>
     </v-layout>
     <v-layout row wrap justify-center align-center class="advLayout">
       <v-flex xs12 lg4 md4 sm4 class="text-xs-center">
@@ -20,28 +20,30 @@
   </v-container>
 </template>
 
-<style scoped>
-.head {
+<style scoped lang="stylus">
+.container
+
+.head
   font-size: 38px;
   text-transform: uppercase;
   font-weight: 500;
-}
-h3 {
+
+h3
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 300;
   line-height: 6rem;
-}
-.something {
-  font-size: 1.8em;
-}
-.icon {
-  font-size: 9rem;
-}
 
-@media (max-width: 600px) {
+.something
+  font-size: 1.8rem
+
+.icon
+  font-size: 9rem;
+
+
+/* @media (max-width: 600px) {
   h3 {
     font-size: 5rem;
   }
-}
+} */
 </style>

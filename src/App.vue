@@ -59,12 +59,12 @@ import subform from './components/subform'
       toolbar () {
         let offset = window.pageYOffset
         let toolbar = document.querySelector('.toolbar')
-        if (offset >= 115) {
+        if (offset >= 150) {
           toolbar.classList.add('toolbar--fixed')
-          this.showNumbers = true
+          // this.showNumbers = true
         } else {
           toolbar.classList.remove('toolbar--fixed')
-          this.showNumbers = false
+          // this.showNumbers = false
         }
       },
       showOrder (item) {
@@ -106,6 +106,9 @@ import subform from './components/subform'
 </script>
 
 <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 a {
   text-decoration: none;
   color: white;

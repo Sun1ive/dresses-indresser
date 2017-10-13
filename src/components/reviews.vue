@@ -42,7 +42,7 @@ export default {
   padding: 25px 25px 0 25px;
   border-radius: 7px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
-  background: url('/static/grunde.png') center center repeat;
+  /* background: url('/static/grunde.png') center center repeat; */
   transition: .3s ease;
 }
 p {

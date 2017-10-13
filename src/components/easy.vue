@@ -1,11 +1,14 @@
 <template>
   <v-container fluid>
-    <v-layout row wrap>
-      <v-flex class="box" xs12 sm6 lg3 v-for="(item, i) in steps" :key="i">
-        <v-avatar size="128">
+    <v-layout justify-center align-center>
+      <h3 class="text-xs-center">Все просто!</h3>
+    </v-layout>
+    <v-layout row wrap justify-center align-center>
+      <v-flex class="box" xs12 sm6 lg2 v-for="(item, i) in steps" :key="i">
+        <v-avatar size="100">
           <div class="back">{{ item.step }}</div>
         </v-avatar>
-        <h3>{{ item.title }}</h3>
+        <h3 class="exhortation text-xs-center">{{ item.title }}</h3>
       </v-flex>
     </v-layout>
   </v-container>
@@ -17,10 +20,10 @@ export default {
   data () {
     return {
       steps: [
-        { title: 'Lorem ipsum dolor sit amet', step: 1 },
-        { title: 'Lorem ipsum dolor sit amet', step: 2 },
-        { title: 'Lorem ipsum dolor sit amet', step: 3 },
-        { title: 'Lorem ipsum dolor sit amet', step: 4 }
+        { title: 'Выбирайте свое платье', step: 1 },
+        { title: 'Оставляйте заявку в форме', step: 2 },
+        { title: 'Обсудите детали доставки', step: 3 },
+        { title: `Наслаждайтесь покупкой`, step: 4 }
       ]
     }
   }
@@ -30,8 +33,12 @@ export default {
 
 
 <style scoped lang="stylus">
+.exhortation
+  font-size 1.6rem
+  word-wrap wrap
+
 .layout
-  background-color #c0c0c0
+  background-color #fff
 
 .box
   display flex
@@ -39,18 +46,22 @@ export default {
   align-items center
   flex-flow column wrap
   text-align center
+  margin 0 15px
   min-height 300px
-  border-left: 1px solid #000
+  &:nth-child(2)
+  &:nth-child(3)
+  &:nth-child(4)
+    // border-left: 2px solid #F44336
   .back
     background-color #F44336
     width 100%
     height 100%
-    min-height 128px
-    min-width 128px
+    min-height 100px
+    min-width 100px
     border-radius 50%
     color #fff
     display inline-flex
     justify-content center
     align-items center
-    font-size 6rem
+    font-size 4rem
 </style>
