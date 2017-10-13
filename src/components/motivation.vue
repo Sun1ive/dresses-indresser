@@ -1,6 +1,6 @@
 <template>
 <v-container fluid>
-  <v-layout justify-center align-center>
+  <v-layout row wrap justify-center align-center>
     <v-flex class="something" xs12>
       <span class="big">Успейте</span><v-btn class="redd mx-4" @click="makeOrder">Заказать</v-btn><span class="big">У нас платье сегодня!</span>
     </v-flex>
@@ -21,15 +21,18 @@
 
 <style scoped lang="stylus">
 .something
-  min-height 200px
+  min-height 500px
   background-color #fff
   display flex
   justify-content center
   align-items center
+  flex-flow row wrap
   transition .4s ease;
+  background-color #DBD8DF
+  text-align center
   &:hover
     transition .4s ease;
-    background-color #DBD8DF
+    background-color #fff
     .redd
       background-color #F44336 !important
       color #fff

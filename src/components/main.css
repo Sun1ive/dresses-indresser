@@ -7,7 +7,9 @@
   text-transform: uppercase;
   font-weight: bold
 }
-
+.minHeight {
+  min-height: 500px !important;
+}
 h3,h2,h1,h4 {
   line-height: initial !important;
   margin-bottom: 0 !important;
@@ -85,19 +87,15 @@ h3,h2,h1,h4 {
   font-size: 24px;
   text-transform: uppercase;
 }
-.review {
-  text-indent: 2.3rem;
-}
-.white {
+/* .white {
   background-image: none !important;
-}
+} */
 .circleBtn {
   border-radius: 6px;
   background-color: #F44336 !important;
   color: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
-
 .bradius {
   border-radius: 10px;
   transition: .4s;

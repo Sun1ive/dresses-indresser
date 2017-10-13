@@ -2,7 +2,8 @@
   <main>
     <!-- баннер -->
     <section class="banner">
-      <!-- <app-banner></app-banner> -->
+      <!-- <h1 class="text-xs-center">VIDEO ELEGIGLE</h1> -->
+      <app-banner></app-banner>
     </section>
     <!-- мотивация? -->
     <section class="motivation">
@@ -12,13 +13,13 @@
     <section class="easy">
       <app-easy></app-easy>
     </section>
-    <!-- преимущества -->
-    <section class="advantage py-5">
-      <app-advantages data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-advantages>
-    </section>
     <!-- почему -->
     <section class="why">
       <app-why data-aos="" data-aos-duration="1000" data-aos-offset="300"></app-why>
+    </section>
+    <!-- преимущества -->
+    <section class="advantage">
+      <app-advantages></app-advantages>
     </section>
     <!-- карточки товаров -->
     <section class="gallery py-5">

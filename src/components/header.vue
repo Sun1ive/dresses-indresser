@@ -2,11 +2,10 @@
   <header class="header">
     <v-container fluid>
       <v-layout row wrap>
-        <v-flex xs12 sm8 lg6 class="headerBox pr-4">
+        <v-flex xs12 sm8 lg6 class="headerBox">
           <v-icon medium class="red--text mx-2">email</v-icon><a href="mailto:info@indresser.com">info@indresser.com</a>
-          <v-spacer></v-spacer>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a>
-          <v-spacer></v-spacer>
+          <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">098-02-02-092</a>
           <v-icon medium class="red--text mx-2">call</v-icon><a href="tel:3336621">073-02-02-090</a>
         </v-flex>
         <v-flex xs12 sm4 lg6>

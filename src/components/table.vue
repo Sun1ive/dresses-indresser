@@ -70,5 +70,10 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
+table.table tbody td
+  font-size 1.5rem
+
+.column
+  font-size 1.5rem
 </style>

@@ -1,8 +1,15 @@
 <template>
  <v-container fluid>
-   <v-layout row wrap justify-center align-center>
+<!--    <v-layout row wrap justify-center align-center>
      <v-flex xs12 sm5 lg3 class="text-xs-center" v-for="(item, i) in terms" :key="i">
        <h3 class="flexx mb-0"><v-icon large class="red--text mr-2">{{ item.icon }}</v-icon>{{ item.title }}</h3>
+       <v-btn flat @click.stop="showTerms(item)">Узнать подробнее <v-icon right>keyboard_arrow_right</v-icon><v-icon style="margin-left: -30px;">keyboard_arrow_right</v-icon></v-btn>
+     </v-flex>
+   </v-layout> -->
+   <v-layout row wrap justify-center align-center>
+     <v-flex xs12 sm5 lg3 class="nice text-xs-center" v-for="(item, i) in terms" :key="i">
+       <v-icon class="niceIcon mr-2">{{ item.icon }}</v-icon>
+       <h3 class="flexx mb-0">{{ item.title }}</h3>
        <v-btn flat @click.stop="showTerms(item)">Узнать подробнее <v-icon right>keyboard_arrow_right</v-icon><v-icon style="margin-left: -30px;">keyboard_arrow_right</v-icon></v-btn>
      </v-flex>
    </v-layout>
@@ -73,6 +80,25 @@
 </script>
 
 <style scoped>
+.nice {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.nice .niceIcon {
+  font-size: 9rem;
+  color: #F44336;
+}
+
+.nice .btn {
+  height: 42px;
+  font-size: 1.5rem;
+}
+.nice .flexx {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .btn {
   border-radius: 6px;
 }
