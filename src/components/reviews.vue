@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="pb-5">
     <v-layout justify-center align-center>
       <h5 class="head mb-0">Отзывы клиентов</h5>
     </v-layout>
@@ -46,11 +46,12 @@ export default {
   transition: .3s ease;
 }
 p {
-  min-height: 120px;
+  min-height: 180px;
+  font-size: 1.2rem;
 }
 .name {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .reviewClient {
   font-size: 1.2rem;
@@ -68,8 +69,8 @@ p {
   text-transform: uppercase;
   font-weight: 700;
   padding: 20px 0;
-  line-height: 6rem;
   text-align: center;
+  line-height: initial;
 }
 
 @media (max-width: 1660px) {

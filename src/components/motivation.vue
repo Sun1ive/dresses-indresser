@@ -2,7 +2,7 @@
 <v-container fluid>
   <v-layout justify-center align-center>
     <v-flex class="something" xs12>
-      <span class="big">Успейте</span><v-btn class="redd mx-4" @click="makeOrder">Заказать</v-btn><span class="big">У нас ваше платье сегодня!</span>
+      <span class="big">Успейте</span><v-btn class="redd mx-4" @click="makeOrder">Заказать</v-btn><span class="big">У нас платье сегодня!</span>
     </v-flex>
   </v-layout>
 </v-container>
@@ -27,7 +27,6 @@
   justify-content center
   align-items center
   transition .4s ease;
-  cursor pointer
   &:hover
     transition .4s ease;
     background-color #DBD8DF
@@ -43,11 +42,12 @@
     border: 1px solid #000
     font-size 3.5rem
     height auto
-    font-weight 300
+    font-weight 500
+    border-radius 6px
   .big
     font-size 3.5rem
     text-transform uppercase
-    font-weight 300
+    font-weight 700
     color #F44336
 
 </style>

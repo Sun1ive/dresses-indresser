@@ -81,13 +81,13 @@ export default {
     color: #333;
 
 .myBtn
-  font-weight bold
+  // font-weight bold
 
 .request
   background-color #F44336 !important
   color #fff !important
-  font-weight bold
-  border-radius 8px
+  // font-weight bold
+  border-radius 6px
 
 // .toolbar {
 //   /* background: url('/static/grunde.png') center center repeat; */

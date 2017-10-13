@@ -7,7 +7,7 @@
      </v-flex>
    </v-layout>
    <v-container>
-     <v-dialog overflow persistent v-model="showDialog" width="500">
+     <v-dialog overflow v-model="showDialog" width="500">
        <v-card class="bradius">
         <v-card-text>
           <p class="mb-0 text" align="justify" v-for="(item, i) in currentTerm.desc" :key="i">{{ item }}</p>
@@ -73,6 +73,9 @@
 </script>
 
 <style scoped>
+.btn {
+  border-radius: 6px;
+}
 ul > li {
   margin: 0 10px;
 }
@@ -80,6 +83,8 @@ ul > li {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 .card__actions {
   justify-content: center;

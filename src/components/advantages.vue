@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout justify-center align-center class="pt-4 text-xs-center">
+    <v-layout justify-center align-center class="text-xs-center">
       <h3 class="">Почему мы?</h3>
     </v-layout>
     <v-layout row wrap justify-center align-center class="advLayout">
@@ -34,7 +34,7 @@ h3
   font-weight: 700;
 
 .something
-  font-size: 1.8rem
+  font-size: 1.5rem
 
 .icon
   font-size: 9rem;

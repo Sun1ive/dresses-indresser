@@ -6,8 +6,8 @@
       <v-text-field name="phone" label="Укажите Ваш телефон" v-model="userData.phone"></v-text-field>
       <v-text-field name="email" label="e-mail" v-model="userData.email"></v-text-field>
       <v-select :items="items" v-model="userData.size" label="Выберите размер платья" single-line bottom></v-select>
-      <v-btn class="red darken-2 white--text ml-0" type="submit">Оформить заказ</v-btn>
-      <v-btn @click="closeOrder" class="white--text grey darken-4">Закрыть</v-btn>
+      <v-btn class="red ml-0" type="submit">Оформить заказ</v-btn>
+      <v-btn style="border-radius: 6px" @click="closeOrder" class="white--text grey darken-4">Закрыть</v-btn>
     </v-form>
   </v-container>
 </template>
@@ -54,6 +54,12 @@ export default {
         this.$emit('closeOrder')
       },
       closeOrder () {
+        this.userData = {
+          name: null,
+          phone: null,
+          email: null,
+          orderedItem: []
+        }
         this.userData.size = null
         this.$emit('closeOrder')
       }
@@ -61,13 +67,19 @@ export default {
   }
 </script>
 
-<style scoped>
-.container {
-  background-color: #fff;
-  min-height: 350px;
-  border-radius: 10px;
-}
-#form {
+<style scoped lang="stylus">
+.container
+  background-color: #fff
+  min-height: 350px
+  border-radius: 10px
+
+#form 
   padding: 15px 45px;
-}
+  background-color #fff
+
+.red
+  border-radius 6px
+  color #fff
+  background-color #F44336 !important
+
 </style>

@@ -13,7 +13,7 @@
       <app-easy></app-easy>
     </section>
     <!-- преимущества -->
-    <section class="advantage">
+    <section class="advantage py-5">
       <app-advantages data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"></app-advantages>
     </section>
     <!-- почему -->
@@ -21,19 +21,19 @@
       <app-why data-aos="" data-aos-duration="1000" data-aos-offset="300"></app-why>
     </section>
     <!-- карточки товаров -->
-    <section class="gallery">
+    <section class="gallery py-5">
       <v-container fluid grid-list-lg>
-        <v-layout justify-center align-center class="pt-4">
+        <v-layout justify-center align-center class="pb-3">
           <h3 id="fontSize">Выбери себе платье</h3>
         </v-layout>
-        <v-layout row wrap class="galleryLayout py-5">
+        <v-layout row wrap class="galleryLayout">
           <v-flex xs12 lg2 md3 sm6 v-for="(item,i) in gallery" :key="i">
             <v-card class="bradius">
               <v-card-media :src="item.url" height="400" @click.stop="showSlider(item)"></v-card-media>
               <v-card-title class="itemTitle">{{ item.title }}</v-card-title>
               <v-card-text class="text-xs-center py-0"><span class="priceBold">{{ item.price }}</span> грн</v-card-text>
               <v-card-actions class="cardActions">
-                <v-btn style="font-weight: bold;" flat @click.stop="showItem(item)">Подробно</v-btn>
+                <v-btn style="border-radius: 6px" flat @click.stop="showItem(item)">Подробно</v-btn>
                 <v-btn class="myButn" flat @click.stop="showOrder(item)">Заказать</v-btn>
               </v-card-actions>
             </v-card>
@@ -53,11 +53,11 @@
       </v-parallax>
     </section>
     <!-- условия доставки -->
-    <section class="terms">
+    <section class="terms py-5">
       <app-terms></app-terms>
     </section>
     <!-- заказать звонок -->
-    <section class="requestConsult">
+    <section class="requestConsult py-5">
       <v-layout row wrap justify-center align-center>
         <v-flex xs12 sm6 md5 lg3>
           <v-form class="requestForm" @submit.prevent="requestConsult" v-model="valid">
@@ -102,7 +102,7 @@
       </v-layout>
     </section>
     <section class="poputData">
-      <v-dialog v-model="popupData" lazy>
+      <v-dialog v-model="popupData" lazy width="400">
         <v-card>
           <v-card-title class="popupTitle">{{ collectionItem.title }}<v-spacer></v-spacer>
              <span class="valute">{{ collectionItem.price }} грн</span></v-card-title>
@@ -114,8 +114,8 @@
               </v-layout>
             </v-card-text>
             <v-card-actions>
-              <v-btn @click.stop="showOrder(collectionItem)" class="red darken-2 white--text ml-0">Оформить заказ</v-btn>
-              <v-btn @click.stop="popupData = false" class="white--text grey darken-4">Закрыть</v-btn>
+              <v-btn style="border-radius: 6px;" @click.stop="showOrder(collectionItem)" class="redBtn ml-0">Оформить заказ</v-btn>
+              <v-btn style="border-radius: 6px;" @click.stop="popupData = false" class="white--text grey darken-4">Закрыть</v-btn>
             </v-card-actions>
         </v-card>
       </v-dialog>
@@ -170,6 +170,7 @@ import axios from 'axios'
     methods: {
       showOrder (item) {
         // console.log(item);
+        this.popupData = false
         this.popup = false
         this.showPrice = false
         this.$emit('showOrder', item)

@@ -28,12 +28,6 @@ h3,h2,h1,h4 {
 .sizeTable .collectionH {
   font-size: 5rem
 }
-.collectionH {
-  /* padding-top: 24px; */
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 300;
-}
 .collectionCard {
   border-radius: 10px;
 }
@@ -101,7 +95,6 @@ h3,h2,h1,h4 {
   border-radius: 6px;
   background-color: #F44336 !important;
   color: #fff;
-  font-weight: 700;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
@@ -111,6 +104,7 @@ h3,h2,h1,h4 {
   font-weight: bold;
 }
 .bradius .myButn {
+  border-radius: 6px;
   font-weight: bold;
 }
 .bradius .card__media {
@@ -129,7 +123,10 @@ h3,h2,h1,h4 {
   color: #F44336;
   background-color: #F44336;
 }
-
+.redBtn {
+  background-color: #F44336 !important;
+  color: #fff;
+}
 .bradius, .card {
   overflow: hidden;
 }
