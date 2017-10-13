@@ -6,7 +6,6 @@
       <td class="text-xs-center">{{ props.item.s }}</td>
       <td class="text-xs-center">{{ props.item.m }}</td>
       <td class="text-xs-center">{{ props.item.l }}</td>
-      <td class="text-xs-center">{{ props.item.xl }}</td>
     </template>
   </v-data-table>
 </template>
@@ -25,7 +24,6 @@
           { text: '36 / S', value: '123', sortable: false, align: 'center' },
           { text: '38 / M', value: '123', sortable: false, align: 'center' },
           { text: '40 / L', value: '123', sortable: false, align: 'center' },
-          { text: '42 / XL', value: '123', sortable: false, align: 'center' },
         ],
         items: [
           {

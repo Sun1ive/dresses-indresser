@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-form id="form" @submit.prevent="offerCall">
-      <h5 class="mb-0 text-xs-center">Заказать Консультацию</h5>
+      <h5 class="mb-0 text-xs-center">Заказать звонок</h5>
       <v-text-field v-model="userCall.name" required label="Имя"></v-text-field>
       <v-text-field v-model="userCall.phone" required label="Телефон"></v-text-field>
       <v-btn type="submit" class="redd ml-0">Заказать звонок</v-btn>

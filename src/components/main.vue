@@ -2,7 +2,6 @@
   <main>
     <!-- баннер -->
     <section class="banner">
-      <!-- <h1 class="text-xs-center">VIDEO ELEGIGLE</h1> -->
       <app-banner></app-banner>
     </section>
     <!-- мотивация? -->
